@@ -49,7 +49,7 @@ enum APIError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .badAddress:
-            "The server address is not an https:// address."
+            "Use an https:// address, or http:// for one on your network or VPN: 10.x, 172.16–31.x, 192.168.x, 100.64–127.x or a .local name."
         case .unauthorized:
             "The token was not accepted."
         case let .server(status, detail):
@@ -65,7 +65,10 @@ struct FiestaBoardAPI: Sendable {
     let base: URL
     let token: String
 
-    /// From what was typed in: an https address, with or without a trailing /api.
+    /// From what was typed in, with or without a trailing /api: https anywhere,
+    /// http only to an address on the home network or reached through a VPN, as
+    /// the token goes with every request. Without a scheme, http for such an
+    /// address, else https.
     init(address: String, token: String) throws {
         var text = address.trimmingCharacters(in: .whitespacesAndNewlines)
         while text.hasSuffix("/") {
@@ -74,11 +77,49 @@ struct FiestaBoardAPI: Sendable {
         if text.hasSuffix("/api") {
             text.removeLast(4)
         }
-        guard let url = URL(string: text), url.scheme?.lowercased() == "https", url.host() != nil else {
+        if !text.contains("://"), let host = URL(string: "http://\(text)")?.host(percentEncoded: false) {
+            text = (Self.isLocal(host) ? "http://" : "https://") + text
+        }
+        guard let url = URL(string: text), let host = url.host(percentEncoded: false) else {
+            throw APIError.badAddress
+        }
+        switch url.scheme?.lowercased() {
+        case "https":
+            break
+        case "http" where Self.isLocal(host):
+            break
+        default:
             throw APIError.badAddress
         }
         base = url.appending(path: "api/v1")
         self.token = token.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+
+    /// Whether a host can only be reached at home or through a VPN: a private
+    /// IPv4 or IPv6 address, the range Tailscale and other carrier-grade NAT
+    /// use, a .local name, or a name without a dot.
+    static func isLocal(_ host: String) -> Bool {
+        let name = host.lowercased().trimmingCharacters(in: CharacterSet(charactersIn: "[]"))
+        if name.hasSuffix(".local") || name == "localhost" {
+            return true
+        }
+        let parts = name.split(separator: ".", omittingEmptySubsequences: false)
+        if parts.count == 4, case let octets = parts.compactMap({ UInt8($0) }), octets.count == 4 {
+            switch (octets[0], octets[1]) {
+            case (10, _), (127, _), (192, 168), (169, 254):
+                return true
+            case (172, 16...31), (100, 64...127):
+                return true
+            default:
+                return false
+            }
+        }
+        if name.contains(":") {
+            // Unique local (fc00::/7), link-local (fe80::/10) and loopback.
+            return name.hasPrefix("fc") || name.hasPrefix("fd") || name.hasPrefix("fe8") || name.hasPrefix("fe9")
+                || name.hasPrefix("fea") || name.hasPrefix("feb") || name == "::1"
+        }
+        return !name.contains(".")
     }
 
     func boards() async throws -> [BoardSummary] {

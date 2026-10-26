@@ -16,12 +16,24 @@ web UI's own.
 
 ## What it needs
 
-- FiestaBoard reachable over **HTTPS** from where the iPhone is: behind a
-  reverse proxy with a certificate, say. The app talks to nothing else.
-- **Login switched on** in FiestaBoard, as for anything on the internet, and
-  an **API token**: in FiestaBoard, **Settings → AI**. The token opens the
-  whole API, so it is kept in the iPhone's Keychain and only sent to the
-  address set in the app.
+- FiestaBoard reachable from where the iPhone is, in one of two ways:
+  - **At home, or through a VPN**: its address on the home network,
+    `10.0.1.10:4420` say, over plain http. From away, a VPN such as
+    WireGuard or Tailscale that reaches the home network makes the same
+    address work. The first time, iOS asks whether the app may use the local
+    network; allow it.
+  - **From anywhere**: an **https://** address, behind a reverse proxy with a
+    certificate, say.
+
+  Plain http is only taken for an address that cannot be reached from the
+  internet: 10.x, 172.16–31.x, 192.168.x, 100.64–127.x (Tailscale's range),
+  a `.local` name, a name without a dot, or a private IPv6 address. Anything
+  else has to be https, as the token goes with every request. An address
+  typed without `http://` or `https://` gets the one that fits.
+- An **API token**: in FiestaBoard, **Settings → AI**. It opens the whole
+  API, so it is kept in the iPhone's Keychain and only sent to the address
+  set in the app. Keep FiestaBoard's login switched on wherever it can be
+  reached from the internet.
 
 On first start the app asks for both, tries them, and keeps them only once
 FiestaBoard has answered. The gear button changes them later.

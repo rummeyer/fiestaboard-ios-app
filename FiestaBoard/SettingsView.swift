@@ -14,7 +14,7 @@ struct SettingsView: View {
     var body: some View {
         Form {
             Section {
-                TextField("https://fiestaboard.example.com", text: $address)
+                TextField("10.0.1.10:4420 or https://…", text: $address)
                     .keyboardType(.URL)
                     .textContentType(.URL)
                     .textInputAutocapitalization(.never)
@@ -22,7 +22,7 @@ struct SettingsView: View {
             } header: {
                 Text("Server")
             } footer: {
-                Text("FiestaBoard's address over HTTPS.")
+                Text("FiestaBoard's address: https:// from anywhere, or its address at home, such as 10.0.1.10:4420, on your network or through a VPN.")
             }
             Section {
                 SecureField("Token", text: $token)
