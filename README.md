@@ -28,8 +28,9 @@ FiestaBoard has answered. The gear button changes them later.
 
 ## Building
 
-Open `FiestaBoard.xcodeproj` in Xcode, choose your team under **Signing &
-Capabilities**, and run it on an iPhone. iOS 18 or later.
+Open `FiestaBoard.xcodeproj` in Xcode 27 or later, choose your team under
+**Signing & Capabilities**, and run it on an iPhone. iOS 18 or later. Not on
+the App Store.
 
 The files in `FiestaBoard/` are the project: Xcode picks up whatever is in
 the folder.
@@ -43,4 +44,7 @@ repository, MIT licence), on white. `tools/make-icon.swift` makes it:
 swift tools/make-icon.swift <path to fiesta-icon.png> FiestaBoard/Assets.xcassets/AppIcon.appiconset/AppIcon.png
 ```
 
-This app is not made by the FiestaBoard project.
+## Licence
+
+MIT, see [LICENSE](LICENSE). The icon is FiestaBoard's, under its own MIT
+licence. This app is not made by the FiestaBoard project.
