@@ -313,9 +313,9 @@ struct HomeView: View {
                 Button {
                     tab = each
                 } label: {
-                    VStack(spacing: 12) {
+                    VStack(spacing: 8) {
                         Text(each.title)
-                            .font(Style.font(.title3))
+                            .font(Style.font(.callout, weight: .medium))
                             .lineLimit(1)
                             .minimumScaleFactor(0.6)
                             .foregroundStyle(tab == each ? Style.ink : Style.muted)
@@ -323,12 +323,15 @@ struct HomeView: View {
                             .fill(tab == each ? Style.primary : .clear)
                             .frame(height: 2)
                     }
+                    // Small, and still a whole finger's height to tap.
+                    .padding(.top, 12)
                     .frame(maxWidth: .infinity)
+                    .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
             }
         }
-        .padding(.top, 18)
+        .padding(.top, 6)
         .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
         .overlay(alignment: .bottom) {
             Rectangle().fill(Style.border).frame(height: 1)
