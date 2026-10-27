@@ -67,25 +67,46 @@
         }
       }
     },
-    "A message for a while, then the schedule again": {
-      "extractionState": "stale",
+    "A message until %@, then the schedule again": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Eine Nachricht für eine Weile, dann wieder der Zeitplan"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Un mensaje por un tiempo, luego de nuevo la programación"
+            "value": "Eine Nachricht bis %@, dann wieder der Zeitplan"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un message pour un moment, puis de nouveau le planning"
+            "value": "Un message jusqu’à %@, puis de nouveau le planning"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un mensaje hasta las %@, luego de nuevo la programación"
+          }
+        }
+      }
+    },
+    "API token": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API-Token"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Token de API"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jeton d’API"
           }
         }
       }
@@ -157,24 +178,24 @@
         }
       }
     },
-    "API token": {
+    "Back to the schedule": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "API-Token"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Token de API"
+            "value": "Zurück zum Zeitplan"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jeton d’API"
+            "value": "Retour au planning"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volver a la programación"
           }
         }
       }
@@ -577,6 +598,94 @@
         }
       }
     },
+    "For 1 hour": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 Stunde lang"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pendant 1 heure"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durante 1 hora"
+          }
+        }
+      }
+    },
+    "For 15 minutes": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "15 Minuten lang"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pendant 15 minutes"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durante 15 minutos"
+          }
+        }
+      }
+    },
+    "For 4 hours": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "4 Stunden lang"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pendant 4 heures"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durante 4 horas"
+          }
+        }
+      }
+    },
+    "For 8 hours": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "8 Stunden lang"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pendant 8 heures"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durante 8 horas"
+          }
+        }
+      }
+    },
     "Green tile": {
       "localizations": {
         "de": {
@@ -599,28 +708,6 @@
         }
       }
     },
-    "Held until the board's quiet time ends": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Wird gehalten, bis die Ruhezeit des Boards endet"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "En espera hasta que termine el tiempo de silencio del tablero"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "En attente jusqu’à la fin de la période de silence du tableau"
-          }
-        }
-      }
-    },
     "HELLO FROM\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}": {
       "localizations": {
         "de": {
@@ -639,6 +726,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "BONJOUR DE\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}"
+          }
+        }
+      }
+    },
+    "Held until the board's quiet time ends": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wird gehalten, bis die Ruhezeit des Boards endet"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En espera hasta que termine el tiempo de silencio del tablero"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En attente jusqu’à la fin de la période de silence du tableau"
           }
         }
       }
@@ -1218,24 +1327,24 @@
         }
       }
     },
-    "Sort and filter": {
+    "Show": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sortieren und filtern"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ordenar y filtrar"
+            "value": "Anzeigen"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Trier et filtrer"
+            "value": "Afficher"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar"
           }
         }
       }
@@ -1258,6 +1367,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "Trier par"
+          }
+        }
+      }
+    },
+    "Sort and filter": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sortieren und filtern"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ordenar y filtrar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trier et filtrer"
           }
         }
       }
@@ -1457,6 +1588,50 @@
           "stringUnit": {
             "state": "translated",
             "value": "Trop long : la fin est coupée"
+          }
+        }
+      }
+    },
+    "Until %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bis %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jusqu’à %@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hasta las %@"
+          }
+        }
+      }
+    },
+    "Until the next refresh": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bis zur nächsten Aktualisierung"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jusqu’à la prochaine actualisation"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hasta la próxima actualización"
           }
         }
       }

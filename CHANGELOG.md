@@ -29,7 +29,11 @@ adheres to [semantic versioning](https://semver.org/spec/v2.0.0.html).
   to an address on the home network or reached through a VPN — private IPv4
   and IPv6 addresses, 100.64–127.x as Tailscale uses, .local names and names
   without a dot — and nowhere else.
-- Every board FiestaBoard drives, picked in the bottom bar, each drawn as it
+- A message for 15 minutes, an hour, 4 or 8 hours, held against the
+  schedule or carousel and then gone by itself; until the next refresh by
+  default. The live card says until when, and Back to the schedule ends it
+  sooner.
+- Every board FiestaBoard drives, picked in the row of boards on top, each drawn as it
   looks: a split-flap board with its flaps, an LED panel lit on black.
   History per board; Favorites and Drafts the same for all, sent to any.
 - Add demo board, in Settings: a board simulated in the app, beside

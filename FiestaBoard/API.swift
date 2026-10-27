@@ -40,6 +40,8 @@ struct MessageResponse: Decodable, Sendable {
     let characters: [[Int]]
     let reason: String?
     let held: Bool?
+    /// When a timed message gives way to the schedule again, ISO 8601.
+    var expiresAt: String? = nil
 }
 
 enum APIError: LocalizedError {
@@ -133,31 +135,37 @@ struct FiestaBoardAPI: Sendable {
         try await call("GET", "boards/\(id)")
     }
 
-    func send(_ text: String, to board: String) async throws -> MessageResponse {
-        try await call("POST", "boards/\(board)/message", body: Body.text(text))
+    /// A message for `minutes`, held against the schedule and then gone again; none, until replaced.
+    func send(_ text: String, to board: String, minutes: Int?) async throws -> MessageResponse {
+        try await call("POST", "boards/\(board)/message", body: Body(text: text, minutes: minutes))
     }
 
     /// A message as it was on a board, flap for flap: for one of the same size.
-    func send(characters: [[Int]], to board: String) async throws -> MessageResponse {
-        try await call("POST", "boards/\(board)/message", body: Body.characters(characters))
+    func send(characters: [[Int]], to board: String, minutes: Int?) async throws -> MessageResponse {
+        try await call("POST", "boards/\(board)/message", body: Body(characters: characters, minutes: minutes))
     }
 
-    private enum Body: Encodable {
-        case text(String)
-        case characters([[Int]])
+    /// The board back to its schedule: a timed message ended before its time.
+    func clear(_ board: String) async throws -> MessageResponse {
+        try await call("DELETE", "boards/\(board)/message")
+    }
+
+    /// What a message is sent as: one of text or flaps, and for how long.
+    private struct Body: Encodable {
+        var text: String?
+        var characters: [[Int]]?
+        var minutes: Int?
 
         private enum Keys: String, CodingKey {
             case text, characters
+            case minutes = "duration_minutes"
         }
 
         func encode(to encoder: Encoder) throws {
             var container = encoder.container(keyedBy: Keys.self)
-            switch self {
-            case let .text(text):
-                try container.encode(text, forKey: .text)
-            case let .characters(characters):
-                try container.encode(characters, forKey: .characters)
-            }
+            try container.encodeIfPresent(text, forKey: .text)
+            try container.encodeIfPresent(characters, forKey: .characters)
+            try container.encodeIfPresent(minutes, forKey: .minutes)
         }
     }
 

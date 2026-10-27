@@ -93,8 +93,8 @@ struct HomeView: View {
             liveView
         }
         .fullScreenCover(item: $composing) { request in
-            ComposeView(request: request, shape: shape, boardName: boardName) { text in
-                await sendText(text)
+            ComposeView(request: request, shape: shape, boardName: boardName) { text, minutes in
+                await sendText(text, minutes: minutes)
             }
             .environment(library)
         }
@@ -163,6 +163,12 @@ struct HomeView: View {
                 }
                 ZStack {
                     LucideIcon("chevron-down", size: 18, relativeTo: .footnote)
+                    if let until {
+                        Label(String(localized: "Until \(until.formatted(date: .omitted, time: .shortened))"), lucide: "timer")
+                            .font(Style.font(.caption2))
+                            .lineLimit(1)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
                     if let date = liveDate {
                         Text(ago(date))
                             .font(Style.font(.caption2))
@@ -252,17 +258,51 @@ struct HomeView: View {
     }
 
     private func status(of board: BoardDetail) -> some View {
-        Group {
-            if board.paused {
-                Label("Paused", lucide: "circle-pause")
-            } else if board.overrideExpiresAt != nil {
-                Label("A message for a while, then the schedule again", lucide: "timer")
-            } else if board.source == "schedule" {
-                Label("Following the schedule", lucide: "calendar")
+        VStack(spacing: 16) {
+            Group {
+                if board.paused {
+                    Label("Paused", lucide: "circle-pause")
+                } else if let until {
+                    Label(String(localized: "A message until \(until.formatted(date: .omitted, time: .shortened)), then the schedule again"), lucide: "timer")
+                } else if board.source == "schedule" {
+                    Label("Following the schedule", lucide: "calendar")
+                }
+            }
+            .font(Style.font(.footnote))
+            .foregroundStyle(Style.secondary)
+            .multilineTextAlignment(.center)
+            if until != nil {
+                Button {
+                    Task { await backToSchedule() }
+                } label: {
+                    Label("Back to the schedule", lucide: "calendar")
+                        .secondaryButton()
+                }
+                .buttonStyle(.plain)
             }
         }
-        .font(Style.font(.footnote))
-        .foregroundStyle(Style.secondary)
+        .padding(.horizontal, 18)
+    }
+
+    /// When a timed message on the board gives way to the schedule again; none without one.
+    private var until: Date? {
+        guard let text = board?.overrideExpiresAt else {
+            return nil
+        }
+        let precise = ISO8601DateFormatter()
+        precise.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        return precise.date(from: text) ?? ISO8601DateFormatter().date(from: text)
+    }
+
+    /// Ends a timed message before its time: the board shows its schedule again.
+    private func backToSchedule() async {
+        do {
+            let response = try await settings.service(for: boardID).clear(boardID)
+            notice = response.sent ? String(localized: "Back to the schedule") : response.reason ?? String(localized: "Not sent")
+            await load()
+        } catch {
+            notice = error.localizedDescription
+        }
     }
 
     // MARK: - History, Favorites, Drafts
@@ -446,7 +486,7 @@ struct HomeView: View {
                 },
                 CardAction(symbol: "send", label: "Send to the board") {
                     Task {
-                        if let outcome = await sendText(draft.text) {
+                        if let outcome = await sendText(draft.text, minutes: nil) {
                             notice = outcome
                         } else {
                             library.deleteDraft(draft.id)
@@ -552,9 +592,9 @@ struct HomeView: View {
     }
 
     /// Sends text; nil when it reached the board, else what came of it.
-    private func sendText(_ text: String) async -> String? {
+    private func sendText(_ text: String, minutes: Int?) async -> String? {
         do {
-            let response = try await settings.service(for: boardID).send(text, to: boardID)
+            let response = try await settings.service(for: boardID).send(text, to: boardID, minutes: minutes)
             return await sent(response, text: text)
         } catch {
             return error.localizedDescription
@@ -567,8 +607,8 @@ struct HomeView: View {
             let api = try settings.service(for: boardID)
             let sameSize = message.characters.count == shape.rows && message.characters.first?.count == shape.cols
             let response = sameSize
-                ? try await api.send(characters: message.characters, to: boardID)
-                : try await api.send(message.editableText, to: boardID)
+                ? try await api.send(characters: message.characters, to: boardID, minutes: nil)
+                : try await api.send(message.editableText, to: boardID, minutes: nil)
             notice = await sent(response, text: message.editableText) ?? String(localized: "Sent to \(boardName)")
         } catch {
             notice = error.localizedDescription

@@ -61,13 +61,17 @@ actor SampleClock: BoardService {
                     characters: characters, text: nil, resolvedPageId: nil, source: "schedule", overrideExpiresAt: nil)
     }
 
-    func send(_ text: String, to board: String) async throws -> MessageResponse {
+    func send(_ text: String, to board: String, minutes: Int?) async throws -> MessageResponse {
         characters = Layout.grid(text, rows: 3, cols: 13).grid
         return MessageResponse(sent: true, characters: characters, reason: nil, held: nil)
     }
 
-    func send(characters: [[Int]], to board: String) async throws -> MessageResponse {
+    func send(characters: [[Int]], to board: String, minutes: Int?) async throws -> MessageResponse {
         self.characters = characters
         return MessageResponse(sent: true, characters: characters, reason: nil, held: nil)
+    }
+
+    func clear(_ board: String) async throws -> MessageResponse {
+        MessageResponse(sent: true, characters: characters, reason: nil, held: nil)
     }
 }

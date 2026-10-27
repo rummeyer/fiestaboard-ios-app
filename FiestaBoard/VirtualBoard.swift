@@ -4,8 +4,9 @@ import Foundation
 protocol BoardService: Sendable {
     func boards() async throws -> [BoardSummary]
     func board(_ id: String) async throws -> BoardDetail
-    func send(_ text: String, to board: String) async throws -> MessageResponse
-    func send(characters: [[Int]], to board: String) async throws -> MessageResponse
+    func send(_ text: String, to board: String, minutes: Int?) async throws -> MessageResponse
+    func send(characters: [[Int]], to board: String, minutes: Int?) async throws -> MessageResponse
+    func clear(_ board: String) async throws -> MessageResponse
 }
 
 extension FiestaBoardAPI: BoardService {}
@@ -23,6 +24,9 @@ actor VirtualBoard: BoardService {
     private static let key = "virtualBoard"
 
     private var characters: [[Int]]
+    /// A timed message's end, and what the board showed before it, to go back to.
+    private var until: Date?
+    private var before: [[Int]]?
 
     init() {
         if let saved = UserDefaults.standard.array(forKey: Self.key) as? [[Int]], saved.count == Self.rows {
@@ -41,29 +45,63 @@ actor VirtualBoard: BoardService {
     }
 
     func board(_ id: String) async throws -> BoardDetail {
-        BoardDetail(
+        expire()
+        return BoardDetail(
             id: Self.id, name: name, deviceType: "note", rows: Self.rows, cols: Self.cols, paused: false,
-            characters: characters, text: nil, resolvedPageId: nil, source: "manual", overrideExpiresAt: nil
+            characters: characters, text: nil, resolvedPageId: nil, source: "manual",
+            overrideExpiresAt: until.map { $0.ISO8601Format() }
         )
     }
 
-    func send(_ text: String, to board: String) async throws -> MessageResponse {
-        try await show(Layout.grid(text, rows: Self.rows, cols: Self.cols).grid)
+    func send(_ text: String, to board: String, minutes: Int?) async throws -> MessageResponse {
+        try await show(Layout.grid(text, rows: Self.rows, cols: Self.cols).grid, minutes: minutes)
     }
 
-    func send(characters: [[Int]], to board: String) async throws -> MessageResponse {
-        try await show(characters)
+    func send(characters: [[Int]], to board: String, minutes: Int?) async throws -> MessageResponse {
+        try await show(characters, minutes: minutes)
     }
 
-    /// Shows a message, as FiestaBoard says it did: written, or the same as already there.
-    private func show(_ grid: [[Int]]) async throws -> MessageResponse {
+    /// Back to what the board showed before a timed message, as FiestaBoard goes back to its schedule.
+    func clear(_ board: String) async throws -> MessageResponse {
+        if let before {
+            try await Task.sleep(for: .milliseconds(700))
+            put(before)
+        }
+        until = nil
+        before = nil
+        return MessageResponse(sent: true, characters: characters, reason: nil, held: nil)
+    }
+
+    /// Shows a message, as FiestaBoard says it did: written, or the same as already there. Timed,
+    /// it gives way to what was there before once its time is up.
+    private func show(_ grid: [[Int]], minutes: Int?) async throws -> MessageResponse {
+        expire()
         guard grid != characters else {
             return MessageResponse(sent: false, characters: grid, reason: String(localized: "The board already shows this."), held: nil)
         }
         try await Task.sleep(for: .milliseconds(700))
+        if let minutes {
+            before = before ?? characters
+            until = .now.addingTimeInterval(TimeInterval(minutes * 60))
+        } else {
+            before = nil
+            until = nil
+        }
+        put(grid)
+        return MessageResponse(sent: true, characters: grid, reason: nil, held: nil, expiresAt: until.map { $0.ISO8601Format() })
+    }
+
+    private func expire() {
+        if let until, until <= .now, let before {
+            put(before)
+            self.until = nil
+            self.before = nil
+        }
+    }
+
+    private func put(_ grid: [[Int]]) {
         characters = grid
         UserDefaults.standard.set(grid, forKey: Self.key)
-        return MessageResponse(sent: true, characters: grid, reason: nil, held: nil)
     }
 
     /// Puts content on the board without a message, as for the sample screenshots.

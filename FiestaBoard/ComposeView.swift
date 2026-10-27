@@ -41,12 +41,15 @@ struct ComposeView: View {
     let shape: BoardShape
     let boardName: String
     /// Sends the text; says what came of it, nil when it reached the board.
-    let send: (String) async -> String?
+    /// Sends the text, for so many minutes or until the next refresh; says what came of it, nil when it reached the board.
+    let send: (String, Int?) async -> String?
 
     @Environment(Library.self) private var library
     @Environment(\.dismiss) private var dismiss
     @State private var text = ""
     @State private var sending = false
+    /// Minutes the message holds against the schedule; none, until the next refresh.
+    @State private var minutes: Int?
     @State private var problem: String?
     @FocusState private var writing: Bool
 
@@ -112,6 +115,10 @@ struct ComposeView: View {
             .padding(.horizontal, 24)
             .padding(.vertical, 8)
 
+            durationChoice
+                .padding(.horizontal, 20)
+                .padding(.bottom, 10)
+
             // In one row where the words fit, else Send across the width and the other two below it:
             // German and French words are longer than English ones, and text can be larger.
             ViewThatFits(in: .horizontal) {
@@ -157,6 +164,42 @@ struct ComposeView: View {
             text = request.text
             writing = true
         }
+    }
+
+    /// How long a message holds against the schedule or carousel: until its next refresh, as by
+    /// default, or for a while, after which the board goes back to it by itself.
+    private static let durations: [(Int?, LocalizedStringKey)] = [
+        (nil, "Until the next refresh"),
+        (15, "For 15 minutes"),
+        (60, "For 1 hour"),
+        (240, "For 4 hours"),
+        (480, "For 8 hours"),
+    ]
+
+    private var durationChoice: some View {
+        Menu {
+            Picker("Show", selection: $minutes) {
+                ForEach(Self.durations, id: \.0) { value, title in
+                    Text(title).tag(value)
+                }
+            }
+        } label: {
+            HStack(spacing: 8) {
+                LucideIcon("timer", size: 18, relativeTo: .subheadline)
+                Text(Self.durations.first { $0.0 == minutes }?.1 ?? "Until the next refresh")
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
+                LucideIcon("chevron-down", size: 14, relativeTo: .subheadline)
+            }
+            .font(Style.font(.subheadline))
+            .foregroundStyle(minutes == nil ? Style.muted : Style.ink)
+            .padding(.horizontal, 14)
+            .frame(height: 36)
+            .background(minutes == nil ? Color.clear : Style.fill, in: Capsule())
+            .overlay(Capsule().stroke(Style.border, lineWidth: 1))
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .accessibilityLabel("Show")
     }
 
     private func cancelButton(wide: Bool) -> some View {
@@ -228,7 +271,7 @@ struct ComposeView: View {
         problem = nil
         Task {
             defer { sending = false }
-            if let outcome = await send(text) {
+            if let outcome = await send(text, minutes) {
                 problem = outcome
             } else {
                 if let draft = request.draft {

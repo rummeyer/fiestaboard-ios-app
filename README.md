@@ -45,6 +45,8 @@
 
 **Writing a message.** The round button opens it. The board above shows where your text will land as you type — laid out as FiestaBoard lays it out: from the top left, word-wrapped, a line break where you type one — with how many tiles it takes. The colour tiles below put one in. **Send** says whether it reached the board or why not: a paused board, or one in its quiet time, which holds the message until that ends. **Save Draft**, next to Send, keeps it for later.
 
+**For a while, then the schedule again.** A message stays until the board's next refresh — the next page of its schedule or carousel — unless you choose, above Send, to show it for 15 minutes, an hour, 4 or 8 hours. It then holds against the schedule, and the board goes back to it by itself once the time is up; the live card says until when, and **Back to the schedule** ends it sooner.
+
 **All your boards.** Every display your FiestaBoard drives — a split-flap board, an LED panel such as a pixel clock — each drawn as it looks, picked in the bar at the bottom. History is per board; Favorites and Drafts are the same whichever board is chosen, and go to any of them, laid out anew for its size.
 
 **A demo board.** Without a FiestaBoard, or to try something out: **Add demo board** in Settings, and a board simulated in the app joins yours — or stands alone, with no FiestaBoard at all. It works as a real one does: it takes messages as FiestaBoard does, keeps what it shows, and has a history of its own.
