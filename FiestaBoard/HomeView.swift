@@ -47,6 +47,9 @@ struct HomeView: View {
         ZStack(alignment: .bottomTrailing) {
             Style.background.ignoresSafeArea()
             VStack(spacing: 0) {
+                if boards.count > 1 {
+                    boardSelector
+                }
                 liveCard
                     .padding(.horizontal, 18)
                     .padding(.top, 8)
@@ -114,6 +117,35 @@ struct HomeView: View {
     }
 
     // MARK: - The board live
+
+    /// Every board by its whole name, the chosen one in orange; scrolled sideways when they do not fit.
+    private var boardSelector: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 8) {
+                ForEach(boards) { each in
+                    Button {
+                        boardID = each.id
+                    } label: {
+                        Text(each.name)
+                            .font(Style.font(.subheadline, weight: each.id == boardID ? .semibold : .regular))
+                            .lineLimit(1)
+                            .fixedSize()
+                            .padding(.horizontal, 14)
+                            .padding(.vertical, 8)
+                            .foregroundStyle(each.id == boardID ? Style.primaryInk : Style.ink)
+                            .background(each.id == boardID ? Style.primary : Style.card, in: Capsule())
+                            .overlay(Capsule().stroke(Style.border, lineWidth: each.id == boardID ? 0 : 1))
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityAddTraits(each.id == boardID ? .isSelected : [])
+                }
+            }
+            .padding(.horizontal, 18)
+            .padding(.vertical, 2)
+        }
+        .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
+        .padding(.top, 6)
+    }
 
     private var liveCard: some View {
         Button {
@@ -454,19 +486,6 @@ struct HomeView: View {
             }
             .frame(maxWidth: .infinity)
             .accessibilityLabel("Home")
-            if boards.count > 1 {
-                Menu {
-                    Picker("Board", selection: $boardID) {
-                        ForEach(boards) { each in
-                            Text(each.name).tag(each.id)
-                        }
-                    }
-                } label: {
-                    LucideIcon("grid-3x3", size: 26, relativeTo: .title2).padding(.top, 13)
-                }
-                .frame(maxWidth: .infinity)
-                .accessibilityLabel("Board")
-            }
             Button {
                 showingSettings = true
             } label: {
