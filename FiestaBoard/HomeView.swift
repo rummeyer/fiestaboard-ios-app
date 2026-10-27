@@ -567,6 +567,9 @@ struct HomeView: View {
             if Demo.live {
                 showingLive = true
             }
+            if Demo.settingsSheet && !showingSettings {
+                showingSettings = true
+            }
         }
         // FiestaBoard's boards, then the demo board. FiestaBoard away a moment: its boards as last known.
         var failure: Error?

@@ -6,10 +6,17 @@ adheres to [semantic versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-10-27
+
 ### Added
 
 - Sending a card from History, Favorites or Drafts asks how long it shows:
   until the next refresh, or 15 minutes, an hour, 4 or 8 hours.
+- Tips, in Settings under Donation: two coffees through In-App Purchase,
+  and a StoreKit configuration to try them from Xcode.
+- Buy Me a Coffee in the README.
+- New screenshots in the README, Settings now opened from Home with all
+  its groups; `-demoSettingsSheet` for it in a debug build.
 
 ### Fixed
 
@@ -17,9 +24,6 @@ adheres to [semantic versioning](https://semver.org/spec/v2.0.0.html).
   FiestaBoard refused a duration with exact tiles, so it now goes as one
   line of text per row, the same tiles. Durations are offered only on the
   primary board, the only one FiestaBoard holds a timed message on.
-- Tips, in Settings under Donation: two coffees through In-App Purchase,
-  and a StoreKit configuration to try them from Xcode.
-- Buy Me a Coffee in the README.
 
 ### Removed
 
@@ -81,5 +85,6 @@ The first release.
 - README with screenshots, and how to reach FiestaBoard at home, through a
   VPN, or from anywhere over HTTPS with Caddy; how to put the app on an iPhone.
 
-[Unreleased]: https://github.com/rummeyer/fiestaboard-ios-app/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/rummeyer/fiestaboard-ios-app/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/rummeyer/fiestaboard-ios-app/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/rummeyer/fiestaboard-ios-app/releases/tag/v1.0.0

@@ -3,7 +3,8 @@ import Foundation
 /// Sample content for looking at the app without a FiestaBoard, in a debug
 /// build started with `-demo`: `-demoCompose` opens the compose screen,
 /// `-demoVisual` the same drawn tile by tile,
-/// `-demoLive` the board large, `-demoSettings` the first start.
+/// `-demoLive` the board large, `-demoSettings` the first start, `-demoSettingsSheet`
+/// Settings opened from Home.
 enum Demo {
     #if DEBUG
     private static let arguments = ProcessInfo.processInfo.arguments
@@ -12,12 +13,14 @@ enum Demo {
     static let visual = arguments.contains("-demoVisual")
     static let live = arguments.contains("-demoLive")
     static let settings = arguments.contains("-demoSettings")
+    static let settingsSheet = arguments.contains("-demoSettingsSheet")
     #else
     static let on = false
     static let compose = false
     static let visual = false
     static let live = false
     static let settings = false
+    static let settingsSheet = false
     #endif
 
     static let shape = BoardShape.note

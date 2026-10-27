@@ -36,7 +36,7 @@
   &nbsp;
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/settings-dark.png">
-    <img src="docs/screenshots/settings-light.png" alt="The first start: Connection, with FiestaBoard's address and the API token, and Demo, to add the demo board" width="200">
+    <img src="docs/screenshots/settings-light.png" alt="Settings: Connection with the server and the API token, Boards with each board black or white and its code 62, Demo, and About with the version" width="200">
   </picture>
 </p>
 
@@ -155,6 +155,7 @@ The files in `FiestaBoard/` are the project: Xcode picks up whatever is in the f
 | `-demo -demoCompose` | writing a message |
 | `-demo -demoVisual` | the visual editor |
 | `-demo -demoSettings` | the first start |
+| `-demo -demoSettingsSheet` | Settings, opened from Home |
 
 All of them run on the demo board and a sample LED clock beside it, with sample content of their own.
 
