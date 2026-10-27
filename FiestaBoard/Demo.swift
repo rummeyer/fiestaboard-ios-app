@@ -43,3 +43,31 @@ enum Demo {
         library.sent(sample, text: "KAFFEE IST FERTIG", board: board, boardName: name)
     }
 }
+
+/// A second board for the sample screenshots alone: an LED pixel clock, 3 × 13,
+/// to show the board selector and how an LED panel is drawn.
+actor SampleClock: BoardService {
+    static let shared = SampleClock()
+    static let id = "sample-clock"
+
+    private var characters = Layout.grid("  ES IST\n HALB ZWEI\n{green}{green}{green}{green}{green}{green}{green}{green}{green}{green}{green}{green}{green}", rows: 3, cols: 13).grid
+
+    func boards() async throws -> [BoardSummary] {
+        [BoardSummary(id: Self.id, name: "Pixel Clock", rows: 3, cols: 13, isPrimary: false, paused: false)]
+    }
+
+    func board(_ id: String) async throws -> BoardDetail {
+        BoardDetail(id: Self.id, name: "Pixel Clock", deviceType: "panel", rows: 3, cols: 13, paused: false,
+                    characters: characters, text: nil, resolvedPageId: nil, source: "schedule", overrideExpiresAt: nil)
+    }
+
+    func send(_ text: String, to board: String) async throws -> MessageResponse {
+        characters = Layout.grid(text, rows: 3, cols: 13).grid
+        return MessageResponse(sent: true, characters: characters, reason: nil, held: nil)
+    }
+
+    func send(characters: [[Int]], to board: String) async throws -> MessageResponse {
+        self.characters = characters
+        return MessageResponse(sent: true, characters: characters, reason: nil, held: nil)
+    }
+}

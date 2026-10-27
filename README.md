@@ -12,12 +12,12 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/home-dark.png">
-    <img src="docs/screenshots/home-light.png" alt="Home: the board live on a card on top, then History, Favorites and Drafts, with message cards below and the orange button to write" width="200">
+    <img src="docs/screenshots/home-light.png" alt="Home: the row of boards on top, the board live on a card, then History, Favorites and Drafts, with message cards below and the orange button to write" width="200">
   </picture>
   &nbsp;
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/live-dark.png">
-    <img src="docs/screenshots/live-light.png" alt="The board large: Live on My Board, with the message on a card and buttons to copy and share it" width="200">
+    <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/clock-dark.png">
+    <img src="docs/screenshots/clock-light.png" alt="A second board, an LED pixel clock, chosen in the row of boards on top and drawn lit on black, with its own history" width="200">
   </picture>
   &nbsp;
   <picture>
@@ -136,10 +136,11 @@ The files in `FiestaBoard/` are the project: Xcode picks up whatever is in the f
 |---|---|
 | `-demo` | Home, with a sample board, history, favorite and draft |
 | `-demo -demoLive` | the board large |
+| `-demo -board sample-clock` | a second board, an LED pixel clock |
 | `-demo -demoCompose` | writing a message |
 | `-demo -demoSettings` | the first start |
 
-All of them run on the demo board alone, with sample content of their own.
+All of them run on the demo board and a sample LED clock beside it, with sample content of their own.
 
 ## Icon, colours, typefaces and icons
 

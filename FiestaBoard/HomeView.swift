@@ -529,6 +529,9 @@ struct HomeView: View {
         if settings.demoBoard {
             list += (try? await VirtualBoard.shared.boards()) ?? []
         }
+        if Demo.on {
+            list += (try? await SampleClock.shared.boards()) ?? []
+        }
         boards = list
         // The board chosen gone, or not chosen yet: FiestaBoard's primary one, else the first.
         if !list.contains(where: { $0.id == boardID }), let pick = list.first(where: \.isPrimary) ?? list.first {

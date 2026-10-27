@@ -47,6 +47,9 @@ final class Settings {
         if board == VirtualBoard.id {
             return VirtualBoard.shared
         }
+        if Demo.on && board == SampleClock.id {
+            return SampleClock.shared
+        }
         guard let fiestaBoard else {
             throw APIError.badAddress
         }
