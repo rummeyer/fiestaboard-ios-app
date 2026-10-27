@@ -32,6 +32,8 @@ adheres to [semantic versioning](https://semver.org/spec/v2.0.0.html).
   whether its code 62 is a heart or a degree sign — FiestaBoard's API does
   not say. On a white board the white and black tiles show the other way
   round, as FiestaBoard draws them, and the colour tiles to put in follow.
+- Settings in groups — Connection, Boards, Demo, About with the version and
+  a link to the source — without long explanations under the fields.
 - Settings for FiestaBoard's address and an API token, tried before they are
   kept; the token in the Keychain. https:// from anywhere, or plain http://
   to an address on the home network or reached through a VPN — private IPv4

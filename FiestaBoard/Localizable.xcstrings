@@ -46,28 +46,6 @@
         }
       }
     },
-    "A board simulated in this app, beside your FiestaBoard's boards or without a FiestaBoard at all, to try everything out. It has its own history.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ein in dieser App simuliertes Board, neben den Boards Ihres FiestaBoard oder ganz ohne FiestaBoard, um alles auszuprobieren. Es hat einen eigenen Verlauf."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Un tablero simulado en esta app, junto a los tableros de tu FiestaBoard o sin ningún FiestaBoard, para probarlo todo. Tiene su propio historial."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Un tableau simulé dans cette app, à côté des tableaux de votre FiestaBoard ou sans FiestaBoard, pour tout essayer. Il a son propre historique."
-          }
-        }
-      }
-    },
     "A message until %@, then the schedule again": {
       "localizations": {
         "de": {
@@ -576,28 +554,6 @@
         }
       }
     },
-    "FiestaBoard's address: https:// from anywhere, or its address at home, such as 10.0.1.10:4420, on your network or through a VPN.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Die Adresse von FiestaBoard: https:// von überall, oder seine Adresse zu Hause wie 10.0.1.10:4420, im eigenen Netz oder über ein VPN."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "La dirección de FiestaBoard: https:// desde cualquier lugar, o su dirección en casa, como 10.0.1.10:4420, en tu red o a través de una VPN."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "L’adresse de FiestaBoard : https:// de partout, ou son adresse à la maison, comme 10.0.1.10:4420, sur votre réseau ou via un VPN."
-          }
-        }
-      }
-    },
     "Following the schedule": {
       "extractionState": "stale",
       "localizations": {
@@ -903,28 +859,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "En direct sur %@. Afficher en grand."
-          }
-        }
-      }
-    },
-    "Made in FiestaBoard under Settings → AI. Kept in this iPhone's Keychain.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Wird in FiestaBoard unter Einstellungen → KI erstellt. Bleibt im Schlüsselbund dieses iPhones."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Se crea en FiestaBoard en Configuración → IA. Se guarda en el llavero de este iPhone."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Se crée dans FiestaBoard sous Paramètres → IA. Conservé dans le trousseau de cet iPhone."
           }
         }
       }
@@ -2033,28 +1967,6 @@
         }
       }
     },
-    "As your boards really are: FiestaBoard does not tell the app. On a white board, the white and the black tile show the other way round.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "So, wie Ihre Boards wirklich sind: FiestaBoard teilt es der App nicht mit. Auf einem weißen Board erscheinen das weiße und das schwarze Feld vertauscht."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Como son realmente tus tableros: FiestaBoard no se lo dice a la app. En un tablero blanco, las casillas blanca y negra se ven al revés."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tels que sont vraiment vos tableaux : FiestaBoard ne le dit pas à l’app. Sur un tableau blanc, les cases blanche et noire s’affichent inversées."
-          }
-        }
-      }
-    },
     "Code 62": {
       "localizations": {
         "de": {
@@ -2161,6 +2073,94 @@
           "stringUnit": {
             "state": "translated",
             "value": "Blanc"
+          }
+        }
+      }
+    },
+    "Connection": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verbindung"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conexión"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connexion"
+          }
+        }
+      }
+    },
+    "About": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Über"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acerca de"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À propos"
+          }
+        }
+      }
+    },
+    "Version": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versión"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version"
+          }
+        }
+      }
+    },
+    "Source code": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quellcode"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Código fuente"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Code source"
           }
         }
       }

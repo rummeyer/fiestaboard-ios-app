@@ -27,31 +27,28 @@ struct SettingsView: View {
 
     var body: some View {
         Form {
+            // Where FiestaBoard is and the key to it.
             Section {
-                TextField("10.0.1.10:4420 or https://…", text: $address)
-                    .keyboardType(.URL)
-                    .textContentType(.URL)
-                    .textInputAutocapitalization(.never)
-                    .autocorrectionDisabled()
+                LabeledContent("Server") {
+                    TextField("10.0.1.10:4420 or https://…", text: $address)
+                        .keyboardType(.URL)
+                        .textContentType(.URL)
+                        .textInputAutocapitalization(.never)
+                        .autocorrectionDisabled()
+                }
+                LabeledContent("API token") {
+                    SecureField("Token", text: $token)
+                        .textInputAutocapitalization(.never)
+                        .autocorrectionDisabled()
+                }
             } header: {
-                Text("Server")
-            } footer: {
-                Text("FiestaBoard's address: https:// from anywhere, or its address at home, such as 10.0.1.10:4420, on your network or through a VPN.")
+                Text("Connection")
             }
-            Section {
-                SecureField("Token", text: $token)
-                    .textInputAutocapitalization(.never)
-                    .autocorrectionDisabled()
-            } header: {
-                Text("API token")
-            } footer: {
-                Text("Made in FiestaBoard under Settings → AI. Kept in this iPhone's Keychain.")
-            }
-            Section {
-                Toggle("Add demo board", isOn: $demoBoard)
-                    .tint(Style.primary)
-            } footer: {
-                Text("A board simulated in this app, beside your FiestaBoard's boards or without a FiestaBoard at all, to try everything out. It has its own history.")
+            if let problem {
+                Section {
+                    Label(problem, lucide: "triangle-alert")
+                        .foregroundStyle(.red)
+                }
             }
             if !flapBoards.isEmpty {
                 Section {
@@ -60,14 +57,22 @@ struct SettingsView: View {
                     }
                 } header: {
                     Text("Boards")
-                } footer: {
-                    Text("As your boards really are: FiestaBoard does not tell the app. On a white board, the white and the black tile show the other way round.")
                 }
             }
-            if let problem {
+            Section {
+                Toggle("Add demo board", isOn: $demoBoard)
+                    .tint(Style.primary)
+            } header: {
+                Text("Demo")
+            }
+            if !isFirstRun {
                 Section {
-                    Label(problem, lucide: "triangle-alert")
-                        .foregroundStyle(.red)
+                    LabeledContent("Version", value: Self.version)
+                    Link(destination: URL(string: "https://github.com/rummeyer/fiestaboard-ios-app")!) {
+                        Label("Source code", lucide: "code")
+                    }
+                } header: {
+                    Text("About")
                 }
             }
         }
@@ -103,6 +108,14 @@ struct SettingsView: View {
             demoBoard = settings.demoBoard
             looks = settings.looks
         }
+    }
+
+    /// The version and build, as the App Store would show them.
+    private static var version: String {
+        let info = Bundle.main.infoDictionary
+        let short = info?["CFBundleShortVersionString"] as? String ?? "–"
+        let build = info?["CFBundleVersion"] as? String ?? ""
+        return build.isEmpty ? short : "\(short) (\(build))"
     }
 
     /// Split-flap boards: an LED panel has no flaps to colour.

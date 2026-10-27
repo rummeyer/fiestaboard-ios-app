@@ -32,7 +32,7 @@
   &nbsp;
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/settings-dark.png">
-    <img src="docs/screenshots/settings-light.png" alt="The first start: FiestaBoard's address and the API token" width="200">
+    <img src="docs/screenshots/settings-light.png" alt="The first start: Connection, with FiestaBoard's address and the API token, and Demo, to add the demo board" width="200">
   </picture>
 </p>
 
