@@ -461,6 +461,9 @@ struct HomeView: View {
             if Demo.compose && composing == nil {
                 composing = ComposeRequest(text: "Kaffee ist fertig {red}")
             }
+            if Demo.live {
+                showingLive = true
+            }
             return
         }
         do {

@@ -53,8 +53,14 @@ final class Library {
     init() {
         let folder = URL.applicationSupportDirectory
         try? FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
-        url = folder.appending(path: "messages.json")
-        draftsURL = folder.appending(path: "drafts.json")
+        // The demo's own files, started afresh, so that it never mixes with the real ones.
+        let prefix = Demo.on ? "demo-" : ""
+        url = folder.appending(path: prefix + "messages.json")
+        draftsURL = folder.appending(path: prefix + "drafts.json")
+        if Demo.on {
+            try? FileManager.default.removeItem(at: url)
+            try? FileManager.default.removeItem(at: draftsURL)
+        }
         messages = Self.load(url) ?? []
         drafts = Self.load(draftsURL) ?? []
     }

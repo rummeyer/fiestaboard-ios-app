@@ -8,6 +8,11 @@ adheres to [semantic versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- README: what the app is for — a replacement for Vestaboard's own app, and
+  with it Vestaboard's cloud — screenshots, and how to reach FiestaBoard at
+  home, through a VPN, or from anywhere over HTTPS with Caddy; how to put it
+  on an iPhone.
+- `-demoLive` and `-demoSettings`, and sample content apart from the real history.
 - The look of Vestaboard's own app: the board live on a white card on top,
   large on tapping it; History, Favorites and Drafts as light cards with the
   ribbon for a favorite and a bar to copy, send again, share or delete;

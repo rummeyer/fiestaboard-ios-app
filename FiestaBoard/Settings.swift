@@ -13,12 +13,13 @@ final class Settings {
     var token: String
 
     init() {
-        address = UserDefaults.standard.string(forKey: Self.addressKey) ?? ""
-        token = Keychain.read(Self.tokenAccount) ?? ""
+        // The demo shows none of the real address or token.
+        address = Demo.on ? "" : UserDefaults.standard.string(forKey: Self.addressKey) ?? ""
+        token = Demo.on ? "" : Keychain.read(Self.tokenAccount) ?? ""
     }
 
     var isComplete: Bool {
-        Demo.on || (try? api()) != nil && !token.isEmpty
+        Demo.on && !Demo.settings || (try? api()) != nil && !token.isEmpty && !Demo.settings
     }
 
     func api() throws -> FiestaBoardAPI {

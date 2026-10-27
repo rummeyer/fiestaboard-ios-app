@@ -1,14 +1,20 @@
 import Foundation
 
 /// Sample content for looking at the app without a FiestaBoard, in a debug
-/// build started with `-demo`; `-demoCompose` opens the compose screen too.
+/// build started with `-demo`: `-demoCompose` opens the compose screen,
+/// `-demoLive` the board large, `-demoSettings` the first start.
 enum Demo {
     #if DEBUG
-    static let on = ProcessInfo.processInfo.arguments.contains("-demo")
-    static let compose = ProcessInfo.processInfo.arguments.contains("-demoCompose")
+    private static let arguments = ProcessInfo.processInfo.arguments
+    static let on = arguments.contains("-demo")
+    static let compose = arguments.contains("-demoCompose")
+    static let live = arguments.contains("-demoLive")
+    static let settings = arguments.contains("-demoSettings")
     #else
     static let on = false
     static let compose = false
+    static let live = false
+    static let settings = false
     #endif
 
     static let shape = BoardShape.note
@@ -31,6 +37,8 @@ enum Demo {
             return
         }
         library.seen(grid("ES IST VIERTEL\nNACH VIER"), boardName: "Vestaboard Note")
+        library.seen(grid("WOHNEN  22°C 48%\nSCHLAF  21°C 51%\nBALKON   9°C 86%"), boardName: "Vestaboard Note")
+        library.saveDraft("Geburtstag! {red}{orange}{yellow}")
         library.sent(grid("{orange}{orange} GUTEN {orange}{orange}\n   MORGEN!"), text: "{orange}{orange} GUTEN {orange}{orange}\n   MORGEN!", boardName: "Vestaboard Note")
         library.toggleFavorite(grid("{orange}{orange} GUTEN {orange}{orange}\n   MORGEN!"), boardName: "Vestaboard Note")
         library.sent(board.characters!, text: "KAFFEE IST FERTIG", boardName: "Vestaboard Note")
