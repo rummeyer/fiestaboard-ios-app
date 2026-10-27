@@ -2164,6 +2164,28 @@
           }
         }
       }
+    },
+    "Buy me a coffee": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spendieren Sie mir einen Kaffee"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Invítame a un café"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Offrez-moi un café"
+          }
+        }
+      }
     }
   },
   "version": "1.0"

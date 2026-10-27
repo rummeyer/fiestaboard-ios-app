@@ -71,6 +71,9 @@ struct SettingsView: View {
                     Link(destination: URL(string: "https://github.com/rummeyer/fiestaboard-ios-app")!) {
                         Label("Source code", lucide: "code")
                     }
+                    Link(destination: URL(string: "https://buymeacoffee.com/rummeyer")!) {
+                        Label("Buy me a coffee", lucide: "coffee")
+                    }
                 } header: {
                     Text("About")
                 }
