@@ -63,7 +63,7 @@ actor SampleClock: BoardService {
     private var characters = Layout.grid("  ES IST\n HALB ZWEI\n{green}{green}{green}{green}{green}{green}{green}{green}{green}{green}{green}{green}{green}", rows: 3, cols: 13).grid
 
     func boards() async throws -> [BoardSummary] {
-        [BoardSummary(id: Self.id, name: "Pixel Clock", rows: 3, cols: 13, isPrimary: false, paused: false)]
+        [BoardSummary(id: Self.id, name: "Pixel Clock", rows: 3, cols: 13, isPrimary: false, paused: false, deviceType: "panel")]
     }
 
     func board(_ id: String) async throws -> BoardDetail {

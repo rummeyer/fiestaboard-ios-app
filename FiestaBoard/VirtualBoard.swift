@@ -41,7 +41,7 @@ actor VirtualBoard: BoardService {
     }
 
     func boards() async throws -> [BoardSummary] {
-        [BoardSummary(id: Self.id, name: name, rows: Self.rows, cols: Self.cols, isPrimary: false, paused: false)]
+        [BoardSummary(id: Self.id, name: name, rows: Self.rows, cols: Self.cols, isPrimary: false, paused: false, deviceType: "note")]
     }
 
     func board(_ id: String) async throws -> BoardDetail {

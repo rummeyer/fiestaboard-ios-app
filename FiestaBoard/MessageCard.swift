@@ -4,22 +4,26 @@ import SwiftUI
 struct BoardShape: Equatable {
     var rows: Int
     var cols: Int
-    /// Code 62 is a heart on a Note, a degree sign on a Flagship.
+    /// Code 62: a heart, as on a Note, or a degree sign, as on a Flagship until 2026.
     var heart: Bool
+    /// A white board: white flaps, and its white and black tiles the other way round.
+    var white: Bool
     /// An LED panel — a pixel clock, a matrix — rather than split flaps.
     var led = false
 
     static let note = BoardShape(rows: 3, cols: 15, heart: true)
 
-    init(rows: Int, cols: Int, heart: Bool, led: Bool = false) {
+    init(rows: Int, cols: Int, heart: Bool, white: Bool? = nil, led: Bool = false) {
         self.rows = rows
         self.cols = cols
         self.heart = heart
+        self.white = white ?? heart
         self.led = led
     }
 
-    init(_ board: BoardDetail) {
-        self.init(rows: board.rows, cols: board.cols, heart: board.deviceType.hasPrefix("note"), led: board.deviceType == "panel")
+    init(_ board: BoardDetail, look: BoardLook) {
+        let led = board.deviceType == "panel"
+        self.init(rows: board.rows, cols: board.cols, heart: look.heart, white: look.white && !led, led: led)
     }
 }
 
@@ -37,6 +41,7 @@ struct CardAction: Identifiable {
 struct MessageCard<More: View>: View {
     let characters: [[Int]]
     let heart: Bool
+    var white = false
     var sender: String?
     var date: Date?
     var favorite: Bool?
@@ -84,7 +89,8 @@ struct MessageCard<More: View>: View {
                 cols: characters.first?.count ?? 0,
                 heart: heart,
                 plain: true,
-                ink: Style.ink
+                ink: Style.ink,
+                white: white
             )
             .frame(maxWidth: 250)
             .padding(.horizontal, 30)
@@ -132,9 +138,9 @@ struct MessageCard<More: View>: View {
 }
 
 extension MessageCard where More == EmptyView {
-    init(characters: [[Int]], heart: Bool, sender: String? = nil, date: Date? = nil, favorite: Bool? = nil,
+    init(characters: [[Int]], heart: Bool, white: Bool = false, sender: String? = nil, date: Date? = nil, favorite: Bool? = nil,
          onFavorite: @escaping () -> Void = {}, shareText: String? = nil, actions: [CardAction]) {
-        self.init(characters: characters, heart: heart, sender: sender, date: date, favorite: favorite,
+        self.init(characters: characters, heart: heart, white: white, sender: sender, date: date, favorite: favorite,
                   onFavorite: onFavorite, shareText: shareText, actions: actions, more: { EmptyView() })
     }
 }

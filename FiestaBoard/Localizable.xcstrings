@@ -1,2018 +1,2148 @@
 {
-  "sourceLanguage" : "en",
-  "strings" : {
-    "" : {
-
+  "sourceLanguage": "en",
+  "strings": {
+    "": {},
+    "%lld/%lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld/%lld"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld/%lld"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld/%lld"
+          }
+        }
+      }
+    },
+    "10.0.1.10:4420 or https://…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "10.0.1.10:4420 oder https://…"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "10.0.1.10:4420 o https://…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "10.0.1.10:4420 ou https://…"
+          }
+        }
+      }
+    },
+    "A board simulated in this app, beside your FiestaBoard's boards or without a FiestaBoard at all, to try everything out. It has its own history.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ein in dieser App simuliertes Board, neben den Boards Ihres FiestaBoard oder ganz ohne FiestaBoard, um alles auszuprobieren. Es hat einen eigenen Verlauf."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un tablero simulado en esta app, junto a los tableros de tu FiestaBoard o sin ningún FiestaBoard, para probarlo todo. Tiene su propio historial."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un tableau simulé dans cette app, à côté des tableaux de votre FiestaBoard ou sans FiestaBoard, pour tout essayer. Il a son propre historique."
+          }
+        }
+      }
+    },
+    "A message until %@, then the schedule again": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eine Nachricht bis %@, dann wieder der Zeitplan"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un mensaje hasta las %@, luego de nuevo la programación"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un message jusqu’à %@, puis de nouveau le planning"
+          }
+        }
+      }
+    },
+    "Add demo board": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo-Board hinzufügen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Añadir tablero de demostración"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter un tableau de démo"
+          }
+        }
+      }
+    },
+    "Add to Favorites": {
+      "extractionState": "stale",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zu Favoriten hinzufügen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Añadir a favoritos"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter aux favoris"
+          }
+        }
+      }
     },
-    "%lld/%lld" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld/%lld"
+    "All": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld/%lld"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todos"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld/%lld"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tous"
           }
         }
       }
     },
-    "10.0.1.10:4420 or https://…" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "10.0.1.10:4420 oder https://…"
+    "API token": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API-Token"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "10.0.1.10:4420 o https://…"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Token de API"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "10.0.1.10:4420 ou https://…"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jeton d’API"
           }
         }
       }
     },
-    "A board simulated in this app, beside your FiestaBoard's boards or without a FiestaBoard at all, to try everything out. It has its own history." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ein in dieser App simuliertes Board, neben den Boards Ihres FiestaBoard oder ganz ohne FiestaBoard, um alles auszuprobieren. Es hat einen eigenen Verlauf."
+    "Back to the schedule": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zurück zum Zeitplan"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Un tablero simulado en esta app, junto a los tableros de tu FiestaBoard o sin ningún FiestaBoard, para probarlo todo. Tiene su propio historial."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volver a la programación"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Un tableau simulé dans cette app, à côté des tableaux de votre FiestaBoard ou sans FiestaBoard, pour tout essayer. Il a son propre historique."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retour au planning"
           }
         }
       }
     },
-    "A message until %@, then the schedule again" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Eine Nachricht bis %@, dann wieder der Zeitplan"
+    "Black tile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schwarzes Feld"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Un mensaje hasta las %@, luego de nuevo la programación"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casilla negra"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Un message jusqu’à %@, puis de nouveau le planning"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Case noire"
           }
         }
       }
     },
-    "Add demo board" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Demo-Board hinzufügen"
+    "Blue tile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blaues Feld"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Añadir tablero de demostración"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casilla azul"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajouter un tableau de démo"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Case bleue"
           }
         }
       }
     },
-    "Add to Favorites" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zu Favoriten hinzufügen"
+    "Cancel": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abbrechen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Añadir a favoritos"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajouter aux favoris"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuler"
           }
         }
       }
     },
-    "All" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alle"
+    "Clear": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leeren"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Todos"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Borrar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tous"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Effacer"
           }
         }
       }
     },
-    "API token" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "API-Token"
+    "Close": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schließen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Token de API"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerrar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jeton d’API"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fermer"
           }
         }
       }
     },
-    "Back to the schedule" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zurück zum Zeitplan"
+    "Close the filter": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filter schließen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Volver a la programación"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerrar el filtro"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Retour au planning"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fermer le filtre"
           }
         }
       }
     },
-    "Black tile" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Schwarzes Feld"
+    "Connect": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verbinden"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Casilla negra"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conectar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Case noire"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se connecter"
           }
         }
       }
     },
-    "Blue tile" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Blaues Feld"
+    "Copy into a new message": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In neue Nachricht kopieren"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Casilla azul"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiar en un mensaje nuevo"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Case bleue"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copier dans un nouveau message"
           }
         }
       }
     },
-    "Cancel" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abbrechen"
+    "Delete": {
+      "extractionState": "stale",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Löschen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cancelar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Annuler"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supprimer"
           }
         }
       }
     },
-    "Clear" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Leeren"
+    "Demo": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Borrar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Effacer"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Démo"
           }
         }
       }
     },
-    "Close" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Schließen"
+    "Demo Board": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo-Board"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cerrar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tablero de demostración"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fermer"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tableau de démo"
           }
         }
       }
     },
-    "Close the filter" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Filter schließen"
+    "Draft": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entwurf"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cerrar el filtro"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Borrador"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fermer le filtre"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brouillon"
           }
         }
       }
     },
-    "Connect" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verbinden"
+    "Drafts": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entwürfe"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Conectar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Borradores"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se connecter"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brouillons"
           }
         }
       }
     },
-    "Copy into a new message" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "In neue Nachricht kopieren"
+    "Edit": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bearbeiten"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copiar en un mensaje nuevo"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copier dans un nouveau message"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modifier"
           }
         }
       }
     },
-    "Delete" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Löschen"
+    "Eraser": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Radierer"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Eliminar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Borrador"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Supprimer"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gomme"
           }
         }
       }
     },
-    "Demo" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Demo"
+    "Favorite": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Favorit"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Demo"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Favorito"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Démo"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Favori"
           }
         }
       }
     },
-    "Demo Board" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Demo-Board"
+    "Favorites": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Favoriten"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tablero de demostración"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Favoritos"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tableau de démo"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Favoris"
           }
         }
       }
     },
-    "Draft" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Entwurf"
+    "FiestaBoard's address: https:// from anywhere, or its address at home, such as 10.0.1.10:4420, on your network or through a VPN.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Adresse von FiestaBoard: https:// von überall, oder seine Adresse zu Hause wie 10.0.1.10:4420, im eigenen Netz oder über ein VPN."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Borrador"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La dirección de FiestaBoard: https:// desde cualquier lugar, o su dirección en casa, como 10.0.1.10:4420, en tu red o a través de una VPN."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Brouillon"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’adresse de FiestaBoard : https:// de partout, ou son adresse à la maison, comme 10.0.1.10:4420, sur votre réseau ou via un VPN."
           }
         }
       }
     },
-    "Drafts" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Entwürfe"
+    "Following the schedule": {
+      "extractionState": "stale",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Folgt dem Zeitplan"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Borradores"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sigue la programación"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Brouillons"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suit le planning"
           }
         }
       }
     },
-    "Edit" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bearbeiten"
+    "For 1 hour": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 Stunde lang"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Editar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durante 1 hora"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modifier"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pendant 1 heure"
           }
         }
       }
     },
-    "Eraser" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Radierer"
+    "For 4 hours": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "4 Stunden lang"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Borrador"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durante 4 horas"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gomme"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pendant 4 heures"
           }
         }
       }
     },
-    "Favorite" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Favorit"
+    "For 8 hours": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "8 Stunden lang"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Favorito"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durante 8 horas"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Favori"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pendant 8 heures"
           }
         }
       }
     },
-    "Favorites" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Favoriten"
+    "For 15 minutes": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "15 Minuten lang"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Favoritos"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durante 15 minutos"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Favoris"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pendant 15 minutes"
           }
         }
       }
     },
-    "FiestaBoard's address: https:// from anywhere, or its address at home, such as 10.0.1.10:4420, on your network or through a VPN." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Die Adresse von FiestaBoard: https:// von überall, oder seine Adresse zu Hause wie 10.0.1.10:4420, im eigenen Netz oder über ein VPN."
+    "Green tile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grünes Feld"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La dirección de FiestaBoard: https:// desde cualquier lugar, o su dirección en casa, como 10.0.1.10:4420, en tu red o a través de una VPN."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casilla verde"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "L’adresse de FiestaBoard : https:// de partout, ou son adresse à la maison, comme 10.0.1.10:4420, sur votre réseau ou via un VPN."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Case verte"
           }
         }
       }
     },
-    "Following the schedule" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Folgt dem Zeitplan"
+    "Held until the board's quiet time ends": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wird gehalten, bis die Ruhezeit des Boards endet"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sigue la programación"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En espera hasta que termine el tiempo de silencio del tablero"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suit le planning"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En attente jusqu’à la fin de la période de silence du tableau"
           }
         }
       }
     },
-    "For 1 hour" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1 Stunde lang"
+    "HELLO FROM\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HALLO VON\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Durante 1 hora"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HOLA DESDE\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pendant 1 heure"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BONJOUR DE\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}"
           }
         }
       }
     },
-    "For 4 hours" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "4 Stunden lang"
+    "History": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verlauf"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Durante 4 horas"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Historial"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pendant 4 heures"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Historique"
           }
         }
       }
     },
-    "For 8 hours" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "8 Stunden lang"
+    "Home": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Durante 8 horas"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inicio"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pendant 8 heures"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Accueil"
           }
         }
       }
     },
-    "For 15 minutes" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "15 Minuten lang"
+    "Just now": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gerade eben"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Durante 15 minutos"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Justo ahora"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pendant 15 minutes"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À l’instant"
           }
         }
       }
     },
-    "Green tile" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Grünes Feld"
+    "Letters": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buchstaben"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Casilla verde"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Letras"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Case verte"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lettres"
           }
         }
       }
     },
-    "Held until the board's quiet time ends" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wird gehalten, bis die Ruhezeit des Boards endet"
+    "Live on %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Live auf %@"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En espera hasta que termine el tiempo de silencio del tablero"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En directo en %@"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En attente jusqu’à la fin de la période de silence du tableau"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En direct sur %@"
           }
         }
       }
     },
-    "HELLO FROM\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "HALLO VON\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}"
+    "Live on %@. Show it large.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Live auf %@. Groß anzeigen."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "HOLA DESDE\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En directo en %@. Mostrar en grande."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "BONJOUR DE\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En direct sur %@. Afficher en grand."
           }
         }
       }
     },
-    "History" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verlauf"
+    "Made in FiestaBoard under Settings → AI. Kept in this iPhone's Keychain.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wird in FiestaBoard unter Einstellungen → KI erstellt. Bleibt im Schlüsselbund dieses iPhones."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Historial"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se crea en FiestaBoard en Configuración → IA. Se guarda en el llavero de este iPhone."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Historique"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se crée dans FiestaBoard sous Paramètres → IA. Conservé dans le trousseau de cet iPhone."
           }
         }
       }
     },
-    "Home" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Start"
+    "Mode": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modus"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inicio"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modo"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Accueil"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mode"
           }
         }
       }
     },
-    "Just now" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gerade eben"
+    "More": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mehr"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Justo ahora"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Más"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "À l’instant"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plus"
           }
         }
       }
     },
-    "Letters" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Buchstaben"
+    "More ways to send": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weitere Optionen zum Senden"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Letras"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Más opciones de envío"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lettres"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autres options d’envoi"
           }
         }
       }
     },
-    "Live on %@" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Live auf %@"
+    "No favorites yet": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noch keine Favoriten"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En directo en %@"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aún no hay favoritos"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En direct sur %@"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun favori pour le moment"
           }
         }
       }
     },
-    "Live on %@. Show it large." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Live auf %@. Groß anzeigen."
+    "No messages yet": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noch keine Nachrichten"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En directo en %@. Mostrar en grande."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aún no hay mensajes"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En direct sur %@. Afficher en grand."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun message pour le moment"
           }
         }
       }
     },
-    "Made in FiestaBoard under Settings → AI. Kept in this iPhone's Keychain." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wird in FiestaBoard unter Einstellungen → KI erstellt. Bleibt im Schlüsselbund dieses iPhones."
+    "Not a favorite": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kein Favorit"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se crea en FiestaBoard en Configuración → IA. Se guarda en el llavero de este iPhone."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No es favorito"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se crée dans FiestaBoard sous Paramètres → IA. Conservé dans le trousseau de cet iPhone."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pas un favori"
           }
         }
       }
     },
-    "Mode" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modus"
+    "Not sent": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nicht gesendet"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modo"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No enviado"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mode"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Non envoyé"
           }
         }
       }
     },
-    "More" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mehr"
+    "Oldest": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Älteste"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Más"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Más antiguos"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Plus"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plus anciens"
           }
         }
       }
     },
-    "More ways to send" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Weitere Optionen zum Senden"
+    "Orange tile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oranges Feld"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Más opciones de envío"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casilla naranja"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Autres options d’envoi"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Case orange"
           }
         }
       }
     },
-    "No favorites yet" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Noch keine Favoriten"
+    "Paused": {
+      "extractionState": "stale",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pausiert"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aún no hay favoritos"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En pausa"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aucun favori pour le moment"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En pause"
           }
         }
       }
     },
-    "No messages yet" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Noch keine Nachrichten"
+    "Recent": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neueste"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aún no hay mensajes"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recientes"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aucun message pour le moment"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Récents"
           }
         }
       }
     },
-    "Not a favorite" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kein Favorit"
+    "Red tile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rotes Feld"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No es favorito"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casilla roja"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pas un favori"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Case rouge"
           }
         }
       }
     },
-    "Not sent" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nicht gesendet"
+    "Redo": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wiederholen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No enviado"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rehacer"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Non envoyé"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rétablir"
           }
         }
       }
     },
-    "Oldest" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Älteste"
+    "Remove from Favorites": {
+      "extractionState": "stale",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aus Favoriten entfernen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Más antiguos"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quitar de favoritos"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Plus anciens"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retirer des favoris"
           }
         }
       }
     },
-    "Orange tile" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Oranges Feld"
+    "Save": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sichern"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Casilla naranja"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Case orange"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistrer"
           }
         }
       }
     },
-    "Paused" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pausiert"
+    "Save Draft": {
+      "extractionState": "stale",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entwurf sichern"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En pausa"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar borrador"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En pause"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistrer le brouillon"
           }
         }
       }
     },
-    "Recent" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Neueste"
+    "Send": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Senden"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recientes"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enviar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Récents"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Envoyer"
           }
         }
       }
     },
-    "Red tile" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rotes Feld"
+    "Send to the board": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "An das Board senden"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Casilla roja"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enviar al tablero"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Case rouge"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Envoyer au tableau"
           }
         }
       }
     },
-    "Redo" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wiederholen"
+    "Sent to %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "An %@ gesendet"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rehacer"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enviado a %@"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rétablir"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Envoyé à %@"
           }
         }
       }
     },
-    "Remove from Favorites" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aus Favoriten entfernen"
+    "Server": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Server"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quitar de favoritos"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Servidor"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Retirer des favoris"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Serveur"
           }
         }
       }
     },
-    "Save" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sichern"
+    "Settings": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einstellungen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Guardar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enregistrer"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réglages"
           }
         }
       }
     },
-    "Save Draft" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Entwurf sichern"
+    "Share": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teilen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Guardar borrador"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compartir"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enregistrer le brouillon"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Partager"
           }
         }
       }
     },
-    "Send" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Senden"
+    "Show": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anzeigen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enviar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Envoyer"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afficher"
           }
         }
       }
     },
-    "Send to the board" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "An das Board senden"
+    "Sort and filter": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sortieren und filtern"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enviar al tablero"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ordenar y filtrar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Envoyer au tableau"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trier et filtrer"
           }
         }
       }
     },
-    "Sent to %@" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "An %@ gesendet"
+    "Sort By": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sortieren nach"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enviado a %@"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ordenar por"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Envoyé à %@"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trier par"
           }
         }
       }
     },
-    "Server" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Server"
+    "Start": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Starten"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Servidor"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empezar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Serveur"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Commencer"
           }
         }
       }
     },
-    "Settings" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Einstellungen"
+    "Tap a tile, then type.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tippen Sie auf ein Feld und schreiben Sie los."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajustes"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toca una casilla y escribe."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Réglages"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Touchez une case, puis tapez."
           }
         }
       }
     },
-    "Share" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Teilen"
+    "Tap or drag across the tiles to paint them.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tippen oder wischen Sie über die Felder, um sie zu färben."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Compartir"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toca o arrastra sobre las casillas para pintarlas."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Partager"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Touchez ou glissez sur les cases pour les colorer."
           }
         }
       }
     },
-    "Show" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Anzeigen"
+    "Tap the ribbon on a message to keep it here.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tippen Sie auf das Lesezeichen einer Nachricht, um sie hier zu behalten."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toca el marcador de un mensaje para guardarlo aquí."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Afficher"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Touchez le marque-page d’un message pour le garder ici."
           }
         }
       }
     },
-    "Sort and filter" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sortieren und filtern"
+    "Text": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Text"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ordenar y filtrar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Texto"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Trier et filtrer"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Texte"
           }
         }
       }
     },
-    "Sort By" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sortieren nach"
+    "The board already shows this.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das Board zeigt das bereits."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ordenar por"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El tablero ya muestra esto."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Trier par"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le tableau affiche déjà ceci."
           }
         }
       }
     },
-    "Start" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Starten"
+    "The server answered %lld.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Der Server antwortete mit %lld."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Empezar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El servidor respondió %lld."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Commencer"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le serveur a répondu %lld."
           }
         }
       }
     },
-    "Tap a tile, then type." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tippen Sie auf ein Feld und schreiben Sie los."
+    "The server's answer could not be read.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Antwort des Servers ließ sich nicht lesen."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toca una casilla y escribe."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo leer la respuesta del servidor."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Touchez une case, puis tapez."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La réponse du serveur est illisible."
           }
         }
       }
     },
-    "Tap or drag across the tiles to paint them." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tippen oder wischen Sie über die Felder, um sie zu färben."
+    "The token was not accepted.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Der Token wurde nicht akzeptiert."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toca o arrastra sobre las casillas para pintarlas."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El token no fue aceptado."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Touchez ou glissez sur les cases pour les colorer."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le jeton n’a pas été accepté."
           }
         }
       }
     },
-    "Tap the ribbon on a message to keep it here." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tippen Sie auf das Lesezeichen einer Nachricht, um sie hier zu behalten."
+    "To keep a message for later, choose Save Draft next to Send while writing it.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Um eine Nachricht für später zu behalten, wählen Sie beim Schreiben „Entwurf sichern“ neben „Senden“."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toca el marcador de un mensaje para guardarlo aquí."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Para guardar un mensaje para más tarde, elige «Guardar borrador» junto a «Enviar» mientras lo escribes."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Touchez le marque-page d’un message pour le garder ici."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pour garder un message pour plus tard, choisissez « Enregistrer le brouillon » à côté d’« Envoyer » pendant que vous l’écrivez."
           }
         }
       }
     },
-    "Text" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Text"
+    "Token": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Token"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Texto"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Token"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Texte"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jeton"
           }
         }
       }
     },
-    "The board already shows this." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Das Board zeigt das bereits."
+    "Too long: the end is cut off": {
+      "extractionState": "stale",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zu lang: Das Ende wird abgeschnitten"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "El tablero ya muestra esto."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demasiado largo: se corta el final"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Le tableau affiche déjà ceci."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trop long : la fin est coupée"
           }
         }
       }
     },
-    "The server answered %lld." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Der Server antwortete mit %lld."
+    "Undo": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widerrufen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "El servidor respondió %lld."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deshacer"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Le serveur a répondu %lld."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuler"
           }
         }
       }
     },
-    "The server's answer could not be read." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Die Antwort des Servers ließ sich nicht lesen."
+    "Until %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bis %@"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No se pudo leer la respuesta del servidor."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hasta las %@"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La réponse du serveur est illisible."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jusqu’à %@"
           }
         }
       }
     },
-    "The token was not accepted." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Der Token wurde nicht akzeptiert."
+    "Until the next refresh": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bis zur nächsten Aktualisierung"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "El token no fue aceptado."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hasta la próxima actualización"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Le jeton n’a pas été accepté."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jusqu’à la prochaine actualisation"
           }
         }
       }
     },
-    "To keep a message for later, choose Save Draft next to Send while writing it." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Um eine Nachricht für später zu behalten, wählen Sie beim Schreiben „Entwurf sichern“ neben „Senden“."
+    "Use an https:// address, or http:// for one on your network or VPN: 10.x, 172.16–31.x, 192.168.x, 100.64–127.x or a .local name.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verwenden Sie eine https://-Adresse, oder http:// für eine in Ihrem Netz oder VPN: 10.x, 172.16–31.x, 192.168.x, 100.64–127.x oder einen .local-Namen."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Para guardar un mensaje para más tarde, elige «Guardar borrador» junto a «Enviar» mientras lo escribes."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usa una dirección https://, o http:// para una de tu red o VPN: 10.x, 172.16–31.x, 192.168.x, 100.64–127.x o un nombre .local."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pour garder un message pour plus tard, choisissez « Enregistrer le brouillon » à côté d’« Envoyer » pendant que vous l’écrivez."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilisez une adresse https://, ou http:// pour une adresse de votre réseau ou VPN : 10.x, 172.16–31.x, 192.168.x, 100.64–127.x ou un nom .local."
           }
         }
       }
     },
-    "Token" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Token"
+    "Violet tile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Violettes Feld"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Token"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casilla violeta"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jeton"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Case violette"
           }
         }
       }
     },
-    "Too long: the end is cut off" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zu lang: Das Ende wird abgeschnitten"
+    "Visual": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visuell"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Demasiado largo: se corta el final"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visual"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Trop long : la fin est coupée"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visuel"
           }
         }
       }
     },
-    "Undo" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widerrufen"
+    "What you send from here, and what the board shows while the app is open, comes here.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Was Sie von hier senden und was das Board zeigt, während die App offen ist, erscheint hier."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Deshacer"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aquí aparece lo que envías desde aquí y lo que muestra el tablero mientras la app está abierta."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Annuler"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ce que vous envoyez d’ici, et ce que le tableau affiche pendant que l’app est ouverte, apparaît ici."
           }
         }
       }
     },
-    "Until %@" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bis %@"
+    "White tile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weißes Feld"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hasta las %@"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casilla blanca"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jusqu’à %@"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Case blanche"
           }
         }
       }
     },
-    "Until the next refresh" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bis zur nächsten Aktualisierung"
+    "Write a message": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nachricht schreiben"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hasta la próxima actualización"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escribir un mensaje"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jusqu’à la prochaine actualisation"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Écrire un message"
           }
         }
       }
     },
-    "Use an https:// address, or http:// for one on your network or VPN: 10.x, 172.16–31.x, 192.168.x, 100.64–127.x or a .local name." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verwenden Sie eine https://-Adresse, oder http:// für eine in Ihrem Netz oder VPN: 10.x, 172.16–31.x, 192.168.x, 100.64–127.x oder einen .local-Namen."
+    "Yellow tile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gelbes Feld"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Usa una dirección https://, o http:// para una de tu red o VPN: 10.x, 172.16–31.x, 192.168.x, 100.64–127.x o un nombre .local."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casilla amarilla"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Utilisez une adresse https://, ou http:// pour une adresse de votre réseau ou VPN : 10.x, 172.16–31.x, 192.168.x, 100.64–127.x ou un nom .local."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Case jaune"
           }
         }
       }
     },
-    "Violet tile" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Violettes Feld"
+    "You": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ich"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Casilla violeta"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yo"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Case violette"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Moi"
           }
         }
       }
     },
-    "Visual" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Visuell"
+    "You have no drafts saved yet": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noch keine Entwürfe gesichert"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Visual"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aún no has guardado borradores"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Visuel"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun brouillon enregistré pour le moment"
           }
         }
       }
     },
-    "What you send from here, and what the board shows while the app is open, comes here." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Was Sie von hier senden und was das Board zeigt, während die App offen ist, erscheint hier."
+    "Boards": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Boards"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aquí aparece lo que envías desde aquí y lo que muestra el tablero mientras la app está abierta."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tableros"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ce que vous envoyez d’ici, et ce que le tableau affiche pendant que l’app est ouverte, apparaît ici."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tableaux"
           }
         }
       }
     },
-    "White tile" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Weißes Feld"
+    "As your boards really are: FiestaBoard does not tell the app. On a white board, the white and the black tile show the other way round.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "So, wie Ihre Boards wirklich sind: FiestaBoard teilt es der App nicht mit. Auf einem weißen Board erscheinen das weiße und das schwarze Feld vertauscht."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Casilla blanca"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Como son realmente tus tableros: FiestaBoard no se lo dice a la app. En un tablero blanco, las casillas blanca y negra se ven al revés."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Case blanche"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tels que sont vraiment vos tableaux : FiestaBoard ne le dit pas à l’app. Sur un tableau blanc, les cases blanche et noire s’affichent inversées."
           }
         }
       }
     },
-    "Write a message" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nachricht schreiben"
+    "White board": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weißes Board"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Escribir un mensaje"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tablero blanco"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Écrire un message"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tableau blanc"
           }
         }
       }
     },
-    "Yellow tile" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gelbes Feld"
+    "Code 62": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Code 62"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Casilla amarilla"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Código 62"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Case jaune"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Code 62"
           }
         }
       }
     },
-    "You" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ich"
+    "Heart": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Herz"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Yo"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Corazón"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Moi"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cœur"
           }
         }
       }
     },
-    "You have no drafts saved yet" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Noch keine Entwürfe gesichert"
+    "Degree sign": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gradzeichen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aún no has guardado borradores"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signo de grado"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aucun brouillon enregistré pour le moment"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signe degré"
           }
         }
       }
     }
   },
-  "version" : "1.0"
+  "version": "1.0"
 }

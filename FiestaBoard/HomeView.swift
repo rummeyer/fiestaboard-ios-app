@@ -36,7 +36,7 @@ struct HomeView: View {
     private let refreshSeconds = 15
 
     private var shape: BoardShape {
-        board.map(BoardShape.init) ?? .note
+        board.map { BoardShape($0, look: settings.look(for: $0.id, deviceType: $0.deviceType)) } ?? .note
     }
 
     private var boardName: String {
@@ -100,7 +100,7 @@ struct HomeView: View {
         }
         .sheet(isPresented: $showingSettings) {
             NavigationStack {
-                SettingsView()
+                SettingsView(boards: boards)
             }
             .environment(settings)
         }
@@ -156,7 +156,7 @@ struct HomeView: View {
                     .font(Style.font(.footnote))
                 if let board {
                     // Nothing sent to it yet: the board as it stands, empty, rather than waiting.
-                    BoardView(characters: board.characters ?? [], rows: board.rows, cols: board.cols, heart: shape.heart, white: shape.heart, led: shape.led)
+                    BoardView(characters: board.characters ?? [], rows: board.rows, cols: board.cols, heart: shape.heart, white: shape.white, led: shape.led)
                         .frame(maxWidth: 300)
                 } else {
                     ProgressView().frame(height: 36)
@@ -225,6 +225,7 @@ struct HomeView: View {
                     MessageCard(
                         characters: characters,
                         heart: shape.heart,
+                        white: shape.white,
                         sender: kept?.sender,
                         date: kept?.date,
                         favorite: library.isFavorite(characters),
@@ -442,6 +443,7 @@ struct HomeView: View {
         MessageCard(
             characters: message.characters,
             heart: shape.heart,
+            white: shape.white,
             sender: message.sender,
             date: message.date,
             favorite: library.isFavorite(message.characters),
@@ -481,6 +483,7 @@ struct HomeView: View {
             characters: draft.characters.map { Layout.fit($0, rows: shape.rows, cols: shape.cols) }
                 ?? Layout.grid(draft.text, rows: shape.rows, cols: shape.cols).grid,
             heart: shape.heart,
+            white: shape.white,
             sender: "Draft",
             date: draft.date,
             shareText: draft.text,

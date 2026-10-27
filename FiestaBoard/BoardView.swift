@@ -6,7 +6,8 @@ enum Flap: Equatable {
     case colour(Color)
 
     /// The board's character set, 0–71, as FiestaBoard documents it. Undefined codes are blank.
-    static func of(_ code: Int, heart: Bool) -> Flap {
+    /// On a white board white (69) and black (70) show the other way round, as FiestaBoard draws them.
+    static func of(_ code: Int, heart: Bool, white: Bool = false) -> Flap {
         switch code {
         case 1...26:
             return .character(String(UnicodeScalar(UInt8(64 + code))))
@@ -17,6 +18,10 @@ enum Flap: Equatable {
         case 62:
             // One flap, two faces: a Note shows a heart, a Flagship a degree sign.
             return .character(heart ? "❤" : "°")
+        case 69 where white:
+            return .colour(colours[70 - 63])
+        case 70 where white:
+            return .colour(colours[69 - 63])
         case 63...71:
             return .colour(colours[code - 63])
         default:
@@ -82,7 +87,7 @@ struct BoardView: View {
             ForEach(0..<rows, id: \.self) { row in
                 GridRow {
                     ForEach(0..<cols, id: \.self) { col in
-                        tile(Flap.of(code(row, col), heart: heart))
+                        tile(Flap.of(code(row, col), heart: heart, white: white))
                     }
                 }
             }

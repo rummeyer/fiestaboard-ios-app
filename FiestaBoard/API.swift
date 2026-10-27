@@ -8,6 +8,8 @@ struct BoardSummary: Decodable, Identifiable, Hashable, Sendable {
     let cols: Int
     let isPrimary: Bool
     let paused: Bool
+    /// "flagship", "note", "note_array" or "panel"; none for one from before it was read.
+    var deviceType: String?
 }
 
 private struct BoardList: Decodable {

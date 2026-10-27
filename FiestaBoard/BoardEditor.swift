@@ -35,7 +35,7 @@ struct BoardEditor: View {
     @State private var stroking = false
 
     var body: some View {
-        BoardView(characters: grid, rows: shape.rows, cols: shape.cols, heart: shape.heart, white: shape.heart, led: shape.led)
+        BoardView(characters: grid, rows: shape.rows, cols: shape.cols, heart: shape.heart, white: shape.white, led: shape.led)
             .overlay {
                 GeometryReader { geometry in
                     let size = tileSize(in: geometry.size)

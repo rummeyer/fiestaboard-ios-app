@@ -28,6 +28,10 @@ adheres to [semantic versioning](https://semver.org/spec/v2.0.0.html).
   colour or the eraser by tapping or dragging, letters typed from the tile
   chosen, undo and redo, sent tile for tile. Text carries over both ways;
   visual drafts and messages copied from what the board showed open in it.
+- How each board looks, in Settings: a white board or a black one, and
+  whether its code 62 is a heart or a degree sign — FiestaBoard's API does
+  not say. On a white board the white and black tiles show the other way
+  round, as FiestaBoard draws them, and the colour tiles to put in follow.
 - Settings for FiestaBoard's address and an API token, tried before they are
   kept; the token in the Keychain. https:// from anywhere, or plain http://
   to an address on the home network or reached through a VPN — private IPv4

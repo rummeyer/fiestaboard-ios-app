@@ -10,6 +10,7 @@ final class Settings {
     private static let addressKey = "serverAddress"
     private static let tokenAccount = "apiToken"
     private static let demoKey = "demoBoard"
+    private static let looksKey = "boardLooks"
 
     var address: String
     var token: String
@@ -20,12 +21,26 @@ final class Settings {
         }
     }
 
+    /// How each board looks, as set in the app: FiestaBoard does not say. By board id.
+    var looks: [String: BoardLook] {
+        didSet {
+            UserDefaults.standard.set(try? JSONEncoder().encode(looks), forKey: Self.looksKey)
+        }
+    }
+
+    /// A board's look: as set, else as its kind mostly is.
+    func look(for board: String, deviceType: String?) -> BoardLook {
+        looks[board] ?? BoardLook.usual(for: deviceType)
+    }
+
     init() {
         // The demo shows none of the real address or token.
         address = Demo.on ? "" : UserDefaults.standard.string(forKey: Self.addressKey) ?? ""
         token = Demo.on ? "" : Keychain.read(Self.tokenAccount) ?? ""
         // The sample screenshots are on the demo board alone, but their first start shows it off.
         demoBoard = Demo.on ? !Demo.settings : UserDefaults.standard.bool(forKey: Self.demoKey)
+        looks = Demo.on ? [:] : UserDefaults.standard.data(forKey: Self.looksKey)
+            .flatMap { try? JSONDecoder().decode([String: BoardLook].self, from: $0) } ?? [:]
     }
 
     /// A FiestaBoard to talk to: an address that will do, and a token.
@@ -61,6 +76,21 @@ final class Settings {
         self.token = token.trimmingCharacters(in: .whitespacesAndNewlines)
         UserDefaults.standard.set(self.address, forKey: Self.addressKey)
         Keychain.write(self.token, for: Self.tokenAccount)
+    }
+}
+
+/// What FiestaBoard knows of a board but does not tell through its API: the
+/// colour of its flaps, and what its code 62 flap shows.
+struct BoardLook: Codable, Equatable, Sendable {
+    /// White flaps, on which white (69) and black (70) tiles show the other way round.
+    var white: Bool
+    /// Code 62 a heart; else a degree sign.
+    var heart: Bool
+
+    /// A Note white with a heart, a Flagship black with a degree sign, as they mostly are.
+    static func usual(for deviceType: String?) -> BoardLook {
+        let note = deviceType?.hasPrefix("note") ?? false
+        return BoardLook(white: note, heart: note)
     }
 }
 

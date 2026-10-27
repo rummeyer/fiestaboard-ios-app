@@ -56,6 +56,8 @@
 
 **All your boards.** Every display your FiestaBoard drives — a split-flap board, an LED panel such as a pixel clock — each drawn as it looks, picked in the row of boards on top. History is per board; Favorites and Drafts are the same whichever board is chosen, and go to any of them, laid out anew for its size.
 
+**White or black.** FiestaBoard's API does not say what colour a board is, or whether its code 62 flap is a heart or a degree sign, so you say it in Settings, board by board. A Note starts out white with a heart, a Flagship black with a degree sign. On a white board the white and black tiles show the other way round — a black tile is white there — and the app draws them as they look, as FiestaBoard does.
+
 **A demo board.** Without a FiestaBoard, or to try something out: **Add demo board** in Settings, and a board simulated in the app joins yours — or stands alone, with no FiestaBoard at all. It works as a real one does: it takes messages as FiestaBoard does, keeps what it shows, and has a history of its own.
 
 **In your language.** English, German, French and Spanish, as the iPhone is set — or for this app alone under Settings → FiestaBoard → Language. It calls FiestaBoard's menus by the names FiestaBoard gives them in that language.

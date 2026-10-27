@@ -156,7 +156,7 @@ struct ComposeView: View {
     @ViewBuilder
     private var textEditor: some View {
         let laid = Layout.grid(text, rows: shape.rows, cols: shape.cols)
-        BoardView(characters: laid.grid, rows: shape.rows, cols: shape.cols, heart: shape.heart, white: shape.heart, led: shape.led)
+        BoardView(characters: laid.grid, rows: shape.rows, cols: shape.cols, heart: shape.heart, white: shape.white, led: shape.led)
             .padding(.horizontal)
             .padding(.bottom, 8)
             // Its full size, the keyboard up or not: the text below gives way.
@@ -395,7 +395,9 @@ struct ComposeView: View {
     /// The colours: as text, each puts a tile in; tile by tile, the one chosen paints, beside the eraser and the letters.
     private var paletteBar: some View {
         HStack(spacing: mode == .visual ? 6 : 10) {
-            ForEach(Self.palette, id: \.0) { name, colour, spoken in
+            ForEach(Self.palette, id: \.0) { shown, colour, spoken in
+                // The tile that shows this colour: on a white board, white and black the other way round.
+                let name = shape.white ? (["white": "black", "black": "white"][shown] ?? shown) : shown
                 let code = Layout.colours[name] ?? 0
                 Button {
                     switch mode {
