@@ -160,7 +160,7 @@ All of them run on the demo board and a sample LED clock beside it, with sample 
 
 ### Tips
 
-Settings → About offers three coffees as tips, through In-App Purchase: consumables that unlock nothing. Their product IDs are `de.rummeyer.fiestaboard.tip.small`, `.medium` and `.large`; in App Store Connect they are created as consumable in-app purchases with these IDs. `FiestaBoard.storekit` has them for Xcode, chosen in the shared scheme, so that a run from Xcode shows and buys them without App Store Connect. Elsewhere, until the App Store has them, Settings shows no tips at all.
+Settings → Donation offers two coffees as tips, through In-App Purchase: consumables that unlock nothing. Their product IDs are `de.rummeyer.fiestaboard.tip.small` and `.medium`; in App Store Connect they are created as consumable in-app purchases with these IDs. `FiestaBoard.storekit` has them for Xcode, chosen in the shared scheme, so that a run from Xcode shows and buys them without App Store Connect. Elsewhere, until the App Store has them, Settings shows no tips at all.
 
 ### Versions
 

@@ -61,36 +61,6 @@
       "productID" : "de.rummeyer.fiestaboard.tip.medium",
       "referenceName" : "Tip medium",
       "type" : "Consumable"
-    },
-    {
-      "displayPrice" : "9.99",
-      "familyShareable" : false,
-      "internalID" : "6740000003",
-      "localizations" : [
-        {
-          "description" : "A thank-you for the app.",
-          "displayName" : "Coffee and cake",
-          "locale" : "en_US"
-        },
-        {
-          "description" : "Ein Dankeschön für die App.",
-          "displayName" : "Kaffee und Kuchen",
-          "locale" : "de_DE"
-        },
-        {
-          "description" : "Un merci pour l’app.",
-          "displayName" : "Café et gâteau",
-          "locale" : "fr_FR"
-        },
-        {
-          "description" : "Un agradecimiento por la app.",
-          "displayName" : "Café y pastel",
-          "locale" : "es_ES"
-        }
-      ],
-      "productID" : "de.rummeyer.fiestaboard.tip.large",
-      "referenceName" : "Tip large",
-      "type" : "Consumable"
     }
   ],
   "settings" : {

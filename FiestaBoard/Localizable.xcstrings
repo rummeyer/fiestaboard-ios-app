@@ -1,2243 +1,2263 @@
 {
-  "sourceLanguage" : "en",
-  "strings" : {
-    "" : {
-
-    },
-    "%lld/%lld" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld/%lld"
+  "sourceLanguage": "en",
+  "strings": {
+    "": {},
+    "%lld/%lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld/%lld"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld/%lld"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld/%lld"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld/%lld"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld/%lld"
           }
         }
       }
     },
-    "A message until %@, then the schedule again" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Eine Nachricht bis %@, dann wieder der Zeitplan"
+    "A message until %@, then the schedule again": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eine Nachricht bis %@, dann wieder der Zeitplan"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Un mensaje hasta las %@, luego de nuevo la programación"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un mensaje hasta las %@, luego de nuevo la programación"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Un message jusqu’à %@, puis de nouveau le planning"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un message jusqu’à %@, puis de nouveau le planning"
           }
         }
       }
     },
-    "About" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Über"
+    "About": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Über"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Acerca de"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acerca de"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "À propos"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À propos"
           }
         }
       }
     },
-    "Add demo board" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Demo-Board hinzufügen"
+    "Add demo board": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo-Board hinzufügen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Añadir tablero de demostración"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Añadir tablero de demostración"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajouter un tableau de démo"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter un tableau de démo"
           }
         }
       }
     },
-    "Add to Favorites" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zu Favoriten hinzufügen"
+    "Add to Favorites": {
+      "extractionState": "stale",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zu Favoriten hinzufügen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Añadir a favoritos"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Añadir a favoritos"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajouter aux favoris"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter aux favoris"
           }
         }
       }
     },
-    "All" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alle"
+    "All": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Todos"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todos"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tous"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tous"
           }
         }
       }
     },
-    "API token" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "API-Token"
+    "API token": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API-Token"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Token de API"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Token de API"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jeton d’API"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jeton d’API"
           }
         }
       }
     },
-    "Back to the schedule" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zurück zum Zeitplan"
+    "Back to the schedule": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zurück zum Zeitplan"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Volver a la programación"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volver a la programación"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Retour au planning"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retour au planning"
           }
         }
       }
     },
-    "Black" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Schwarz"
+    "Black": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schwarz"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Negro"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Negro"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Noir"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noir"
           }
         }
       }
     },
-    "Black tile" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Schwarzes Feld"
+    "Black tile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schwarzes Feld"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Casilla negra"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casilla negra"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Case noire"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Case noire"
           }
         }
       }
     },
-    "Blue tile" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Blaues Feld"
+    "Blue tile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blaues Feld"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Casilla azul"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casilla azul"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Case bleue"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Case bleue"
           }
         }
       }
     },
-    "Boards" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Boards"
+    "Boards": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Boards"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tableros"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tableros"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tableaux"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tableaux"
           }
         }
       }
     },
-    "Cancel" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abbrechen"
+    "Cancel": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abbrechen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cancelar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Annuler"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuler"
           }
         }
       }
     },
-    "Clear" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Leeren"
+    "Clear": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leeren"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Borrar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Borrar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Effacer"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Effacer"
           }
         }
       }
     },
-    "Close" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Schließen"
+    "Close": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schließen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cerrar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerrar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fermer"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fermer"
           }
         }
       }
     },
-    "Close the filter" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Filter schließen"
+    "Close the filter": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filter schließen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cerrar el filtro"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerrar el filtro"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fermer le filtre"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fermer le filtre"
           }
         }
       }
     },
-    "Code 62" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Code 62"
+    "Code 62": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Code 62"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Código 62"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Código 62"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Code 62"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Code 62"
           }
         }
       }
     },
-    "Connect" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verbinden"
+    "Connect": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verbinden"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Conectar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conectar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se connecter"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se connecter"
           }
         }
       }
     },
-    "Connection" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verbindung"
+    "Connection": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verbindung"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Conexión"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conexión"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Connexion"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connexion"
           }
         }
       }
     },
-    "Copy into a new message" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "In neue Nachricht kopieren"
+    "Copy into a new message": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In neue Nachricht kopieren"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copiar en un mensaje nuevo"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiar en un mensaje nuevo"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copier dans un nouveau message"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copier dans un nouveau message"
           }
         }
       }
     },
-    "Degree sign" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gradzeichen"
+    "Degree sign": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gradzeichen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Signo de grado"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signo de grado"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Signe degré"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signe degré"
           }
         }
       }
     },
-    "Delete" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Löschen"
+    "Delete": {
+      "extractionState": "stale",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Löschen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Eliminar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Supprimer"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supprimer"
           }
         }
       }
     },
-    "Demo" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Demo"
+    "Demo": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Demo"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Démo"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Démo"
           }
         }
       }
     },
-    "Demo Board" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Demo-Board"
+    "Demo Board": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo-Board"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tablero de demostración"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tablero de demostración"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tableau de démo"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tableau de démo"
           }
         }
       }
     },
-    "Draft" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Entwurf"
+    "Draft": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entwurf"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Borrador"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Borrador"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Brouillon"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brouillon"
           }
         }
       }
     },
-    "Drafts" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Entwürfe"
+    "Drafts": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entwürfe"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Borradores"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Borradores"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Brouillons"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brouillons"
           }
         }
       }
     },
-    "Edit" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bearbeiten"
+    "Edit": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bearbeiten"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Editar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modifier"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modifier"
           }
         }
       }
     },
-    "Eraser" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Radierer"
+    "Eraser": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Radierer"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Borrador"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Borrador"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gomme"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gomme"
           }
         }
       }
     },
-    "Favorite" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Favorit"
+    "Favorite": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Favorit"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Favorito"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Favorito"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Favori"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Favori"
           }
         }
       }
     },
-    "Favorites" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Favoriten"
+    "Favorites": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Favoriten"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Favoritos"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Favoritos"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Favoris"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Favoris"
           }
         }
       }
     },
-    "Following the schedule" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Folgt dem Zeitplan"
+    "Following the schedule": {
+      "extractionState": "stale",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Folgt dem Zeitplan"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sigue la programación"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sigue la programación"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suit le planning"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suit le planning"
           }
         }
       }
     },
-    "For 1 hour" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1 Stunde lang"
+    "For 1 hour": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 Stunde lang"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Durante 1 hora"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durante 1 hora"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pendant 1 heure"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pendant 1 heure"
           }
         }
       }
     },
-    "For 4 hours" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "4 Stunden lang"
+    "For 4 hours": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "4 Stunden lang"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Durante 4 horas"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durante 4 horas"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pendant 4 heures"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pendant 4 heures"
           }
         }
       }
     },
-    "For 8 hours" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "8 Stunden lang"
+    "For 8 hours": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "8 Stunden lang"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Durante 8 horas"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durante 8 horas"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pendant 8 heures"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pendant 8 heures"
           }
         }
       }
     },
-    "For 15 minutes" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "15 Minuten lang"
+    "For 15 minutes": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "15 Minuten lang"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Durante 15 minutos"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durante 15 minutos"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pendant 15 minutes"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pendant 15 minutes"
           }
         }
       }
     },
-    "Green tile" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Grünes Feld"
+    "Green tile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grünes Feld"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Casilla verde"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casilla verde"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Case verte"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Case verte"
           }
         }
       }
     },
-    "Heart" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Herz"
+    "Heart": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Herz"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Corazón"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Corazón"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cœur"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cœur"
           }
         }
       }
     },
-    "Held until the board's quiet time ends" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wird gehalten, bis die Ruhezeit des Boards endet"
+    "Held until the board's quiet time ends": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wird gehalten, bis die Ruhezeit des Boards endet"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En espera hasta que termine el tiempo de silencio del tablero"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En espera hasta que termine el tiempo de silencio del tablero"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En attente jusqu’à la fin de la période de silence du tableau"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En attente jusqu’à la fin de la période de silence du tableau"
           }
         }
       }
     },
-    "HELLO FROM\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "HALLO VON\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}"
+    "HELLO FROM\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HALLO VON\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "HOLA DESDE\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HOLA DESDE\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "BONJOUR DE\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BONJOUR DE\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}"
           }
         }
       }
     },
-    "History" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verlauf"
+    "History": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verlauf"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Historial"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Historial"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Historique"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Historique"
           }
         }
       }
     },
-    "Home" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Start"
+    "Home": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inicio"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inicio"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Accueil"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Accueil"
           }
         }
       }
     },
-    "https://… or 10.0.1.10:4420" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://… oder 10.0.1.10:4420"
+    "https://… or 10.0.1.10:4420": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://… oder 10.0.1.10:4420"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://… o 10.0.1.10:4420"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://… o 10.0.1.10:4420"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://… ou 10.0.1.10:4420"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://… ou 10.0.1.10:4420"
           }
         }
       }
     },
-    "Just now" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gerade eben"
+    "Just now": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gerade eben"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Justo ahora"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Justo ahora"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "À l’instant"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À l’instant"
           }
         }
       }
     },
-    "Letters" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Buchstaben"
+    "Letters": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buchstaben"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Letras"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Letras"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lettres"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lettres"
           }
         }
       }
     },
-    "Live on %@" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Live auf %@"
+    "Live on %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Live auf %@"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En directo en %@"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En directo en %@"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En direct sur %@"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En direct sur %@"
           }
         }
       }
     },
-    "Live on %@. Show it large." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Live auf %@. Groß anzeigen."
+    "Live on %@. Show it large.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Live auf %@. Groß anzeigen."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En directo en %@. Mostrar en grande."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En directo en %@. Mostrar en grande."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En direct sur %@. Afficher en grand."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En direct sur %@. Afficher en grand."
           }
         }
       }
     },
-    "Mode" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modus"
+    "Mode": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modus"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modo"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modo"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mode"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mode"
           }
         }
       }
     },
-    "More" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mehr"
+    "More": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mehr"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Más"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Más"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Plus"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plus"
           }
         }
       }
     },
-    "More ways to send" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Weitere Optionen zum Senden"
+    "More ways to send": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weitere Optionen zum Senden"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Más opciones de envío"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Más opciones de envío"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Autres options d’envoi"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autres options d’envoi"
           }
         }
       }
     },
-    "No favorites yet" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Noch keine Favoriten"
+    "No favorites yet": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noch keine Favoriten"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aún no hay favoritos"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aún no hay favoritos"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aucun favori pour le moment"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun favori pour le moment"
           }
         }
       }
     },
-    "No messages yet" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Noch keine Nachrichten"
+    "No messages yet": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noch keine Nachrichten"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aún no hay mensajes"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aún no hay mensajes"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aucun message pour le moment"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun message pour le moment"
           }
         }
       }
     },
-    "Not a favorite" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kein Favorit"
+    "Not a favorite": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kein Favorit"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No es favorito"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No es favorito"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pas un favori"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pas un favori"
           }
         }
       }
     },
-    "Not sent" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nicht gesendet"
+    "Not sent": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nicht gesendet"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No enviado"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No enviado"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Non envoyé"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Non envoyé"
           }
         }
       }
+    },
+    "OK": {
+      "comment": "The label of a button that dismisses a thank-you alert.",
+      "isCommentAutoGenerated": true
     },
-    "OK" : {
-      "comment" : "The label of a button that dismisses a thank-you alert.",
-      "isCommentAutoGenerated" : true
+    "Oldest": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Älteste"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Más antiguos"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plus anciens"
+          }
+        }
+      }
     },
-    "Oldest" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Älteste"
+    "Orange tile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oranges Feld"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Más antiguos"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casilla naranja"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Plus anciens"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Case orange"
           }
         }
       }
     },
-    "Orange tile" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Oranges Feld"
+    "Paused": {
+      "extractionState": "stale",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pausiert"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Casilla naranja"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En pausa"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Case orange"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En pause"
           }
         }
       }
     },
-    "Paused" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pausiert"
+    "Recent": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neueste"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En pausa"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recientes"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En pause"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Récents"
           }
         }
       }
     },
-    "Recent" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Neueste"
+    "Red tile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rotes Feld"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recientes"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casilla roja"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Récents"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Case rouge"
           }
         }
       }
     },
-    "Red tile" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rotes Feld"
+    "Redo": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wiederholen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Casilla roja"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rehacer"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Case rouge"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rétablir"
           }
         }
       }
     },
-    "Redo" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wiederholen"
+    "Remove from Favorites": {
+      "extractionState": "stale",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aus Favoriten entfernen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rehacer"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quitar de favoritos"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rétablir"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retirer des favoris"
           }
         }
       }
     },
-    "Remove from Favorites" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aus Favoriten entfernen"
+    "Required": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erforderlich"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quitar de favoritos"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obligatorio"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Retirer des favoris"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obligatoire"
           }
         }
       }
     },
-    "Required" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Erforderlich"
+    "Save": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sichern"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obligatorio"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obligatoire"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistrer"
           }
         }
       }
     },
-    "Save" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sichern"
+    "Save Draft": {
+      "extractionState": "stale",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entwurf sichern"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Guardar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar borrador"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enregistrer"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistrer le brouillon"
           }
         }
       }
     },
-    "Save Draft" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Entwurf sichern"
+    "Send": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Senden"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Guardar borrador"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enviar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enregistrer le brouillon"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Envoyer"
           }
         }
       }
     },
-    "Send" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Senden"
+    "Send to the board": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "An das Board senden"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enviar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enviar al tablero"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Envoyer"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Envoyer au tableau"
           }
         }
       }
     },
-    "Send to the board" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "An das Board senden"
+    "Sent to %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "An %@ gesendet"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enviar al tablero"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enviado a %@"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Envoyer au tableau"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Envoyé à %@"
           }
         }
       }
     },
-    "Sent to %@" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "An %@ gesendet"
+    "Server": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Server"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enviado a %@"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Servidor"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Envoyé à %@"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Serveur"
           }
         }
       }
     },
-    "Server" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Server"
+    "Settings": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einstellungen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Servidor"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Serveur"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réglages"
           }
         }
       }
     },
-    "Settings" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Einstellungen"
+    "Share": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teilen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajustes"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compartir"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Réglages"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Partager"
           }
         }
       }
     },
-    "Share" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Teilen"
+    "Show": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anzeigen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Compartir"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Partager"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afficher"
           }
         }
       }
     },
-    "Show" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Anzeigen"
+    "Sort and filter": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sortieren und filtern"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ordenar y filtrar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Afficher"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trier et filtrer"
           }
         }
       }
     },
-    "Sort and filter" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sortieren und filtern"
+    "Sort By": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sortieren nach"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ordenar y filtrar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ordenar por"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Trier et filtrer"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trier par"
           }
         }
       }
     },
-    "Sort By" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sortieren nach"
+    "Start": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Starten"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ordenar por"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empezar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Trier par"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Commencer"
           }
         }
       }
     },
-    "Start" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Starten"
+    "Tap a tile, then type.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tippen Sie auf ein Feld und schreiben Sie los."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Empezar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toca una casilla y escribe."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Commencer"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Touchez une case, puis tapez."
           }
         }
       }
     },
-    "Tap a tile, then type." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tippen Sie auf ein Feld und schreiben Sie los."
+    "Tap or drag across the tiles to paint them.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tippen oder wischen Sie über die Felder, um sie zu färben."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toca una casilla y escribe."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toca o arrastra sobre las casillas para pintarlas."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Touchez une case, puis tapez."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Touchez ou glissez sur les cases pour les colorer."
           }
         }
       }
     },
-    "Tap or drag across the tiles to paint them." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tippen oder wischen Sie über die Felder, um sie zu färben."
+    "Tap the ribbon on a message to keep it here.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tippen Sie auf das Lesezeichen einer Nachricht, um sie hier zu behalten."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toca o arrastra sobre las casillas para pintarlas."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toca el marcador de un mensaje para guardarlo aquí."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Touchez ou glissez sur les cases pour les colorer."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Touchez le marque-page d’un message pour le garder ici."
           }
         }
       }
     },
-    "Tap the ribbon on a message to keep it here." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tippen Sie auf das Lesezeichen einer Nachricht, um sie hier zu behalten."
+    "Text": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Text"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toca el marcador de un mensaje para guardarlo aquí."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Texto"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Touchez le marque-page d’un message pour le garder ici."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Texte"
           }
         }
       }
     },
-    "Text" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Text"
+    "Thank you!": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vielen Dank!"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Texto"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¡Gracias!"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Texte"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Merci !"
           }
         }
       }
     },
-    "Thank you!" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vielen Dank!"
+    "The App Store could not confirm the purchase.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Der App Store konnte den Kauf nicht bestätigen."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¡Gracias!"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El App Store no pudo confirmar la compra."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Merci !"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’App Store n’a pas pu confirmer l’achat."
           }
         }
       }
     },
-    "The App Store could not confirm the purchase." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Der App Store konnte den Kauf nicht bestätigen."
+    "The board already shows this.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das Board zeigt das bereits."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "El App Store no pudo confirmar la compra."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El tablero ya muestra esto."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "L’App Store n’a pas pu confirmer l’achat."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le tableau affiche déjà ceci."
           }
         }
       }
     },
-    "The board already shows this." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Das Board zeigt das bereits."
+    "The server answered %lld.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Der Server antwortete mit %lld."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "El tablero ya muestra esto."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El servidor respondió %lld."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Le tableau affiche déjà ceci."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le serveur a répondu %lld."
           }
         }
       }
     },
-    "The server answered %lld." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Der Server antwortete mit %lld."
+    "The server's answer could not be read.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Antwort des Servers ließ sich nicht lesen."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "El servidor respondió %lld."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo leer la respuesta del servidor."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Le serveur a répondu %lld."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La réponse du serveur est illisible."
           }
         }
       }
     },
-    "The server's answer could not be read." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Die Antwort des Servers ließ sich nicht lesen."
+    "The token was not accepted.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Der Token wurde nicht akzeptiert."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No se pudo leer la respuesta del servidor."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El token no fue aceptado."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La réponse du serveur est illisible."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le jeton n’a pas été accepté."
           }
         }
       }
     },
-    "The token was not accepted." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Der Token wurde nicht akzeptiert."
+    "To keep a message for later, choose Save Draft next to Send while writing it.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Um eine Nachricht für später zu behalten, wählen Sie beim Schreiben „Entwurf sichern“ neben „Senden“."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "El token no fue aceptado."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Para guardar un mensaje para más tarde, elige «Guardar borrador» junto a «Enviar» mientras lo escribes."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Le jeton n’a pas été accepté."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pour garder un message pour plus tard, choisissez « Enregistrer le brouillon » à côté d’« Envoyer » pendant que vous l’écrivez."
           }
         }
       }
     },
-    "To keep a message for later, choose Save Draft next to Send while writing it." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Um eine Nachricht für später zu behalten, wählen Sie beim Schreiben „Entwurf sichern“ neben „Senden“."
+    "Token": {
+      "extractionState": "stale",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Token"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Para guardar un mensaje para más tarde, elige «Guardar borrador» junto a «Enviar» mientras lo escribes."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Token"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pour garder un message pour plus tard, choisissez « Enregistrer le brouillon » à côté d’« Envoyer » pendant que vous l’écrivez."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jeton"
           }
         }
       }
     },
-    "Token" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Token"
+    "Too long: the end is cut off": {
+      "extractionState": "stale",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zu lang: Das Ende wird abgeschnitten"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Token"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demasiado largo: se corta el final"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jeton"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trop long : la fin est coupée"
           }
         }
       }
     },
-    "Too long: the end is cut off" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zu lang: Das Ende wird abgeschnitten"
+    "Undo": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widerrufen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Demasiado largo: se corta el final"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deshacer"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Trop long : la fin est coupée"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuler"
           }
         }
       }
     },
-    "Undo" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widerrufen"
+    "Until %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bis %@"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Deshacer"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hasta las %@"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Annuler"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jusqu’à %@"
           }
         }
       }
     },
-    "Until %@" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bis %@"
+    "Until the next refresh": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bis zur nächsten Aktualisierung"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hasta las %@"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hasta la próxima actualización"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jusqu’à %@"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jusqu’à la prochaine actualisation"
           }
         }
       }
     },
-    "Until the next refresh" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bis zur nächsten Aktualisierung"
+    "Use an https:// address, or http:// for one on your network or VPN: 10.x, 172.16–31.x, 192.168.x, 100.64–127.x or a .local name.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verwenden Sie eine https://-Adresse, oder http:// für eine in Ihrem Netz oder VPN: 10.x, 172.16–31.x, 192.168.x, 100.64–127.x oder einen .local-Namen."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hasta la próxima actualización"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usa una dirección https://, o http:// para una de tu red o VPN: 10.x, 172.16–31.x, 192.168.x, 100.64–127.x o un nombre .local."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jusqu’à la prochaine actualisation"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilisez une adresse https://, ou http:// pour une adresse de votre réseau ou VPN : 10.x, 172.16–31.x, 192.168.x, 100.64–127.x ou un nom .local."
           }
         }
       }
     },
-    "Use an https:// address, or http:// for one on your network or VPN: 10.x, 172.16–31.x, 192.168.x, 100.64–127.x or a .local name." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verwenden Sie eine https://-Adresse, oder http:// für eine in Ihrem Netz oder VPN: 10.x, 172.16–31.x, 192.168.x, 100.64–127.x oder einen .local-Namen."
+    "Version": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Usa una dirección https://, o http:// para una de tu red o VPN: 10.x, 172.16–31.x, 192.168.x, 100.64–127.x o un nombre .local."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versión"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Utilisez une adresse https://, ou http:// pour une adresse de votre réseau ou VPN : 10.x, 172.16–31.x, 192.168.x, 100.64–127.x ou un nom .local."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version"
           }
         }
       }
     },
-    "Version" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Version"
+    "Violet tile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Violettes Feld"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Versión"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casilla violeta"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Version"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Case violette"
           }
         }
       }
     },
-    "Violet tile" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Violettes Feld"
+    "Visual": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visuell"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Casilla violeta"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visual"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Case violette"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visuel"
           }
         }
       }
     },
-    "Visual" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Visuell"
+    "What you send from here, and what the board shows while the app is open, comes here.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Was Sie von hier senden und was das Board zeigt, während die App offen ist, erscheint hier."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Visual"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aquí aparece lo que envías desde aquí y lo que muestra el tablero mientras la app está abierta."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Visuel"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ce que vous envoyez d’ici, et ce que le tableau affiche pendant que l’app est ouverte, apparaît ici."
           }
         }
       }
     },
-    "What you send from here, and what the board shows while the app is open, comes here." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Was Sie von hier senden und was das Board zeigt, während die App offen ist, erscheint hier."
+    "White": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weiß"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aquí aparece lo que envías desde aquí y lo que muestra el tablero mientras la app está abierta."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blanco"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ce que vous envoyez d’ici, et ce que le tableau affiche pendant que l’app est ouverte, apparaît ici."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blanc"
           }
         }
       }
     },
-    "White" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Weiß"
+    "White tile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weißes Feld"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Blanco"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casilla blanca"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Blanc"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Case blanche"
           }
         }
       }
     },
-    "White tile" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Weißes Feld"
+    "Write a message": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nachricht schreiben"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Casilla blanca"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escribir un mensaje"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Case blanche"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Écrire un message"
           }
         }
       }
     },
-    "Write a message" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nachricht schreiben"
+    "Yellow tile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gelbes Feld"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Escribir un mensaje"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casilla amarilla"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Écrire un message"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Case jaune"
           }
         }
       }
     },
-    "Yellow tile" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gelbes Feld"
+    "You": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ich"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Casilla amarilla"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yo"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Case jaune"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Moi"
           }
         }
       }
     },
-    "You" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ich"
+    "You have no drafts saved yet": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noch keine Entwürfe gesichert"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Yo"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aún no has guardado borradores"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Moi"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun brouillon enregistré pour le moment"
           }
         }
       }
     },
-    "You have no drafts saved yet" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Noch keine Entwürfe gesichert"
+    "Your coffee keeps the app going.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ihr Kaffee hält die App am Laufen."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aún no has guardado borradores"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu café mantiene viva la app."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aucun brouillon enregistré pour le moment"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Votre café fait vivre l’app."
           }
         }
       }
     },
-    "Your coffee keeps the app going." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ihr Kaffee hält die App am Laufen."
+    "Donation": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spende"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tu café mantiene viva la app."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Donación"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Votre café fait vivre l’app."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Don"
           }
         }
       }
     }
   },
-  "version" : "1.1"
+  "version": "1.1"
 }

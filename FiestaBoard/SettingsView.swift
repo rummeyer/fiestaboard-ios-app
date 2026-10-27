@@ -75,13 +75,20 @@ struct SettingsView: View {
             if !isFirstRun {
                 Section {
                     LabeledContent("Version", value: Self.version)
-                    TipRows()
                 } header: {
                     Text("About")
                 }
-                .tipping(tips)
+                // Only where the App Store offers the tips.
+                if !tips.products.isEmpty {
+                    Section {
+                        TipRows()
+                    } header: {
+                        Text("Donation")
+                    }
+                }
             }
         }
+        .tipping(tips)
         .scrollContentBackground(.hidden)
         .background(Style.background)
         .navigationTitle(isFirstRun ? Text(verbatim: "FiestaBoard") : Text("Settings"))

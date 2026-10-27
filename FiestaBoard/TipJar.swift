@@ -4,7 +4,7 @@ import SwiftUI
 
 private let log = Logger(subsystem: "de.rummeyer.fiestaboard", category: "tips")
 
-/// Tips, through In-App Purchase as the App Store has them: three coffees,
+/// Tips, through In-App Purchase as the App Store has them: two coffees,
 /// each a consumable that unlocks nothing — a thank-you, no more. The
 /// products are set up in App Store Connect, and for Xcode in
 /// FiestaBoard.storekit.
@@ -13,7 +13,6 @@ final class TipJar {
     static let productIDs = [
         "de.rummeyer.fiestaboard.tip.small",
         "de.rummeyer.fiestaboard.tip.medium",
-        "de.rummeyer.fiestaboard.tip.large",
     ]
 
     /// Cheapest first; none until the App Store has answered, or where it offers none.
