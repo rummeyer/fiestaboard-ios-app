@@ -2,17 +2,22 @@ import Foundation
 import Observation
 import Security
 
-/// Where FiestaBoard is and the token for it — the address in the defaults,
+/// Where FiestaBoard is and the token for it — its addresses in the defaults,
 /// the token in the Keychain, as it opens everything the API can do — and
 /// whether the demo board is there beside its boards, or instead of them.
 @MainActor @Observable
 final class Settings {
+    /// The remote server's: once the only address, which may have been the local one.
     private static let addressKey = "serverAddress"
+    private static let localKey = "localServerAddress"
     private static let tokenAccount = "apiToken"
     private static let demoKey = "demoBoard"
     private static let looksKey = "boardLooks"
 
+    /// FiestaBoard from anywhere, over HTTPS.
     var address: String
+    /// FiestaBoard on the home network: tried when the remote server cannot be reached.
+    var localAddress: String
     var token: String
     /// The board simulated in the app, beside FiestaBoard's or alone.
     var demoBoard: Bool {
@@ -36,11 +41,20 @@ final class Settings {
     init() {
         // The demo shows none of the real address or token.
         address = Demo.on ? "" : UserDefaults.standard.string(forKey: Self.addressKey) ?? ""
+        localAddress = Demo.on ? "" : UserDefaults.standard.string(forKey: Self.localKey) ?? ""
         token = Demo.on ? "" : Keychain.read(Self.tokenAccount) ?? ""
         // The sample screenshots are on the demo board alone, but their first start shows it off.
         demoBoard = Demo.on ? !Demo.settings : UserDefaults.standard.bool(forKey: Self.demoKey)
         looks = Demo.on ? [:] : UserDefaults.standard.data(forKey: Self.looksKey)
             .flatMap { try? JSONDecoder().decode([String: BoardLook].self, from: $0) } ?? [:]
+        // The one address of before, at home: the local server's now.
+        if localAddress.isEmpty, let host = (try? FiestaBoardAPI(address: address, token: ""))?.base.host(percentEncoded: false),
+           FiestaBoardAPI.isLocal(host) {
+            localAddress = address
+            address = ""
+            UserDefaults.standard.set(localAddress, forKey: Self.localKey)
+            UserDefaults.standard.set(address, forKey: Self.addressKey)
+        }
     }
 
     /// A FiestaBoard to talk to: an address that will do, and a token.
@@ -48,8 +62,8 @@ final class Settings {
         fiestaBoard != nil
     }
 
-    var fiestaBoard: FiestaBoardAPI? {
-        token.isEmpty ? nil : try? FiestaBoardAPI(address: address, token: token)
+    var fiestaBoard: FiestaBoardServers? {
+        token.isEmpty ? nil : (try? FiestaBoardServers(local: localAddress, remote: address, token: token)) ?? nil
     }
 
     /// Something to show: FiestaBoard's boards, the demo board, or both.
@@ -71,10 +85,12 @@ final class Settings {
         return fiestaBoard
     }
 
-    func save(address: String, token: String) {
-        self.address = address.trimmingCharacters(in: .whitespacesAndNewlines)
+    func save(local: String, remote: String, token: String) {
+        localAddress = local.trimmingCharacters(in: .whitespacesAndNewlines)
+        address = remote.trimmingCharacters(in: .whitespacesAndNewlines)
         self.token = token.trimmingCharacters(in: .whitespacesAndNewlines)
-        UserDefaults.standard.set(self.address, forKey: Self.addressKey)
+        UserDefaults.standard.set(localAddress, forKey: Self.localKey)
+        UserDefaults.standard.set(address, forKey: Self.addressKey)
         Keychain.write(self.token, for: Self.tokenAccount)
     }
 }

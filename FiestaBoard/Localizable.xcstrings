@@ -907,28 +907,6 @@
         }
       }
     },
-    "https://… or 10.0.1.10:4420": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "https://… oder 10.0.1.10:4420"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "https://… o 10.0.1.10:4420"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "https://… ou 10.0.1.10:4420"
-          }
-        }
-      }
-    },
     "Just now": {
       "localizations": {
         "de": {
@@ -1460,28 +1438,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "Envoyé à %@"
-          }
-        }
-      }
-    },
-    "Server": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Server"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Servidor"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Serveur"
           }
         }
       }
@@ -2254,6 +2210,50 @@
           "stringUnit": {
             "state": "translated",
             "value": "Don"
+          }
+        }
+      }
+    },
+    "Local Server": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lokaler Server"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Servidor local"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Serveur local"
+          }
+        }
+      }
+    },
+    "Remote Server": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remote-Server"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Servidor remoto"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Serveur distant"
           }
         }
       }

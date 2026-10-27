@@ -105,7 +105,7 @@ struct HomeView: View {
             .environment(settings)
         }
         // Read again now and every so often while open; stopped in the background.
-        .task(id: "\(boardID)|\(scenePhase == .active)|\(settings.address)|\(settings.token)|\(settings.demoBoard)") {
+        .task(id: "\(boardID)|\(scenePhase == .active)|\(settings.address)|\(settings.localAddress)|\(settings.token)|\(settings.demoBoard)") {
             guard scenePhase == .active else {
                 return
             }

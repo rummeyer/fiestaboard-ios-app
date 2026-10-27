@@ -11,6 +11,7 @@ struct SettingsView: View {
     @Environment(TipJar.self) private var tips
     @Environment(\.dismiss) private var dismiss
     @State private var address = ""
+    @State private var localAddress = ""
     @State private var token = ""
     @State private var demoBoard = false
     @State private var looks: [String: BoardLook] = [:]
@@ -19,11 +20,11 @@ struct SettingsView: View {
 
     /// Something of FiestaBoard filled in, to be tried; nothing, for the demo board alone.
     private var withFiestaBoard: Bool {
-        !address.trimmingCharacters(in: .whitespaces).isEmpty || !token.trimmingCharacters(in: .whitespaces).isEmpty
+        [localAddress, address, token].contains { !$0.trimmingCharacters(in: .whitespaces).isEmpty }
     }
 
     private var canSave: Bool {
-        withFiestaBoard ? !address.isEmpty && !token.isEmpty : demoBoard
+        withFiestaBoard ? (!localAddress.isEmpty || !address.isEmpty) && !token.isEmpty : demoBoard
     }
 
     var body: some View {
@@ -32,14 +33,28 @@ struct SettingsView: View {
             Section {
                 // As iOS's own forms have it: the label on the left, what is typed on the right,
                 // in one line however long the address — it scrolls in its field rather than going below.
+                // One or both: at home the local server, from anywhere the remote one.
                 HStack(spacing: 16) {
-                    Text("Server").fixedSize()
-                    TextField("https://… or 10.0.1.10:4420", text: $address)
-                        .keyboardType(.URL)
-                        .textContentType(.URL)
-                        .textInputAutocapitalization(.never)
-                        .autocorrectionDisabled()
-                        .multilineTextAlignment(.trailing)
+                    Text("Local Server").fixedSize()
+                    TextField(text: $localAddress) {
+                        Text(verbatim: "10.0.1.10:4420")
+                    }
+                    .keyboardType(.URL)
+                    .textContentType(.URL)
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled()
+                    .multilineTextAlignment(.trailing)
+                }
+                HStack(spacing: 16) {
+                    Text("Remote Server").fixedSize()
+                    TextField(text: $address) {
+                        Text(verbatim: "fiestaboard.rummeyer.de")
+                    }
+                    .keyboardType(.URL)
+                    .textContentType(.URL)
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled()
+                    .multilineTextAlignment(.trailing)
                 }
                 HStack(spacing: 16) {
                     Text("API token").fixedSize()
@@ -117,6 +132,7 @@ struct SettingsView: View {
         }
         .onAppear {
             address = settings.address
+            localAddress = settings.localAddress
             token = settings.token
             demoBoard = settings.demoBoard
             looks = settings.looks
@@ -155,11 +171,11 @@ struct SettingsView: View {
         }
     }
 
-    /// FiestaBoard kept only once it has answered with this token; nothing of it, for the demo board alone.
+    /// FiestaBoard kept only once it has answered with this token, at one of its addresses; nothing of it, for the demo board alone.
     private func save() {
         problem = nil
         guard withFiestaBoard else {
-            settings.save(address: "", token: "")
+            settings.save(local: "", remote: "", token: "")
             settings.demoBoard = demoBoard
             settings.looks = looks
             close()
@@ -169,9 +185,12 @@ struct SettingsView: View {
         Task {
             defer { checking = false }
             do {
-                let api = try FiestaBoardAPI(address: address, token: token)
-                _ = try await api.boards()
-                settings.save(address: address, token: token)
+                // Kept once one of them answers: at home the local one, away the remote one.
+                guard let servers = try FiestaBoardServers(local: localAddress, remote: address, token: token) else {
+                    throw APIError.badAddress
+                }
+                _ = try await servers.boards()
+                settings.save(local: localAddress, remote: address, token: token)
                 settings.demoBoard = demoBoard
                 settings.looks = looks
                 close()
