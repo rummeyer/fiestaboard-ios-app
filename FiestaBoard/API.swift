@@ -36,6 +36,8 @@ struct BoardDetail: Decodable, Sendable {
 struct MessageResponse: Decodable, Sendable {
     /// True only when the board was written to.
     let sent: Bool
+    /// What the message became on the board, sent or not.
+    let characters: [[Int]]
     let reason: String?
     let held: Bool?
 }
@@ -132,10 +134,34 @@ struct FiestaBoardAPI: Sendable {
     }
 
     func send(_ text: String, to board: String) async throws -> MessageResponse {
-        try await call("POST", "boards/\(board)/message", body: ["text": text])
+        try await call("POST", "boards/\(board)/message", body: Body.text(text))
     }
 
-    private func call<T: Decodable>(_ method: String, _ path: String, body: [String: String]? = nil) async throws -> T {
+    /// A message as it was on a board, flap for flap: for one of the same size.
+    func send(characters: [[Int]], to board: String) async throws -> MessageResponse {
+        try await call("POST", "boards/\(board)/message", body: Body.characters(characters))
+    }
+
+    private enum Body: Encodable {
+        case text(String)
+        case characters([[Int]])
+
+        private enum Keys: String, CodingKey {
+            case text, characters
+        }
+
+        func encode(to encoder: Encoder) throws {
+            var container = encoder.container(keyedBy: Keys.self)
+            switch self {
+            case let .text(text):
+                try container.encode(text, forKey: .text)
+            case let .characters(characters):
+                try container.encode(characters, forKey: .characters)
+            }
+        }
+    }
+
+    private func call<T: Decodable>(_ method: String, _ path: String, body: Body? = nil) async throws -> T {
         var request = URLRequest(url: base.appending(path: path))
         request.httpMethod = method
         request.timeoutInterval = 20

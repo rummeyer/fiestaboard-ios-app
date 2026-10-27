@@ -18,7 +18,7 @@ final class Settings {
     }
 
     var isComplete: Bool {
-        (try? api()) != nil && !token.isEmpty
+        Demo.on || (try? api()) != nil && !token.isEmpty
     }
 
     func api() throws -> FiestaBoardAPI {

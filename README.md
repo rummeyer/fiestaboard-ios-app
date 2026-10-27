@@ -1,15 +1,24 @@
 # FiestaBoard for iPhone
 
 A small iPhone app for a [FiestaBoard](https://github.com/Fiestaboard/FiestaBoard)
-install: it shows what the board shows, and sends it a message. Nothing else.
+install, in the look of Vestaboard's own app.
 
-- **The board** as it looks: its characters and colour tiles, read again every
-  15 seconds while the app is open, and on pulling down. With more than one
-  board, the grid button picks one. Below it, whether the board is paused,
-  until when a timed message stays, or whether it follows its schedule.
-- **A message**, word-wrapped by FiestaBoard to the board. The app says whether
-  it reached the board, or why not: a paused board, or one in its quiet time,
-  which holds it until that ends.
+- **The board live on top**: "Live on My Board", what it shows and since
+  when. Tap it for it large, with whether it is paused or follows its
+  schedule, and to copy it into a new message, keep it as a favorite or share it.
+- **History, Favorites and Drafts** below, as cards: who put a message there
+  and when, the ribbon to keep it as a favorite, and a bar to copy it into a
+  new message, send it again, share it, or delete it. Sort them by recent or
+  oldest, and by who sent them.
+- **Writing a message** with the round button: the board above shows where
+  the text will land as you type, the colour tiles below put one in, and
+  Send says whether it reached the board or why not — a paused board, or one
+  in its quiet time, which holds it until that ends. Save Draft, next to
+  Send, keeps it for later.
+
+FiestaBoard keeps no history, favorites or drafts, so the app keeps them on
+the iPhone: History is what you sent from the app ("You") and what the board
+showed while the app was open ("FiestaBoard").
 
 It uses FiestaBoard's public API, version 1 (`/api/v1`), and nothing of the
 web UI's own.
@@ -46,6 +55,9 @@ the App Store.
 
 The files in `FiestaBoard/` are the project: Xcode picks up whatever is in
 the folder.
+
+A debug build started with the argument `-demo` shows sample content
+without a FiestaBoard, and with `-demoCompose` too, the compose screen.
 
 ## The icon
 

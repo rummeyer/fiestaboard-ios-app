@@ -1,0 +1,100 @@
+import Foundation
+
+/// Text laid out on a board as FiestaBoard lays out a text message: from the
+/// top left, word-wrapped to the board's width, a line break where one is
+/// typed, a colour marker such as `{red}` one tile, and what does not fit cut
+/// off at the bottom. The preview shows what the board will.
+enum Layout {
+    static func grid(_ text: String, rows: Int, cols: Int) -> (grid: [[Int]], overflow: Bool) {
+        var lines: [[Int]] = []
+        for line in text.components(separatedBy: "\n") {
+            let tiles = tiles(of: line)
+            if tiles.count <= cols {
+                lines.append(tiles)
+            } else {
+                lines.append(contentsOf: wrap(tiles, cols: cols))
+            }
+        }
+        let overflow = lines.count > rows
+        var grid = Array(lines.prefix(rows)).map { Array($0.prefix(cols)) + Array(repeating: 0, count: max(0, cols - $0.count)) }
+        while grid.count < rows {
+            grid.append(Array(repeating: 0, count: cols))
+        }
+        return (grid, overflow)
+    }
+
+    /// Greedy word wrap on tiles, a word wider than the board flowing on.
+    private static func wrap(_ tiles: [Int], cols: Int) -> [[Int]] {
+        let words = tiles.split(separator: 0, omittingEmptySubsequences: true).map(Array.init)
+        guard !words.isEmpty else {
+            return [[]]
+        }
+        var wrapped: [[Int]] = []
+        var current: [Int] = []
+        for var word in words {
+            if !current.isEmpty && current.count + 1 + word.count <= cols {
+                current += [0] + word
+                continue
+            }
+            if !current.isEmpty {
+                wrapped.append(current)
+                current = []
+            }
+            while word.count > cols {
+                wrapped.append(Array(word.prefix(cols)))
+                word = Array(word.dropFirst(cols))
+            }
+            current = word
+        }
+        if !current.isEmpty {
+            wrapped.append(current)
+        }
+        return wrapped
+    }
+
+    /// A line as flap codes: a marker `{red}` or `{63}` one tile, other braces as they are.
+    static func tiles(of line: String) -> [Int] {
+        var codes: [Int] = []
+        var rest = Substring(line)
+        while let first = rest.first {
+            if first == "{", let close = rest.firstIndex(of: "}") {
+                let name = rest[rest.index(after: rest.startIndex)..<close].lowercased()
+                if let code = colours[name] ?? Int(name).flatMap({ (0...71).contains($0) ? $0 : nil }) {
+                    codes.append(code)
+                    rest = rest[rest.index(after: close)...]
+                    continue
+                }
+            }
+            codes.append(code(of: first))
+            rest = rest.dropFirst()
+        }
+        return codes
+    }
+
+    static let colours: [String: Int] = [
+        "red": 63, "orange": 64, "yellow": 65, "green": 66, "blue": 67, "violet": 68, "purple": 68,
+        "white": 69, "black": 70, "filled": 71,
+    ]
+
+    private static func code(of character: Character) -> Int {
+        let upper = String(character).uppercased()
+        if let scalar = upper.unicodeScalars.first, upper.count == 1 {
+            switch scalar.value {
+            case 65...90:
+                return Int(scalar.value) - 64
+            case 49...57:
+                return Int(scalar.value) - 49 + 27
+            case 48:
+                return 36
+            default:
+                break
+            }
+        }
+        return punctuation[upper] ?? 0
+    }
+
+    private static let punctuation: [String: Int] = [
+        "!": 37, "@": 38, "#": 39, "$": 40, "(": 41, ")": 42, "-": 44, "+": 46, "&": 47, "=": 48,
+        ";": 49, ":": 50, "'": 52, "\"": 53, "%": 54, ",": 55, ".": 56, "/": 59, "?": 60, "°": 62, "❤": 62, "♥": 62,
+    ]
+}

@@ -42,6 +42,13 @@ enum Flap: Equatable {
         .white,
     ]
 
+    var isCharacter: Bool {
+        if case .character = self {
+            return true
+        }
+        return false
+    }
+
     /// The tile's face: dark behind a character, else its colour.
     var fill: Color {
         if case let .colour(colour) = self {
@@ -57,6 +64,10 @@ struct BoardView: View {
     let rows: Int
     let cols: Int
     let heart: Bool
+    /// As on a card: the letters alone, only colours as tiles.
+    var plain = false
+    /// The letters' colour when plain: dark on a light card.
+    var ink: Color = .white
 
     /// A flap is taller than wide.
     private let tileAspect: CGFloat = 1.3
@@ -72,8 +83,8 @@ struct BoardView: View {
                 }
             }
         }
-        .padding(8)
-        .background(Color(white: 0.05), in: RoundedRectangle(cornerRadius: 10))
+        .padding(plain ? 0 : 8)
+        .background(plain ? Color.clear : Color(white: 0.05), in: RoundedRectangle(cornerRadius: 10))
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(accessibleText)
     }
@@ -86,22 +97,30 @@ struct BoardView: View {
     }
 
     private func tile(_ flap: Flap) -> some View {
-        RoundedRectangle(cornerRadius: 2)
-            .fill(flap.fill)
+        RoundedRectangle(cornerRadius: plain ? 1 : 2)
+            .fill(plain && flap.isCharacter ? Color.clear : flap.fill)
+            // On a card a colour is a small tile, as high as a letter, not the whole flap.
+            .scaleEffect(plain && !flap.isCharacter ? CGSize(width: 0.72, height: 0.62) : CGSize(width: 1, height: 1))
             .aspectRatio(1 / tileAspect, contentMode: .fit)
             .overlay {
                 if case let .character(text) = flap, !text.isEmpty {
                     Text(text)
-                        .font(.system(size: 200, weight: .semibold, design: .rounded))
+                        .font(.system(size: 200, weight: plain ? .regular : .semibold, design: plain ? .monospaced : .rounded))
                         .minimumScaleFactor(0.01)
                         .lineLimit(1)
                         .padding(.vertical, 2)
                         .padding(.horizontal, 1)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(plain ? ink : .white)
                 }
             }
             .overlay {
-                if case .character = flap {
+                if plain, case .colour(.white) = flap {
+                    // A white tile on a light card, seen by its edge.
+                    RoundedRectangle(cornerRadius: 1)
+                        .stroke(Color.black.opacity(0.15), lineWidth: 0.5)
+                        .scaleEffect(CGSize(width: 0.72, height: 0.62))
+                }
+                if case .character = flap, !plain {
                     // The split between the two halves of a flap.
                     Rectangle()
                         .fill(Color.black.opacity(0.5))
