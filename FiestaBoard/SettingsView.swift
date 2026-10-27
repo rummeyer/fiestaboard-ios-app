@@ -40,6 +40,8 @@ struct SettingsView: View {
                 }
             }
         }
+        .scrollContentBackground(.hidden)
+        .background(Style.background)
         .navigationTitle(isFirstRun ? "FiestaBoard" : "Settings")
         .toolbar {
             if !isFirstRun {

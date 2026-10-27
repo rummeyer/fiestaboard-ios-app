@@ -5,33 +5,41 @@
 <h1 align="center">FiestaBoard for iPhone</h1>
 
 <p align="center">
-  Your <a href="https://github.com/Fiestaboard/FiestaBoard">FiestaBoard</a> in your pocket, in the look of Vestaboard's own app:<br>
-  <b>what the board shows</b>, live, and <b>a message to it</b> in a few taps — at home, through a VPN, or from anywhere.
+  Your <a href="https://github.com/Fiestaboard/FiestaBoard">FiestaBoard</a> in your pocket, in FiestaBoard's own look:<br>
+  <b>what your board shows</b>, live, and <b>a message to it</b> in a few taps — at home, through a VPN, or from anywhere.
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/home.png" alt="Home: the board live on a white card on top, then History, Favorites and Drafts, with message cards below" width="200">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/home-dark.png">
+    <img src="docs/screenshots/home-light.png" alt="Home: the board live on a card on top, then History, Favorites and Drafts, with message cards below and the orange button to write" width="200">
+  </picture>
   &nbsp;
-  <img src="docs/screenshots/live.png" alt="The board large: Live on Vestaboard Note, with the message on a card and buttons to copy and share it" width="200">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/live-dark.png">
+    <img src="docs/screenshots/live-light.png" alt="The board large: Live on My Board, with the message on a card and buttons to copy and share it" width="200">
+  </picture>
   &nbsp;
-  <img src="docs/screenshots/compose.png" alt="Writing a message: the board above showing where the text lands, the text, 19/45 tiles, Cancel, Clear and Send, and the colour tiles" width="200">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/compose-dark.png">
+    <img src="docs/screenshots/compose-light.png" alt="Writing a message: the board above showing where the text lands, the text, 19/45 tiles, Cancel, Clear and the orange Send, and the colour tiles" width="200">
+  </picture>
   &nbsp;
-  <img src="docs/screenshots/settings.png" alt="The first start: FiestaBoard's address and the API token" width="200">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/settings-dark.png">
+    <img src="docs/screenshots/settings-light.png" alt="The first start: FiestaBoard's address and the API token" width="200">
+  </picture>
 </p>
 
 ---
 
 ## Why
 
-This app is meant to **replace Vestaboard's own app**, and with it **Vestaboard's cloud**.
-
-Vestaboard's app sends every message through Vestaboard's servers, with a Vestaboard account, and the board does what those servers say. FiestaBoard drives the board on your own network instead, over the board's [Local API](https://github.com/Fiestaboard/FiestaBoard#readme) — set it up that way rather than with Vestaboard's Cloud API — and this app talks only to your FiestaBoard. Your messages, your history and your favorites stay with you — on your FiestaBoard and your iPhone — and the board keeps working whatever becomes of Vestaboard's cloud.
-
-What you are used to from Vestaboard's app is here: the board live on top, History, Favorites and Drafts as cards, and writing a message with the colour tiles. Vestaboard's own content — its Inspiration — is not, as that lives on Vestaboard's servers.
+[FiestaBoard](https://github.com/Fiestaboard/FiestaBoard) runs your display on your own network — a split-flap board, an LED matrix, a TV — from your own pages, schedules and plugins. This app puts it in your pocket: no account somewhere else, no cloud in between. It talks only to your FiestaBoard, and your history, favorites and drafts stay on your iPhone.
 
 ## What it does
 
-**The board, live.** On top, the white card shows what your board shows right now and since when, read again every 15 seconds while the app is open and on pulling down. Tap it for the board large: whether it is paused or follows its schedule, and buttons to copy the message into a new one, keep it as a favorite or share it.
+**The board, live.** On top, a card shows what your board shows right now and since when, read again every 15 seconds while the app is open and on pulling down. Tap it for the board large: whether it is paused or follows its schedule, and buttons to copy the message into a new one, keep it as a favorite or share it.
 
 **History, Favorites and Drafts.** Below, as cards: who put a message there and when, the ribbon in the corner to keep it as a favorite, and a bar to copy it into a new message, send it again, share it or delete it. Sort by recent or oldest, and by who sent it. FiestaBoard keeps no history of its own, so the app keeps it on the iPhone: what you sent from the app (*You*) and what the board showed while the app was open (*FiestaBoard*).
 
@@ -125,14 +133,19 @@ The files in `FiestaBoard/` are the project: Xcode picks up whatever is in the f
 | `-demo -demoCompose` | writing a message |
 | `-demo -demoSettings` | the first start |
 
-## The icon
+## Icon, colours and typefaces
 
-The app icon is FiestaBoard's own taco (`fiesta-icon.png` in the FiestaBoard repository, MIT licence), on white. `tools/make-icon.swift` makes it:
+All three are FiestaBoard's:
 
-```sh
-swift tools/make-icon.swift <path to fiesta-icon.png> FiestaBoard/Assets.xcassets/AppIcon.appiconset/AppIcon.png
-```
+- **The icon** is FiestaBoard's taco (`fiesta-icon.png` in the FiestaBoard repository, MIT licence), on white. `tools/make-icon.swift` makes it:
+
+  ```sh
+  swift tools/make-icon.swift <path to fiesta-icon.png> FiestaBoard/Assets.xcassets/AppIcon.appiconset/AppIcon.png
+  ```
+
+- **The colours** are those of FiestaBoard's web UI (`@fiestaboard/ui`), in light and dark: warm beige or warm near-black, and FiestaBoard orange for whatever is primary or chosen.
+- **The typefaces** are FiestaBoard's: Archivo for words and Spline Sans Mono for the board, both under the SIL Open Font License, in `FiestaBoard/Fonts/` with their licences.
 
 ## Licence
 
-MIT, see [LICENSE](LICENSE). The icon is FiestaBoard's, under its own MIT licence. This app is not made by the FiestaBoard project, nor by Vestaboard.
+MIT, see [LICENSE](LICENSE). The icon is FiestaBoard's, under its own MIT licence. This app is not made by the FiestaBoard project.

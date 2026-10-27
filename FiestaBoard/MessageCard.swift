@@ -28,7 +28,7 @@ struct CardAction: Identifiable {
     let run: () -> Void
 }
 
-/// A message as Vestaboard's app shows one: who and when on top, the ribbon
+/// A message as a card: who and when on top, the ribbon
 /// for a favorite, the message in the middle, and a bar of actions below.
 struct MessageCard<More: View>: View {
     let characters: [[Int]]
@@ -68,7 +68,7 @@ struct MessageCard<More: View>: View {
                     .padding(.top, -14)
                 }
             }
-            .font(.subheadline)
+            .font(Style.font(.subheadline))
             .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
             .padding(.horizontal, 18)
             .padding(.top, 14)
@@ -95,7 +95,7 @@ struct MessageCard<More: View>: View {
                     }
                     Button(action: action.run) {
                         Image(systemName: action.symbol)
-                            .font(.title3)
+                            .font(Style.font(.title3))
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                     }
                     .accessibilityLabel(action.label)
@@ -104,7 +104,7 @@ struct MessageCard<More: View>: View {
                     Rectangle().fill(Style.rule).frame(width: 1)
                     ShareLink(item: shareText) {
                         Image(systemName: "arrowshape.turn.up.right.fill")
-                            .font(.title3)
+                            .font(Style.font(.title3))
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                     }
                     .accessibilityLabel("Share")
@@ -116,7 +116,7 @@ struct MessageCard<More: View>: View {
                     } label: {
                         Image(systemName: "ellipsis")
                             .rotationEffect(.degrees(90))
-                            .font(.title3)
+                            .font(Style.font(.title3))
                             .frame(width: 64)
                             .frame(maxHeight: .infinity)
                     }
@@ -149,9 +149,9 @@ struct Avatar: View {
             .frame(width: 30, height: 30)
             .overlay {
                 if name == "You" {
-                    Image(systemName: "person.fill").font(.caption).foregroundStyle(.white)
+                    Image(systemName: "person.fill").font(Style.font(.caption)).foregroundStyle(Style.card)
                 } else {
-                    Text(name.prefix(1)).font(.caption).foregroundStyle(.white)
+                    Text(name.prefix(1)).font(Style.font(.caption, weight: .semibold)).foregroundStyle(Style.card)
                 }
             }
     }

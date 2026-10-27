@@ -4,6 +4,12 @@
 <dict>
 	<!-- Plain http only to the home network or a VPN: the app itself refuses
 	     http to any other address (FiestaBoardAPI.isLocal). -->
+	<!-- FiestaBoard's own typefaces, both under the SIL Open Font License. -->
+	<key>UIAppFonts</key>
+	<array>
+		<string>Archivo.ttf</string>
+		<string>SplineSansMono.ttf</string>
+	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsLocalNetworking</key>

@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// "Send" and the plane after it, as on Vestaboard's button.
+/// "Send" and the plane after it.
 private struct SendLabelStyle: LabelStyle {
     func makeBody(configuration: Configuration) -> some View {
         HStack(spacing: 12) {
@@ -17,7 +17,7 @@ struct ComposeRequest: Identifiable {
     var draft: Draft.ID?
 }
 
-/// Writing a message, as in Vestaboard's compose: the text, how much of the
+/// Writing a message: the text, how much of the
 /// board it takes, Cancel, Clear and Send, and the colours to put in — with
 /// the board above showing where it will land.
 struct ComposeView: View {
@@ -35,7 +35,7 @@ struct ComposeView: View {
     @FocusState private var writing: Bool
 
     private static let palette: [(String, Color)] = [
-        ("white", .white),
+        ("white", Color(white: 0.98)),
         ("red", Color(red: 0.85, green: 0.16, blue: 0.11)),
         ("orange", Color(red: 1.0, green: 0.46, blue: 0.0)),
         ("yellow", Color(red: 1.0, green: 0.72, blue: 0.11)),
@@ -52,11 +52,11 @@ struct ComposeView: View {
                 Text(boardName)
                 Circle().fill(Style.live).frame(width: 7, height: 7)
             }
-            .font(.footnote)
-            .foregroundStyle(.white)
+            .font(Style.font(.footnote))
+            .foregroundStyle(Style.ink)
             .padding(.vertical, 12)
 
-            BoardView(characters: laid.grid, rows: shape.rows, cols: shape.cols, heart: shape.heart)
+            BoardView(characters: laid.grid, rows: shape.rows, cols: shape.cols, heart: shape.heart, white: shape.heart)
                 .padding(.horizontal)
                 .padding(.bottom, 12)
 
@@ -72,9 +72,9 @@ struct ComposeView: View {
                     .textInputAutocapitalization(.characters)
                     .autocorrectionDisabled()
                     .focused($writing)
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Style.ink)
             }
-            .font(.title3)
+            .font(Style.font(.title3))
             .padding(.horizontal, 24)
 
             HStack {
@@ -90,7 +90,7 @@ struct ComposeView: View {
                     .monospacedDigit()
                     .foregroundStyle(Style.secondary)
             }
-            .font(.footnote)
+            .font(Style.font(.footnote))
             .dynamicTypeSize(...DynamicTypeSize.accessibility1)
             .padding(.horizontal, 24)
             .padding(.vertical, 8)
@@ -106,7 +106,7 @@ struct ComposeView: View {
                     Button(action: submit) {
                         Group {
                             if sending {
-                                ProgressView().tint(.white)
+                                ProgressView().tint(Style.primaryInk)
                             } else {
                                 Label {
                                     Text("Send").fixedSize()
@@ -122,7 +122,7 @@ struct ComposeView: View {
                     }
                     .buttonStyle(.plain)
                     .disabled(sending || text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
-                    Rectangle().fill(Color.black.opacity(0.3)).frame(width: 1, height: 48)
+                    Rectangle().fill(Style.primaryInk.opacity(0.2)).frame(width: 1, height: 48)
                     Menu {
                         Button("Save Draft", systemImage: "square.and.arrow.down") {
                             library.saveDraft(text, replacing: request.draft)
@@ -131,14 +131,15 @@ struct ComposeView: View {
                         .disabled(text.isEmpty)
                     } label: {
                         Image(systemName: "chevron.down")
-                            .font(.footnote)
+                            .font(Style.font(.footnote))
                             .frame(width: 44, height: 48)
                     }
                     .accessibilityLabel("More ways to send")
                 }
-                .background(Style.control, in: RoundedRectangle(cornerRadius: 8))
+                .foregroundStyle(Style.primaryInk)
+                .background(Style.primary, in: RoundedRectangle(cornerRadius: Style.radius))
             }
-            .foregroundStyle(.white)
+            .foregroundStyle(Style.ink)
             .lineLimit(1)
             // Larger text, but the buttons stay on one line beside each other.
             .dynamicTypeSize(...DynamicTypeSize.xxLarge)
@@ -152,7 +153,7 @@ struct ComposeView: View {
                     } label: {
                         RoundedRectangle(cornerRadius: 5)
                             .fill(colour)
-                            .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.white.opacity(0.25), lineWidth: name == "black" ? 1 : 0))
+                            .overlay(RoundedRectangle(cornerRadius: 5).stroke(Style.border, lineWidth: 1))
                             .frame(height: 38)
                     }
                     .accessibilityLabel("\(name.capitalized) tile")
@@ -160,7 +161,8 @@ struct ComposeView: View {
             }
             .padding(.horizontal, 16)
             .padding(.vertical, 12)
-            .background(Color.black)
+            .background(Style.card)
+            .overlay(alignment: .top) { Rectangle().fill(Style.border).frame(height: 1) }
         }
         .background(Style.background.ignoresSafeArea())
         .onAppear {

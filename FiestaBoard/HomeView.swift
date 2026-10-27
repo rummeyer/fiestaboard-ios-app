@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// Home, as in Vestaboard's app: the board live on top, then History,
+/// Home: the board live on top, then History,
 /// Favorites and Drafts, and the button to write a message.
 struct HomeView: View {
     enum Tab: String, CaseIterable {
@@ -66,7 +66,7 @@ struct HomeView: View {
         .overlay(alignment: .top) {
             if let notice {
                 Text(notice)
-                    .font(.footnote)
+                    .font(Style.font(.footnote))
                     .padding(.horizontal, 14)
                     .padding(.vertical, 8)
                     .background(.ultraThinMaterial, in: Capsule())
@@ -113,19 +113,19 @@ struct HomeView: View {
         } label: {
             VStack(spacing: 8) {
                 liveTitle(dark: true)
-                    .font(.footnote)
+                    .font(Style.font(.footnote))
                 if let board, let characters = board.characters {
-                    BoardView(characters: characters, rows: board.rows, cols: board.cols, heart: shape.heart, plain: true, ink: Style.ink)
-                        .frame(maxWidth: 220)
+                    BoardView(characters: characters, rows: board.rows, cols: board.cols, heart: shape.heart, white: shape.heart)
+                        .frame(maxWidth: 300)
                 } else {
                     ProgressView().frame(height: 36)
                 }
                 ZStack {
                     Image(systemName: "chevron.down")
-                        .font(.footnote.weight(.semibold))
+                        .font(Style.font(.footnote, weight: .semibold))
                     if let date = liveDate {
                         Text(ago(date))
-                            .font(.caption2)
+                            .font(Style.font(.caption2))
                             .lineLimit(1)
                             .frame(maxWidth: .infinity, alignment: .trailing)
                     }
@@ -137,7 +137,7 @@ struct HomeView: View {
             .frame(maxWidth: .infinity)
             // Small print on a small card: larger text, but the time stays clear of the chevron.
             .dynamicTypeSize(...DynamicTypeSize.xxLarge)
-            .background(Color.white, in: RoundedRectangle(cornerRadius: 8))
+            .card()
         }
         .buttonStyle(.plain)
         .accessibilityLabel("Live on \(boardName). Show it large.")
@@ -150,7 +150,7 @@ struct HomeView: View {
                 .minimumScaleFactor(0.7)
             Circle().fill(board?.paused == true ? Color.orange : Style.live).frame(width: 7, height: 7)
         }
-        .foregroundStyle(dark ? Style.ink : .white)
+        .foregroundStyle(Style.ink)
     }
 
     /// When what the board shows came there, as far as the app knows.
@@ -164,7 +164,7 @@ struct HomeView: View {
             VStack(spacing: 50) {
                 Spacer()
                 liveTitle(dark: false)
-                    .font(.title3.weight(.medium))
+                    .font(Style.font(.title3, weight: .medium))
                 if let board, let characters = board.characters {
                     let kept = library.latest(characters)
                     MessageCard(
@@ -192,10 +192,11 @@ struct HomeView: View {
                 showingLive = false
             } label: {
                 Image(systemName: "xmark")
-                    .font(.title2)
+                    .font(Style.font(.title2))
                     .foregroundStyle(Style.ink)
                     .frame(width: 64, height: 64)
-                    .background(Color.white, in: Circle())
+                    .background(Style.card, in: Circle())
+                    .overlay(Circle().stroke(Style.border, lineWidth: 1))
             }
             .accessibilityLabel("Close")
             .padding(.bottom, 24)
@@ -212,7 +213,7 @@ struct HomeView: View {
                 Label("Following the schedule", systemImage: "calendar")
             }
         }
-        .font(.footnote)
+        .font(Style.font(.footnote))
         .foregroundStyle(Style.secondary)
     }
 
@@ -226,12 +227,12 @@ struct HomeView: View {
                 } label: {
                     VStack(spacing: 12) {
                         Text(each.rawValue)
-                            .font(.title3)
+                            .font(Style.font(.title3))
                             .lineLimit(1)
                             .minimumScaleFactor(0.6)
-                            .foregroundStyle(tab == each ? Color.white : Style.secondary)
+                            .foregroundStyle(tab == each ? Style.ink : Style.muted)
                         Rectangle()
-                            .fill(tab == each ? Color.white : .clear)
+                            .fill(tab == each ? Style.primary : .clear)
                             .frame(height: 2)
                     }
                     .frame(maxWidth: .infinity)
@@ -242,7 +243,7 @@ struct HomeView: View {
         .padding(.top, 18)
         .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
         .overlay(alignment: .bottom) {
-            Rectangle().fill(Color.white.opacity(0.08)).frame(height: 1)
+            Rectangle().fill(Style.border).frame(height: 1)
         }
     }
 
@@ -285,7 +286,7 @@ struct HomeView: View {
                     Button {
                         withAnimation { filtering = false }
                     } label: {
-                        Image(systemName: "xmark").font(.title3)
+                        Image(systemName: "xmark").font(Style.font(.title3))
                     }
                     .accessibilityLabel("Close the filter")
                     Spacer()
@@ -312,14 +313,15 @@ struct HomeView: View {
                     withAnimation { filtering = true }
                 } label: {
                     Image(systemName: "slider.horizontal.3")
-                        .font(.title3)
+                        .font(Style.font(.title3))
                         .frame(width: 52, height: 52)
-                        .background(Color.black, in: Circle())
+                        .background(Style.card, in: Circle())
+                        .overlay(Circle().stroke(Style.border, lineWidth: 1))
                 }
                 .accessibilityLabel("Sort and filter")
             }
         }
-        .foregroundStyle(.white)
+        .foregroundStyle(Style.ink)
         .frame(maxWidth: .infinity, alignment: .leading)
     }
 
@@ -329,16 +331,16 @@ struct HomeView: View {
                 .lineLimit(1)
                 .padding(.horizontal, 16)
                 .padding(.vertical, 8)
-                .foregroundStyle(selected ? Style.ink : Style.secondary)
-                .background(selected ? Color.white : Color.clear, in: Capsule())
-                .overlay(Capsule().stroke(Style.secondary, lineWidth: selected ? 0 : 1))
+                .foregroundStyle(selected ? Style.primaryInk : Style.muted)
+                .background(selected ? Style.primary : Color.clear, in: Capsule())
+                .overlay(Capsule().stroke(Style.border, lineWidth: selected ? 0 : 1))
         }
         .buttonStyle(.plain)
     }
 
     private func empty(_ title: String, _ detail: String) -> some View {
         VStack(spacing: 14) {
-            Text(title).font(.title3).foregroundStyle(.white)
+            Text(title).font(Style.font(.title3)).foregroundStyle(Style.ink)
             Text(detail).foregroundStyle(Style.secondary)
         }
         .multilineTextAlignment(.center)
@@ -408,11 +410,11 @@ struct HomeView: View {
             composing = ComposeRequest()
         } label: {
             Image(systemName: "square.and.pencil")
-                .font(.title)
-                .foregroundStyle(Style.ink)
+                .font(Style.font(.title))
+                .foregroundStyle(Style.primaryInk)
                 .frame(width: 68, height: 68)
-                .background(Color.white, in: Circle())
-                .shadow(color: .black.opacity(0.4), radius: 8, y: 4)
+                .background(Style.primary, in: Circle())
+                .shadow(color: .black.opacity(0.25), radius: 8, y: 4)
         }
         .accessibilityLabel("Write a message")
     }
@@ -420,8 +422,8 @@ struct HomeView: View {
     private var bottomBar: some View {
         HStack {
             VStack(spacing: 10) {
-                Rectangle().fill(Color.white).frame(width: 40, height: 3)
-                Image(systemName: "house.fill").font(.title2)
+                Rectangle().fill(Style.primary).frame(width: 40, height: 3)
+                Image(systemName: "house.fill").font(Style.font(.title2))
             }
             .frame(maxWidth: .infinity)
             .accessibilityLabel("Home")
@@ -433,7 +435,7 @@ struct HomeView: View {
                         }
                     }
                 } label: {
-                    Image(systemName: "square.grid.3x3").font(.title2).padding(.top, 13)
+                    Image(systemName: "square.grid.3x3").font(Style.font(.title2)).padding(.top, 13)
                 }
                 .frame(maxWidth: .infinity)
                 .accessibilityLabel("Board")
@@ -441,15 +443,16 @@ struct HomeView: View {
             Button {
                 showingSettings = true
             } label: {
-                Image(systemName: "gearshape").font(.title2).padding(.top, 13)
+                Image(systemName: "gearshape").font(Style.font(.title2)).padding(.top, 13)
             }
             .frame(maxWidth: .infinity)
             .accessibilityLabel("Settings")
         }
-        .foregroundStyle(Color.white.opacity(0.75))
+        .foregroundStyle(Style.ink.opacity(0.8))
         .padding(.bottom, 6)
         .frame(height: 64, alignment: .top)
         .background(Style.bar.ignoresSafeArea())
+        .overlay(alignment: .top) { Rectangle().fill(Style.border).frame(height: 1) }
     }
 
     // MARK: - FiestaBoard

@@ -25,7 +25,7 @@ enum Demo {
 
     static var board: BoardDetail {
         BoardDetail(
-            id: "demo", name: "Vestaboard Note", deviceType: "note", rows: 3, cols: 15, paused: false,
+            id: "demo", name: "My Board", deviceType: "note", rows: 3, cols: 15, paused: false,
             characters: grid("{yellow}{blue} {red}{red}{orange}{yellow}{blue} {red}{red}{orange}{yellow}\n KAFFEE IST\n   FERTIG {red}"),
             text: nil, resolvedPageId: nil, source: "manual", overrideExpiresAt: nil
         )
@@ -36,11 +36,11 @@ enum Demo {
         guard library.messages.isEmpty else {
             return
         }
-        library.seen(grid("ES IST VIERTEL\nNACH VIER"), boardName: "Vestaboard Note")
-        library.seen(grid("WOHNEN  22°C 48%\nSCHLAF  21°C 51%\nBALKON   9°C 86%"), boardName: "Vestaboard Note")
+        library.seen(grid("ES IST VIERTEL\nNACH VIER"), boardName: "My Board")
+        library.seen(grid("WOHNEN  22°C 48%\nSCHLAF  21°C 51%\nBALKON   9°C 86%"), boardName: "My Board")
         library.saveDraft("Geburtstag! {red}{orange}{yellow}")
-        library.sent(grid("{orange}{orange} GUTEN {orange}{orange}\n   MORGEN!"), text: "{orange}{orange} GUTEN {orange}{orange}\n   MORGEN!", boardName: "Vestaboard Note")
-        library.toggleFavorite(grid("{orange}{orange} GUTEN {orange}{orange}\n   MORGEN!"), boardName: "Vestaboard Note")
-        library.sent(board.characters!, text: "KAFFEE IST FERTIG", boardName: "Vestaboard Note")
+        library.sent(grid("{orange}{orange} GUTEN {orange}{orange}\n   MORGEN!"), text: "{orange}{orange} GUTEN {orange}{orange}\n   MORGEN!", boardName: "My Board")
+        library.toggleFavorite(grid("{orange}{orange} GUTEN {orange}{orange}\n   MORGEN!"), boardName: "My Board")
+        library.sent(board.characters!, text: "KAFFEE IST FERTIG", boardName: "My Board")
     }
 }

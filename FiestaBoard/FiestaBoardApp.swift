@@ -18,7 +18,8 @@ struct FiestaBoardApp: App {
             }
             .environment(settings)
             .environment(library)
-            .preferredColorScheme(.dark)
+            .font(Style.font(.body))
+            .tint(Style.primary)
         }
     }
 }

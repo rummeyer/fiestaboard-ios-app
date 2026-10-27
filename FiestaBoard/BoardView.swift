@@ -68,6 +68,8 @@ struct BoardView: View {
     var plain = false
     /// The letters' colour when plain: dark on a light card.
     var ink: Color = .white
+    /// White flaps with dark letters, as a white board's are; else black ones with white.
+    var white = false
 
     /// A flap is taller than wide.
     private let tileAspect: CGFloat = 1.3
@@ -83,8 +85,18 @@ struct BoardView: View {
                 }
             }
         }
-        .padding(plain ? 0 : 8)
-        .background(plain ? Color.clear : Color(white: 0.05), in: RoundedRectangle(cornerRadius: 10))
+        .padding(plain ? 0 : 10)
+        .background {
+            if !plain {
+                // The board's frame, as FiestaBoard draws it: silver round a Note, black round a Flagship.
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(white
+                        ? LinearGradient(colors: [Color(white: 0.95), Color(white: 0.86)], startPoint: .top, endPoint: .bottom)
+                        : LinearGradient(colors: [Color(white: 0.1), Color(white: 0.04)], startPoint: .top, endPoint: .bottom))
+                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.black.opacity(white ? 0.08 : 0.4), lineWidth: 1))
+                    .shadow(color: .black.opacity(0.12), radius: 6, y: 3)
+            }
+        }
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(accessibleText)
     }
@@ -98,19 +110,19 @@ struct BoardView: View {
 
     private func tile(_ flap: Flap) -> some View {
         RoundedRectangle(cornerRadius: plain ? 1 : 2)
-            .fill(plain && flap.isCharacter ? Color.clear : flap.fill)
+            .fill(plain && flap.isCharacter ? Color.clear : flap.isCharacter ? (white ? Color(white: 0.985) : Color(white: 0.12)) : flap.fill)
             // On a card a colour is a small tile, as high as a letter, not the whole flap.
             .scaleEffect(plain && !flap.isCharacter ? CGSize(width: 0.72, height: 0.62) : CGSize(width: 1, height: 1))
             .aspectRatio(1 / tileAspect, contentMode: .fit)
             .overlay {
                 if case let .character(text) = flap, !text.isEmpty {
                     Text(text)
-                        .font(.system(size: 200, weight: plain ? .regular : .semibold, design: plain ? .monospaced : .rounded))
+                        .font(Style.board(size: 200, weight: plain ? .regular : .semibold))
                         .minimumScaleFactor(0.01)
                         .lineLimit(1)
                         .padding(.vertical, 2)
                         .padding(.horizontal, 1)
-                        .foregroundStyle(plain ? ink : .white)
+                        .foregroundStyle(plain ? ink : white ? Color(white: 0.1) : .white)
                 }
             }
             .overlay {
@@ -123,7 +135,7 @@ struct BoardView: View {
                 if case .character = flap, !plain {
                     // The split between the two halves of a flap.
                     Rectangle()
-                        .fill(Color.black.opacity(0.5))
+                        .fill(Color.black.opacity(white ? 0.07 : 0.5))
                         .frame(height: 0.5)
                 }
             }
