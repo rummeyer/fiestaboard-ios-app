@@ -126,6 +126,7 @@ struct HomeView: View {
                     if let date = liveDate {
                         Text(ago(date))
                             .font(.caption2)
+                            .lineLimit(1)
                             .frame(maxWidth: .infinity, alignment: .trailing)
                     }
                 }
@@ -134,6 +135,8 @@ struct HomeView: View {
             .padding(.horizontal, 20)
             .padding(.vertical, 10)
             .frame(maxWidth: .infinity)
+            // Small print on a small card: larger text, but the time stays clear of the chevron.
+            .dynamicTypeSize(...DynamicTypeSize.xxLarge)
             .background(Color.white, in: RoundedRectangle(cornerRadius: 8))
         }
         .buttonStyle(.plain)
@@ -143,6 +146,8 @@ struct HomeView: View {
     private func liveTitle(dark: Bool) -> some View {
         HStack(spacing: 6) {
             Text("Live on \(boardName)")
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
             Circle().fill(board?.paused == true ? Color.orange : Style.live).frame(width: 7, height: 7)
         }
         .foregroundStyle(dark ? Style.ink : .white)
@@ -222,6 +227,8 @@ struct HomeView: View {
                     VStack(spacing: 12) {
                         Text(each.rawValue)
                             .font(.title3)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.6)
                             .foregroundStyle(tab == each ? Color.white : Style.secondary)
                         Rectangle()
                             .fill(tab == each ? Color.white : .clear)
@@ -233,6 +240,7 @@ struct HomeView: View {
             }
         }
         .padding(.top, 18)
+        .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
         .overlay(alignment: .bottom) {
             Rectangle().fill(Color.white.opacity(0.08)).frame(height: 1)
         }
@@ -282,6 +290,8 @@ struct HomeView: View {
                     .accessibilityLabel("Close the filter")
                     Spacer()
                     Text("Sort By")
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
                     Picker("Sort By", selection: $oldestFirst) {
                         Text("Recent").tag(false)
                         Text("Oldest").tag(true)
@@ -316,6 +326,7 @@ struct HomeView: View {
     private func chip(_ title: String, selected: Bool, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             Text(title)
+                .lineLimit(1)
                 .padding(.horizontal, 16)
                 .padding(.vertical, 8)
                 .foregroundStyle(selected ? Style.ink : Style.secondary)

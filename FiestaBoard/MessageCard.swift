@@ -46,12 +46,18 @@ struct MessageCard<More: View>: View {
             HStack(alignment: .top, spacing: 10) {
                 if let sender {
                     Avatar(name: sender)
-                    Text(sender)
-                        .foregroundStyle(Style.ink)
-                    if let date {
-                        Text(ago(date))
-                            .foregroundStyle(Style.faint)
+                    // Who on one line, when beside it, both smaller rather than wrapped.
+                    HStack(spacing: 10) {
+                        Text(sender)
+                            .foregroundStyle(Style.ink)
+                            .layoutPriority(1)
+                        if let date {
+                            Text(ago(date))
+                                .foregroundStyle(Style.faint)
+                        }
                     }
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
                 }
                 Spacer()
                 if let favorite {
@@ -63,6 +69,7 @@ struct MessageCard<More: View>: View {
                 }
             }
             .font(.subheadline)
+            .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
             .padding(.horizontal, 18)
             .padding(.top, 14)
             .frame(minHeight: 44, alignment: .top)
@@ -117,6 +124,7 @@ struct MessageCard<More: View>: View {
                 }
             }
             .foregroundStyle(Style.faint)
+            .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
             .frame(height: 56)
         }
         .card()

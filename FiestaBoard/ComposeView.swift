@@ -91,12 +91,15 @@ struct ComposeView: View {
                     .foregroundStyle(Style.secondary)
             }
             .font(.footnote)
+            .dynamicTypeSize(...DynamicTypeSize.accessibility1)
             .padding(.horizontal, 24)
             .padding(.vertical, 8)
 
-            HStack(spacing: 28) {
+            HStack(spacing: 24) {
                 Button("Cancel") { dismiss() }
+                    .fixedSize()
                 Button("Clear") { text = "" }
+                    .fixedSize()
                     .disabled(text.isEmpty)
                 Spacer()
                 HStack(spacing: 0) {
@@ -136,6 +139,9 @@ struct ComposeView: View {
                 .background(Style.control, in: RoundedRectangle(cornerRadius: 8))
             }
             .foregroundStyle(.white)
+            .lineLimit(1)
+            // Larger text, but the buttons stay on one line beside each other.
+            .dynamicTypeSize(...DynamicTypeSize.xxLarge)
             .padding(.horizontal, 24)
             .padding(.bottom, 12)
 
