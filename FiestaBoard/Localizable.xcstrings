@@ -509,6 +509,28 @@
         }
       }
     },
+    "Eraser": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Radierer"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Borrador"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gomme"
+          }
+        }
+      }
+    },
     "Favorite": {
       "localizations": {
         "de": {
@@ -818,6 +840,28 @@
         }
       }
     },
+    "Letters": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buchstaben"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Letras"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lettres"
+          }
+        }
+      }
+    },
     "Live on %@": {
       "localizations": {
         "de": {
@@ -880,6 +924,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "Se crée dans FiestaBoard sous Paramètres → IA. Conservé dans le trousseau de cet iPhone."
+          }
+        }
+      }
+    },
+    "Mode": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modus"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mode"
           }
         }
       }
@@ -1123,6 +1189,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "Case rouge"
+          }
+        }
+      }
+    },
+    "Redo": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wiederholen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rehacer"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rétablir"
           }
         }
       }
@@ -1415,6 +1503,50 @@
         }
       }
     },
+    "Tap a tile, then type.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tippen Sie auf ein Feld und schreiben Sie los."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toca una casilla y escribe."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Touchez une case, puis tapez."
+          }
+        }
+      }
+    },
+    "Tap or drag across the tiles to paint them.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tippen oder wischen Sie über die Felder, um sie zu färben."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toca o arrastra sobre las casillas para pintarlas."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Touchez ou glissez sur les cases pour les colorer."
+          }
+        }
+      }
+    },
     "Tap the ribbon on a message to keep it here.": {
       "localizations": {
         "de": {
@@ -1433,6 +1565,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "Touchez le marque-page d’un message pour le garder ici."
+          }
+        }
+      }
+    },
+    "Text": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Text"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Texto"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Texte"
           }
         }
       }
@@ -1592,6 +1746,28 @@
         }
       }
     },
+    "Undo": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widerrufen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deshacer"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuler"
+          }
+        }
+      }
+    },
     "Until %@": {
       "localizations": {
         "de": {
@@ -1676,6 +1852,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "Case violette"
+          }
+        }
+      }
+    },
+    "Visual": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visuell"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visual"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visuel"
           }
         }
       }

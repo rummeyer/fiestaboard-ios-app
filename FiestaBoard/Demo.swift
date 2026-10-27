@@ -2,22 +2,32 @@ import Foundation
 
 /// Sample content for looking at the app without a FiestaBoard, in a debug
 /// build started with `-demo`: `-demoCompose` opens the compose screen,
+/// `-demoVisual` the same drawn tile by tile,
 /// `-demoLive` the board large, `-demoSettings` the first start.
 enum Demo {
     #if DEBUG
     private static let arguments = ProcessInfo.processInfo.arguments
     static let on = arguments.contains("-demo")
     static let compose = arguments.contains("-demoCompose")
+    static let visual = arguments.contains("-demoVisual")
     static let live = arguments.contains("-demoLive")
     static let settings = arguments.contains("-demoSettings")
     #else
     static let on = false
     static let compose = false
+    static let visual = false
     static let live = false
     static let settings = false
     #endif
 
     static let shape = BoardShape.note
+
+    /// A message drawn in the visual editor: a word between two rainbows.
+    static let drawn: [[Int]] = {
+        let rainbow = [63, 64, 65, 66, 67, 68]
+        let stripe = (0..<15).map { rainbow[$0 % rainbow.count] }
+        return [stripe, Layout.tiles(of: "COFFEE IS READY"), stripe.reversed()]
+    }()
 
     static func grid(_ text: String) -> [[Int]] {
         Layout.grid(text, rows: shape.rows, cols: shape.cols).grid

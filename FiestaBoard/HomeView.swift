@@ -93,8 +93,8 @@ struct HomeView: View {
             liveView
         }
         .fullScreenCover(item: $composing) { request in
-            ComposeView(request: request, shape: shape, boardName: boardName) { text, minutes in
-                await sendText(text, minutes: minutes)
+            ComposeView(request: request, shape: shape, boardName: boardName) { outgoing, minutes in
+                await send(outgoing, minutes: minutes)
             }
             .environment(library)
         }
@@ -233,7 +233,7 @@ struct HomeView: View {
                         actions: [
                             CardAction(symbol: "copy", label: "Copy into a new message") {
                                 showingLive = false
-                                composing = ComposeRequest(text: kept?.editableText ?? "")
+                                composing = kept.map(request(from:)) ?? ComposeRequest(characters: characters)
                             },
                         ]
                     )
@@ -446,7 +446,7 @@ struct HomeView: View {
             shareText: message.editableText,
             actions: [
                 CardAction(symbol: "copy", label: "Copy into a new message") {
-                    composing = ComposeRequest(text: message.editableText)
+                    composing = request(from: message)
                 },
                 CardAction(symbol: "send", label: "Send to the board") {
                     Task { await resend(message) }
@@ -475,18 +475,19 @@ struct HomeView: View {
 
     private func draftCard(_ draft: Draft) -> some View {
         MessageCard(
-            characters: Layout.grid(draft.text, rows: shape.rows, cols: shape.cols).grid,
+            characters: draft.characters.map { Layout.fit($0, rows: shape.rows, cols: shape.cols) }
+                ?? Layout.grid(draft.text, rows: shape.rows, cols: shape.cols).grid,
             heart: shape.heart,
             sender: "Draft",
             date: draft.date,
             shareText: draft.text,
             actions: [
                 CardAction(symbol: "pencil", label: "Edit") {
-                    composing = ComposeRequest(text: draft.text, draft: draft.id)
+                    composing = ComposeRequest(text: draft.text, characters: draft.characters, draft: draft.id)
                 },
                 CardAction(symbol: "send", label: "Send to the board") {
                     Task {
-                        if let outcome = await sendText(draft.text, minutes: nil) {
+                        if let outcome = await send(outgoing(of: draft), minutes: nil) {
                             notice = outcome
                         } else {
                             library.deleteDraft(draft.id)
@@ -549,6 +550,9 @@ struct HomeView: View {
             if Demo.compose && composing == nil {
                 composing = ComposeRequest(text: "Kaffee ist fertig {red}")
             }
+            if Demo.visual && composing == nil {
+                composing = ComposeRequest(characters: Demo.drawn)
+            }
             if Demo.live {
                 showingLive = true
             }
@@ -591,11 +595,29 @@ struct HomeView: View {
         }
     }
 
-    /// Sends text; nil when it reached the board, else what came of it.
-    private func sendText(_ text: String, minutes: Int?) async -> String? {
+    /// A kept message to start from: its text as written, or, for one only seen on the board, its tiles.
+    private func request(from message: SavedMessage) -> ComposeRequest {
+        message.text.map { ComposeRequest(text: $0) } ?? ComposeRequest(characters: message.characters)
+    }
+
+    /// A draft as it goes out: tile by tile to a board of its size, else as text.
+    private func outgoing(of draft: Draft) -> Outgoing {
+        if let grid = draft.characters, grid.count == shape.rows, grid.first?.count == shape.cols {
+            return .grid(grid)
+        }
+        return .text(draft.text)
+    }
+
+    /// Sends text or tiles; nil when it reached the board, else what came of it.
+    private func send(_ outgoing: Outgoing, minutes: Int?) async -> String? {
         do {
-            let response = try await settings.service(for: boardID).send(text, to: boardID, minutes: minutes)
-            return await sent(response, text: text)
+            let api = try settings.service(for: boardID)
+            switch outgoing {
+            case let .text(text):
+                return await sent(try await api.send(text, to: boardID, minutes: minutes), text: text)
+            case let .grid(grid):
+                return await sent(try await api.send(characters: grid, to: boardID, minutes: minutes), text: nil)
+            }
         } catch {
             return error.localizedDescription
         }
@@ -609,13 +631,13 @@ struct HomeView: View {
             let response = sameSize
                 ? try await api.send(characters: message.characters, to: boardID, minutes: nil)
                 : try await api.send(message.editableText, to: boardID, minutes: nil)
-            notice = await sent(response, text: message.editableText) ?? String(localized: "Sent to \(boardName)")
+            notice = await sent(response, text: message.text) ?? String(localized: "Sent to \(boardName)")
         } catch {
             notice = error.localizedDescription
         }
     }
 
-    private func sent(_ response: MessageResponse, text: String) async -> String? {
+    private func sent(_ response: MessageResponse, text: String?) async -> String? {
         if response.sent || response.held == true {
             library.sent(response.characters, text: text, board: boardID, boardName: boardName)
             if response.held == true {

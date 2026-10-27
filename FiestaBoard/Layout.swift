@@ -5,6 +5,29 @@ import Foundation
 /// typed, a colour marker such as `{red}` one tile, and what does not fit cut
 /// off at the bottom. The preview shows what the board will.
 enum Layout {
+    /// A grid made to a board's size: cut where it is larger, blank where it is smaller.
+    static func fit(_ grid: [[Int]], rows: Int, cols: Int) -> [[Int]] {
+        (0..<rows).map { row in
+            (0..<cols).map { col in row < grid.count && col < grid[row].count ? grid[row][col] : 0 }
+        }
+    }
+
+    /// A grid as text to write on: its letters, a marker such as `{red}` for each colour,
+    /// a line for each row — the blanks before a word kept, where they place it.
+    static func text(of grid: [[Int]]) -> String {
+        grid.map { row in
+            row.map { code -> String in
+                if let name = colours.first(where: { $0.value == code && $0.key != "purple" })?.key {
+                    return "{\(name)}"
+                }
+                if case let .character(letter) = Flap.of(code, heart: false) {
+                    return letter.isEmpty ? " " : letter
+                }
+                return " "
+            }.joined().replacingOccurrences(of: " +$", with: "", options: .regularExpression)
+        }.joined(separator: "\n").replacingOccurrences(of: "\n+$", with: "", options: .regularExpression)
+    }
+
     static func grid(_ text: String, rows: Int, cols: Int) -> (grid: [[Int]], overflow: Bool) {
         var lines: [[Int]] = []
         for line in text.components(separatedBy: "\n") {
@@ -76,7 +99,8 @@ enum Layout {
         "white": 69, "black": 70, "filled": 71,
     ]
 
-    private static func code(of character: Character) -> Int {
+    /// A typed character's flap code; 0, a blank, for one the board has not.
+    static func code(of character: Character) -> Int {
         let upper = String(character).uppercased()
         if let scalar = upper.unicodeScalars.first, upper.count == 1 {
             switch scalar.value {

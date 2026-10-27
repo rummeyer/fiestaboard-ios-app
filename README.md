@@ -26,6 +26,11 @@
   </picture>
   &nbsp;
   <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/visual-dark.png">
+    <img src="docs/screenshots/visual-light.png" alt="The visual editor: the board drawn tile by tile, COFFEE IS READY between two rainbows, undo and redo, and below the colours, the eraser and the letters" width="200">
+  </picture>
+  &nbsp;
+  <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/settings-dark.png">
     <img src="docs/screenshots/settings-light.png" alt="The first start: FiestaBoard's address and the API token" width="200">
   </picture>
@@ -45,9 +50,11 @@
 
 **Writing a message.** The round button opens it. The board above shows where your text will land as you type — laid out as FiestaBoard lays it out: from the top left, word-wrapped, a line break where you type one — with how many tiles it takes. The colour tiles below put one in. **Send** says whether it reached the board or why not: a paused board, or one in its quiet time, which holds the message until that ends. **Save Draft**, next to Send, keeps it for later.
 
+**Tile by tile.** Switch from **Text** to **Visual** and the board is your canvas: choose a colour or the eraser and tap or drag across the tiles, or choose the letters, tap a tile and type from there — backspace goes back, return to the next row. Undo and redo as you go. What you wrote as text carries over, and back. A visual message is sent tile for tile, exactly as drawn; a visual draft opens visually again, and so does a message copied from what the board showed.
+
 **For a while, then the schedule again.** A message stays until the board's next refresh — the next page of its schedule or carousel — unless you choose, above Send, to show it for 15 minutes, an hour, 4 or 8 hours. It then holds against the schedule, and the board goes back to it by itself once the time is up; the live card says until when, and **Back to the schedule** ends it sooner.
 
-**All your boards.** Every display your FiestaBoard drives — a split-flap board, an LED panel such as a pixel clock — each drawn as it looks, picked in the bar at the bottom. History is per board; Favorites and Drafts are the same whichever board is chosen, and go to any of them, laid out anew for its size.
+**All your boards.** Every display your FiestaBoard drives — a split-flap board, an LED panel such as a pixel clock — each drawn as it looks, picked in the row of boards on top. History is per board; Favorites and Drafts are the same whichever board is chosen, and go to any of them, laid out anew for its size.
 
 **A demo board.** Without a FiestaBoard, or to try something out: **Add demo board** in Settings, and a board simulated in the app joins yours — or stands alone, with no FiestaBoard at all. It works as a real one does: it takes messages as FiestaBoard does, keeps what it shows, and has a history of its own.
 
@@ -140,6 +147,7 @@ The files in `FiestaBoard/` are the project: Xcode picks up whatever is in the f
 | `-demo -demoLive` | the board large |
 | `-demo -board sample-clock` | a second board, an LED pixel clock |
 | `-demo -demoCompose` | writing a message |
+| `-demo -demoVisual` | the visual editor |
 | `-demo -demoSettings` | the first start |
 
 All of them run on the demo board and a sample LED clock beside it, with sample content of their own.

@@ -18,17 +18,7 @@ struct SavedMessage: Codable, Identifiable, Hashable, Sendable {
 
     /// The text to start a new message from: as written, or read back off the board.
     var editableText: String {
-        text ?? characters.map { row in
-            row.map { code -> String in
-                if let name = Layout.colours.first(where: { $0.value == code && $0.key != "purple" })?.key {
-                    return "{\(name)}"
-                }
-                if case let .character(letter) = Flap.of(code, heart: false) {
-                    return letter.isEmpty ? " " : letter
-                }
-                return " "
-            }.joined().trimmingCharacters(in: .whitespaces)
-        }.joined(separator: "\n").trimmingCharacters(in: .newlines)
+        text ?? Layout.text(of: characters)
     }
 }
 
@@ -36,6 +26,8 @@ struct SavedMessage: Codable, Identifiable, Hashable, Sendable {
 struct Draft: Codable, Identifiable, Hashable, Sendable {
     var id = UUID()
     var text: String
+    /// The board drawn tile by tile, for one made in the visual editor.
+    var characters: [[Int]]?
     var date: Date
 }
 
@@ -90,7 +82,7 @@ final class Library {
     }
 
     /// A message sent from the app: at the top of that board's history.
-    func sent(_ characters: [[Int]], text: String, board: String, boardName: String) {
+    func sent(_ characters: [[Int]], text: String?, board: String, boardName: String) {
         add(SavedMessage(characters: characters, text: text, sender: "You", boardID: board, boardName: boardName, date: .now))
     }
 
@@ -138,9 +130,9 @@ final class Library {
         Self.write(messages, to: url)
     }
 
-    func saveDraft(_ text: String, replacing id: Draft.ID? = nil) {
+    func saveDraft(_ text: String, characters: [[Int]]? = nil, replacing id: Draft.ID? = nil) {
         drafts.removeAll { $0.id == id }
-        drafts.insert(Draft(text: text, date: .now), at: 0)
+        drafts.insert(Draft(text: text, characters: characters, date: .now), at: 0)
         Self.write(drafts, to: draftsURL)
     }
 

@@ -24,6 +24,10 @@ adheres to [semantic versioning](https://semver.org/spec/v2.0.0.html).
   laid out as FiestaBoard does, how many tiles it takes, the colour tiles to
   put in, Save Draft beside Send, and whether it reached the board: sent,
   held until the board's quiet time ends, or FiestaBoard's reason for not.
+- A visual editor beside the text: the board as a canvas, painted with a
+  colour or the eraser by tapping or dragging, letters typed from the tile
+  chosen, undo and redo, sent tile for tile. Text carries over both ways;
+  visual drafts and messages copied from what the board showed open in it.
 - Settings for FiestaBoard's address and an API token, tried before they are
   kept; the token in the Keychain. https:// from anywhere, or plain http://
   to an address on the home network or reached through a VPN — private IPv4
