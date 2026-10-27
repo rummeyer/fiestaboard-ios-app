@@ -8,7 +8,6 @@ struct SettingsView: View {
     var boards: [BoardSummary] = []
 
     @Environment(Settings.self) private var settings
-    @Environment(TipJar.self) private var tips
     @Environment(\.dismiss) private var dismiss
     @State private var address = ""
     @State private var token = ""
@@ -78,17 +77,8 @@ struct SettingsView: View {
                 } header: {
                     Text("About")
                 }
-                // Only where the App Store offers the tips.
-                if !tips.products.isEmpty {
-                    Section {
-                        TipRows()
-                    } header: {
-                        Text("Donation")
-                    }
-                }
             }
         }
-        .tipping(tips)
         .scrollContentBackground(.hidden)
         .background(Style.background)
         .navigationTitle(isFirstRun ? Text(verbatim: "FiestaBoard") : Text("Settings"))

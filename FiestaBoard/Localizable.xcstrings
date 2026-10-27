@@ -1706,50 +1706,6 @@
         }
       }
     },
-    "Thank you!": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vielen Dank!"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "¡Gracias!"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Merci !"
-          }
-        }
-      }
-    },
-    "The App Store could not confirm the purchase.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Der App Store konnte den Kauf nicht bestätigen."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "El App Store no pudo confirmar la compra."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "L’App Store n’a pas pu confirmer l’achat."
-          }
-        }
-      }
-    },
     "The board already shows this.": {
       "localizations": {
         "de": {
@@ -2210,50 +2166,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "Aucun brouillon enregistré pour le moment"
-          }
-        }
-      }
-    },
-    "Your coffee keeps the app going.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ihr Kaffee hält die App am Laufen."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tu café mantiene viva la app."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Votre café fait vivre l’app."
-          }
-        }
-      }
-    },
-    "Donation": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Spende"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Donación"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Don"
           }
         }
       }

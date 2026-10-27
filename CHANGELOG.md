@@ -6,6 +6,11 @@ adheres to [semantic versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Removed
+
+- The tips: no In-App Purchase in the app, and no StoreKit configuration.
+  Buy Me a Coffee stays in the README.
+
 ## [1.1.0] - 2026-10-27
 
 ### Added
