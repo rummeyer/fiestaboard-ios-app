@@ -23,24 +23,23 @@ enum Demo {
         Layout.grid(text, rows: shape.rows, cols: shape.cols).grid
     }
 
-    static var board: BoardDetail {
-        BoardDetail(
-            id: "demo", name: "My Board", deviceType: "note", rows: 3, cols: 15, paused: false,
-            characters: grid("{yellow}{blue} {red}{red}{orange}{yellow}{blue} {red}{red}{orange}{yellow}\n KAFFEE IST\n   FERTIG {red}"),
-            text: nil, resolvedPageId: nil, source: "manual", overrideExpiresAt: nil
-        )
-    }
+    static let sample = grid("{yellow}{blue} {red}{red}{orange}{yellow}{blue} {red}{red}{orange}{yellow}\n KAFFEE IST\n   FERTIG {red}")
 
+    /// The sample screenshots' content: on the simulated board and in its history.
     @MainActor
-    static func fill(_ library: Library) {
+    static func fill(_ library: Library) async {
         guard library.messages.isEmpty else {
             return
         }
-        library.seen(grid("ES IST VIERTEL\nNACH VIER"), boardName: "My Board")
-        library.seen(grid("WOHNEN  22°C 48%\nSCHLAF  21°C 51%\nBALKON   9°C 86%"), boardName: "My Board")
+        await VirtualBoard.shared.set(sample)
+        let board = VirtualBoard.id
+        let name = String(localized: "Demo Board")
+        library.seen(grid("ES IST VIERTEL\nNACH VIER"), board: board, boardName: name)
+        library.seen(grid("WOHNEN  22°C 48%\nSCHLAF  21°C 51%\nBALKON   9°C 86%"), board: board, boardName: name)
         library.saveDraft("Geburtstag! {red}{orange}{yellow}")
-        library.sent(grid("{orange}{orange} GUTEN {orange}{orange}\n   MORGEN!"), text: "{orange}{orange} GUTEN {orange}{orange}\n   MORGEN!", boardName: "My Board")
-        library.toggleFavorite(grid("{orange}{orange} GUTEN {orange}{orange}\n   MORGEN!"), boardName: "My Board")
-        library.sent(board.characters!, text: "KAFFEE IST FERTIG", boardName: "My Board")
+        let morning = "{orange}{orange} GUTEN {orange}{orange}\n   MORGEN!"
+        library.sent(grid(morning), text: morning, board: board, boardName: name)
+        library.toggleFavorite(grid(morning), board: board, boardName: name)
+        library.sent(sample, text: "KAFFEE IST FERTIG", board: board, boardName: name)
     }
 }

@@ -57,7 +57,7 @@ struct ComposeView: View {
             .foregroundStyle(Style.ink)
             .padding(.vertical, 12)
 
-            BoardView(characters: laid.grid, rows: shape.rows, cols: shape.cols, heart: shape.heart, white: shape.heart)
+            BoardView(characters: laid.grid, rows: shape.rows, cols: shape.cols, heart: shape.heart, white: shape.heart, led: shape.led)
                 .padding(.horizontal)
                 .padding(.bottom, 12)
 

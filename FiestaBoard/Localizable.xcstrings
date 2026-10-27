@@ -45,6 +45,28 @@
         }
       }
     },
+    "A board simulated in this app, beside your FiestaBoard's boards or without a FiestaBoard at all, to try everything out. It has its own history.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ein in dieser App simuliertes Board, neben den Boards Ihres FiestaBoard oder ganz ohne FiestaBoard, um alles auszuprobieren. Es hat einen eigenen Verlauf."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un tableau simulé dans cette app, à côté des tableaux de votre FiestaBoard ou sans FiestaBoard, pour tout essayer. Il a son propre historique."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un tablero simulado en esta app, junto a los tableros de tu FiestaBoard o sin ningún FiestaBoard, para probarlo todo. Tiene su propio historial."
+          }
+        }
+      }
+    },
     "A message for a while, then the schedule again": {
       "localizations": {
         "de": {
@@ -85,6 +107,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "Token de API"
+          }
+        }
+      }
+    },
+    "Add demo board": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo-Board hinzufügen"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter un tableau de démo"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Añadir tablero de demostración"
           }
         }
       }
@@ -353,6 +397,50 @@
         }
       }
     },
+    "Demo": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Démo"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo"
+          }
+        }
+      }
+    },
+    "Demo Board": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo-Board"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tableau de démo"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tablero de demostración"
+          }
+        }
+      }
+    },
     "Draft": {
       "localizations": {
         "de": {
@@ -525,6 +613,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "Casilla verde"
+          }
+        }
+      }
+    },
+    "HELLO FROM\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HALLO VON\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BONJOUR DE\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HOLA DESDE\nFIESTABOARD\n{red}{orange}{yellow}{green}{blue}{violet}"
           }
         }
       }
@@ -1167,6 +1277,28 @@
         }
       }
     },
+    "Start": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Starten"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Commencer"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empezar"
+          }
+        }
+      }
+    },
     "Tap the ribbon on a message to keep it here.": {
       "localizations": {
         "de": {
@@ -1185,6 +1317,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "Toca el marcador de un mensaje para guardarlo aquí."
+          }
+        }
+      }
+    },
+    "The board already shows this.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das Board zeigt das bereits."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le tableau affiche déjà ceci."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El tablero ya muestra esto."
           }
         }
       }

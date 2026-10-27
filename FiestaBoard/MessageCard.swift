@@ -6,17 +6,20 @@ struct BoardShape: Equatable {
     var cols: Int
     /// Code 62 is a heart on a Note, a degree sign on a Flagship.
     var heart: Bool
+    /// An LED panel — a pixel clock, a matrix — rather than split flaps.
+    var led = false
 
     static let note = BoardShape(rows: 3, cols: 15, heart: true)
 
-    init(rows: Int, cols: Int, heart: Bool) {
+    init(rows: Int, cols: Int, heart: Bool, led: Bool = false) {
         self.rows = rows
         self.cols = cols
         self.heart = heart
+        self.led = led
     }
 
     init(_ board: BoardDetail) {
-        self.init(rows: board.rows, cols: board.cols, heart: board.deviceType.hasPrefix("note"))
+        self.init(rows: board.rows, cols: board.cols, heart: board.deviceType.hasPrefix("note"), led: board.deviceType == "panel")
     }
 }
 

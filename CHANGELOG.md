@@ -29,6 +29,12 @@ adheres to [semantic versioning](https://semver.org/spec/v2.0.0.html).
   to an address on the home network or reached through a VPN — private IPv4
   and IPv6 addresses, 100.64–127.x as Tailscale uses, .local names and names
   without a dot — and nowhere else.
+- Every board FiestaBoard drives, picked in the bottom bar, each drawn as it
+  looks: a split-flap board with its flaps, an LED panel lit on black.
+  History per board; Favorites and Drafts the same for all, sent to any.
+- Add demo board, in Settings: a board simulated in the app, beside
+  FiestaBoard's or alone without one, that takes messages as FiestaBoard does
+  and keeps what it shows; a Demo tag on the live card.
 - English, German, French and Spanish, as the iPhone is set, with
   FiestaBoard's own names for its menus in each.
 - Labels on one line at any text size.

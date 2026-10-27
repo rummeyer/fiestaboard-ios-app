@@ -9,8 +9,11 @@ struct SavedMessage: Codable, Identifiable, Hashable, Sendable {
     var text: String?
     /// Who put it there: "You" from this app, "FiestaBoard" for what the board showed.
     var sender: String
+    /// The board it was on; none for one kept before there were several.
+    var boardID: String?
     var boardName: String
     var date: Date
+    /// Whether it was a favorite, when favorites were part of the history: read once, to carry them over.
     var favorite = false
 
     /// The text to start a new message from: as written, or read back off the board.
@@ -37,97 +40,102 @@ struct Draft: Codable, Identifiable, Hashable, Sendable {
 }
 
 /// History, favorites and drafts, kept on this iPhone: FiestaBoard keeps none
-/// of them. History is what was sent from the app and what the board showed
-/// while the app was open, newest first; a favorite stays when it falls out of
-/// the history.
+/// of them. History is per board — what was sent to it from the app and what
+/// it showed while the app was open, newest first. Favorites and drafts are
+/// the same whichever board is chosen, and go to any.
 @MainActor @Observable
 final class Library {
     private static let limit = 300
 
+    /// Every board's history, newest first.
     private(set) var messages: [SavedMessage] = []
+    private(set) var favorites: [SavedMessage] = []
     private(set) var drafts: [Draft] = []
 
     private let url: URL
+    private let favoritesURL: URL
     private let draftsURL: URL
 
     init() {
         let folder = URL.applicationSupportDirectory
         try? FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
-        // The demo's own files, started afresh, so that it never mixes with the real ones.
-        let prefix = Demo.on ? "demo-" : ""
+        // The sample screenshots' own files, started afresh each time.
+        let prefix = Demo.on ? "sample-" : ""
         url = folder.appending(path: prefix + "messages.json")
+        favoritesURL = folder.appending(path: prefix + "favorites.json")
         draftsURL = folder.appending(path: prefix + "drafts.json")
         if Demo.on {
-            try? FileManager.default.removeItem(at: url)
-            try? FileManager.default.removeItem(at: draftsURL)
+            for file in [url, favoritesURL, draftsURL] {
+                try? FileManager.default.removeItem(at: file)
+            }
         }
         messages = Self.load(url) ?? []
+        // Favorites were marked in the history once: carried over the first time.
+        favorites = Self.load(favoritesURL) ?? messages.filter(\.favorite)
         drafts = Self.load(draftsURL) ?? []
     }
 
-    var favorites: [SavedMessage] {
-        messages.filter(\.favorite)
+    /// One board's history. One kept before there were several is a FiestaBoard board's, any of them.
+    func history(for board: String) -> [SavedMessage] {
+        messages.filter { Self.belongs($0, to: board) }
     }
 
-    var senders: [String] {
-        Array(Set(messages.map(\.sender))).sorted()
+    func senders(for board: String) -> [String] {
+        Array(Set(history(for: board).map(\.sender))).sorted()
     }
 
-    /// The newest message that is this board content, if one is kept.
-    func latest(_ characters: [[Int]]) -> SavedMessage? {
-        messages.first { $0.characters == characters }
+    /// The newest message in a board's history that is this content, if one is kept.
+    func latest(_ characters: [[Int]], on board: String) -> SavedMessage? {
+        history(for: board).first { $0.characters == characters }
     }
 
-    /// A message sent from the app: at the top of the history.
-    func sent(_ characters: [[Int]], text: String, boardName: String) {
-        add(SavedMessage(characters: characters, text: text, sender: "You", boardName: boardName, date: .now))
+    /// A message sent from the app: at the top of that board's history.
+    func sent(_ characters: [[Int]], text: String, board: String, boardName: String) {
+        add(SavedMessage(characters: characters, text: text, sender: "You", boardID: board, boardName: boardName, date: .now))
     }
 
-    /// What the board shows now, seen by the app: kept unless it is the newest one already.
-    func seen(_ characters: [[Int]], boardName: String) {
-        guard characters.contains(where: { $0.contains { $0 != 0 } }), messages.first?.characters != characters else {
+    /// What a board shows now, seen by the app: kept unless it is the newest one there already.
+    func seen(_ characters: [[Int]], board: String, boardName: String) {
+        guard characters.contains(where: { $0.contains { $0 != 0 } }), history(for: board).first?.characters != characters else {
             return
         }
-        add(SavedMessage(characters: characters, sender: "FiestaBoard", boardName: boardName, date: .now))
+        add(SavedMessage(characters: characters, sender: "FiestaBoard", boardID: board, boardName: boardName, date: .now))
     }
 
     private func add(_ message: SavedMessage) {
-        var message = message
-        message.favorite = messages.contains { $0.favorite && $0.characters == message.characters }
-        messages.removeAll { $0.characters == message.characters && !$0.favorite }
-        messages.removeAll { $0.characters == message.characters && message.favorite }
+        messages.removeAll { $0.characters == message.characters && Self.belongs($0, to: message.boardID ?? "") }
         messages.insert(message, at: 0)
-        var kept = 0
-        messages = messages.filter { each in
-            if each.favorite {
-                return true
-            }
-            kept += 1
-            return kept <= Self.limit
-        }
-        save()
+        messages = Array(messages.prefix(Self.limit))
+        Self.write(messages, to: url)
     }
 
     func isFavorite(_ characters: [[Int]]) -> Bool {
-        messages.contains { $0.favorite && $0.characters == characters }
+        favorites.contains { $0.characters == characters }
     }
 
-    /// Marks a message, or board content not kept yet, as a favorite, or no longer.
-    func toggleFavorite(_ characters: [[Int]], boardName: String) {
-        if let index = messages.firstIndex(where: { $0.characters == characters }) {
-            let favorite = !messages[index].favorite
-            for i in messages.indices where messages[i].characters == characters {
-                messages[i].favorite = favorite
-            }
+    /// Keeps a message as a favorite, or no longer.
+    func toggleFavorite(_ message: SavedMessage) {
+        if isFavorite(message.characters) {
+            favorites.removeAll { $0.characters == message.characters }
         } else {
-            messages.insert(SavedMessage(characters: characters, sender: "FiestaBoard", boardName: boardName, date: .now, favorite: true), at: 0)
+            var favorite = message
+            favorite.id = UUID()
+            favorite.favorite = true
+            favorites.insert(favorite, at: 0)
         }
-        save()
+        Self.write(favorites, to: favoritesURL)
     }
 
+    /// The same for what a board shows: as the history has it, or as it is.
+    func toggleFavorite(_ characters: [[Int]], board: String, boardName: String) {
+        toggleFavorite(latest(characters, on: board)
+            ?? SavedMessage(characters: characters, sender: "FiestaBoard", boardID: board, boardName: boardName, date: .now))
+    }
+
+    /// Out of a board's history; a favorite of it stays.
     func delete(_ message: SavedMessage) {
         messages.removeAll { $0.id == message.id }
-        save()
+        Self.write(messages, to: url)
     }
 
     func saveDraft(_ text: String, replacing id: Draft.ID? = nil) {
@@ -141,8 +149,8 @@ final class Library {
         Self.write(drafts, to: draftsURL)
     }
 
-    private func save() {
-        Self.write(messages, to: url)
+    private static func belongs(_ message: SavedMessage, to board: String) -> Bool {
+        message.boardID == board || message.boardID == nil && board != VirtualBoard.id
     }
 
     private static func load<T: Decodable>(_ url: URL) -> T? {

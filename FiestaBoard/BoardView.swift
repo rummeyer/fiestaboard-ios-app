@@ -70,6 +70,8 @@ struct BoardView: View {
     var ink: Color = .white
     /// White flaps with dark letters, as a white board's are; else black ones with white.
     var white = false
+    /// An LED panel: lit characters on black, no flaps.
+    var led = false
 
     /// A flap is taller than wide.
     private let tileAspect: CGFloat = 1.3
@@ -110,7 +112,7 @@ struct BoardView: View {
 
     private func tile(_ flap: Flap) -> some View {
         RoundedRectangle(cornerRadius: plain ? 1 : 2)
-            .fill(plain && flap.isCharacter ? Color.clear : flap.isCharacter ? (white ? Color(white: 0.985) : Color(white: 0.12)) : flap.fill)
+            .fill(plain && flap.isCharacter ? Color.clear : flap.isCharacter ? (white ? Color(white: 0.985) : led ? Color(white: 0.02) : Color(white: 0.12)) : flap.fill)
             // On a card a colour is a small tile, as high as a letter, not the whole flap.
             .scaleEffect(plain && !flap.isCharacter ? CGSize(width: 0.72, height: 0.62) : CGSize(width: 1, height: 1))
             .aspectRatio(1 / tileAspect, contentMode: .fit)
@@ -123,6 +125,8 @@ struct BoardView: View {
                         .padding(.vertical, 2)
                         .padding(.horizontal, 1)
                         .foregroundStyle(plain ? ink : white ? Color(white: 0.1) : .white)
+                        // An LED's light around the character.
+                        .shadow(color: .white.opacity(led && !plain ? 0.6 : 0), radius: 3)
                 }
             }
             .overlay {
@@ -132,7 +136,7 @@ struct BoardView: View {
                         .stroke(Color.black.opacity(0.15), lineWidth: 0.5)
                         .scaleEffect(CGSize(width: 0.72, height: 0.62))
                 }
-                if case .character = flap, !plain {
+                if case .character = flap, !plain, !led {
                     // The split between the two halves of a flap.
                     Rectangle()
                         .fill(Color.black.opacity(white ? 0.07 : 0.5))
