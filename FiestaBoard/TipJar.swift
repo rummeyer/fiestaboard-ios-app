@@ -1,5 +1,8 @@
+import OSLog
 import StoreKit
 import SwiftUI
+
+private let log = Logger(subsystem: "de.rummeyer.fiestaboard", category: "tips")
 
 /// Tips, through In-App Purchase as the App Store has them: three coffees,
 /// each a consumable that unlocks nothing — a thank-you, no more. The
@@ -41,7 +44,9 @@ final class TipJar {
         }
         do {
             products = try await Product.products(for: Self.productIDs).sorted { $0.price < $1.price }
+            log.info("Tips: \(self.products.count) of \(Self.productIDs.count) from the App Store")
         } catch {
+            log.error("Tips: none, \(error.localizedDescription)")
             products = []
         }
     }

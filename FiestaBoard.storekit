@@ -1,107 +1,107 @@
 {
-  "identifier": "F1E5TAB0",
-  "nonRenewingSubscriptions": [],
-  "products": [
+  "identifier" : "4F1E5A0B",
+  "nonRenewingSubscriptions" : [],
+  "products" : [
     {
-      "displayPrice": "1.99",
-      "familyShareable": false,
-      "internalID": "4445351405",
-      "localizations": [
+      "displayPrice" : "1.99",
+      "familyShareable" : false,
+      "internalID" : "6740000001",
+      "localizations" : [
         {
-          "description": "A thank-you for the app.",
-          "displayName": "Small coffee",
-          "locale": "en_US"
+          "description" : "A thank-you for the app.",
+          "displayName" : "Small coffee",
+          "locale" : "en_US"
         },
         {
-          "description": "Ein Dankeschön für die App.",
-          "displayName": "Kleiner Kaffee",
-          "locale": "de"
+          "description" : "Ein Dankeschön für die App.",
+          "displayName" : "Kleiner Kaffee",
+          "locale" : "de_DE"
         },
         {
-          "description": "Un merci pour l’app.",
-          "displayName": "Petit café",
-          "locale": "fr"
+          "description" : "Un merci pour l’app.",
+          "displayName" : "Petit café",
+          "locale" : "fr_FR"
         },
         {
-          "description": "Un agradecimiento por la app.",
-          "displayName": "Café pequeño",
-          "locale": "es"
+          "description" : "Un agradecimiento por la app.",
+          "displayName" : "Café pequeño",
+          "locale" : "es_ES"
         }
       ],
-      "productID": "de.rummeyer.fiestaboard.tip.small",
-      "referenceName": "Tip small",
-      "type": "Consumable"
+      "productID" : "de.rummeyer.fiestaboard.tip.small",
+      "referenceName" : "Tip small",
+      "type" : "Consumable"
     },
     {
-      "displayPrice": "4.99",
-      "familyShareable": false,
-      "internalID": "6093017670",
-      "localizations": [
+      "displayPrice" : "4.99",
+      "familyShareable" : false,
+      "internalID" : "6740000002",
+      "localizations" : [
         {
-          "description": "A thank-you for the app.",
-          "displayName": "Big coffee",
-          "locale": "en_US"
+          "description" : "A thank-you for the app.",
+          "displayName" : "Big coffee",
+          "locale" : "en_US"
         },
         {
-          "description": "Ein Dankeschön für die App.",
-          "displayName": "Großer Kaffee",
-          "locale": "de"
+          "description" : "Ein Dankeschön für die App.",
+          "displayName" : "Großer Kaffee",
+          "locale" : "de_DE"
         },
         {
-          "description": "Un merci pour l’app.",
-          "displayName": "Grand café",
-          "locale": "fr"
+          "description" : "Un merci pour l’app.",
+          "displayName" : "Grand café",
+          "locale" : "fr_FR"
         },
         {
-          "description": "Un agradecimiento por la app.",
-          "displayName": "Café grande",
-          "locale": "es"
+          "description" : "Un agradecimiento por la app.",
+          "displayName" : "Café grande",
+          "locale" : "es_ES"
         }
       ],
-      "productID": "de.rummeyer.fiestaboard.tip.medium",
-      "referenceName": "Tip medium",
-      "type": "Consumable"
+      "productID" : "de.rummeyer.fiestaboard.tip.medium",
+      "referenceName" : "Tip medium",
+      "type" : "Consumable"
     },
     {
-      "displayPrice": "9.99",
-      "familyShareable": false,
-      "internalID": "1513989320",
-      "localizations": [
+      "displayPrice" : "9.99",
+      "familyShareable" : false,
+      "internalID" : "6740000003",
+      "localizations" : [
         {
-          "description": "A thank-you for the app.",
-          "displayName": "Coffee and cake",
-          "locale": "en_US"
+          "description" : "A thank-you for the app.",
+          "displayName" : "Coffee and cake",
+          "locale" : "en_US"
         },
         {
-          "description": "Ein Dankeschön für die App.",
-          "displayName": "Kaffee und Kuchen",
-          "locale": "de"
+          "description" : "Ein Dankeschön für die App.",
+          "displayName" : "Kaffee und Kuchen",
+          "locale" : "de_DE"
         },
         {
-          "description": "Un merci pour l’app.",
-          "displayName": "Café et gâteau",
-          "locale": "fr"
+          "description" : "Un merci pour l’app.",
+          "displayName" : "Café et gâteau",
+          "locale" : "fr_FR"
         },
         {
-          "description": "Un agradecimiento por la app.",
-          "displayName": "Café y pastel",
-          "locale": "es"
+          "description" : "Un agradecimiento por la app.",
+          "displayName" : "Café y pastel",
+          "locale" : "es_ES"
         }
       ],
-      "productID": "de.rummeyer.fiestaboard.tip.large",
-      "referenceName": "Tip large",
-      "type": "Consumable"
+      "productID" : "de.rummeyer.fiestaboard.tip.large",
+      "referenceName" : "Tip large",
+      "type" : "Consumable"
     }
   ],
-  "settings": {
-    "_failTransactionsEnabled": false,
-    "_locale": "de",
-    "_storefront": "DEU",
-    "_storeKitErrors": []
+  "settings" : {
+    "_failTransactionsEnabled" : false,
+    "_locale" : "de_DE",
+    "_storefront" : "DEU",
+    "_storeKitErrors" : []
   },
-  "subscriptionGroups": [],
-  "version": {
-    "major": 4,
-    "minor": 0
+  "subscriptionGroups" : [],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
   }
 }
