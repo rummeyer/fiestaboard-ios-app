@@ -10,6 +10,22 @@ private struct SendLabelStyle: LabelStyle {
     }
 }
 
+extension View {
+    /// A secondary action as FiestaBoard draws one: outlined, as tall as Send; widening to share a row of its own.
+    func secondaryButton(wide: Bool = false) -> some View {
+        self
+            .font(Style.font(.body))
+            .foregroundStyle(Style.ink)
+            .fixedSize()
+            .padding(.horizontal, 18)
+            .frame(maxWidth: wide ? .infinity : nil)
+            .frame(height: 48)
+            .background(Style.card, in: RoundedRectangle(cornerRadius: Style.radius))
+            .overlay(RoundedRectangle(cornerRadius: Style.radius).stroke(Style.border, lineWidth: 1))
+            .contentShape(Rectangle())
+    }
+}
+
 /// What to start writing from: a new message, a copy of one, or a draft.
 struct ComposeRequest: Identifiable {
     let id = UUID()
@@ -96,56 +112,26 @@ struct ComposeView: View {
             .padding(.horizontal, 24)
             .padding(.vertical, 8)
 
-            HStack(spacing: 24) {
-                Button("Cancel") { dismiss() }
-                    .fixedSize()
-                Button("Clear") { text = "" }
-                    .fixedSize()
-                    .disabled(text.isEmpty)
-                Spacer()
-                HStack(spacing: 0) {
-                    Button(action: submit) {
-                        Group {
-                            if sending {
-                                ProgressView().tint(Style.primaryInk)
-                            } else {
-                                Label {
-                                    Text("Send").fixedSize()
-                                } icon: {
-                                    LucideIcon("send", size: 20, relativeTo: .body)
-                                }
-                                .labelStyle(SendLabelStyle())
-                            }
-                        }
-                        .padding(.horizontal, 22)
-                        .frame(height: 48)
-                        .contentShape(Rectangle())
-                    }
-                    .buttonStyle(.plain)
-                    .disabled(sending || text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
-                    Rectangle().fill(Style.primaryInk.opacity(0.2)).frame(width: 1, height: 48)
-                    Menu {
-                        Button {
-                            library.saveDraft(text, replacing: request.draft)
-                            dismiss()
-                        } label: {
-                            Label("Save Draft", lucide: "save")
-                        }
-                        .disabled(text.isEmpty)
-                    } label: {
-                        LucideIcon("chevron-down", size: 18, relativeTo: .footnote)
-                            .frame(width: 44, height: 48)
-                    }
-                    .accessibilityLabel("More ways to send")
+            // In one row where the words fit, else Send across the width and the other two below it:
+            // German and French words are longer than English ones, and text can be larger.
+            ViewThatFits(in: .horizontal) {
+                HStack(spacing: 10) {
+                    cancelButton(wide: false)
+                    clearButton(wide: false)
+                    Spacer(minLength: 0)
+                    sendButton
                 }
-                .foregroundStyle(Style.primaryInk)
-                .background(Style.primary, in: RoundedRectangle(cornerRadius: Style.radius))
+                VStack(spacing: 10) {
+                    sendButton
+                    HStack(spacing: 10) {
+                        cancelButton(wide: true)
+                        clearButton(wide: true)
+                    }
+                }
             }
-            .foregroundStyle(Style.ink)
             .lineLimit(1)
-            // Larger text, but the buttons stay on one line beside each other.
             .dynamicTypeSize(...DynamicTypeSize.xxLarge)
-            .padding(.horizontal, 24)
+            .padding(.horizontal, 20)
             .padding(.bottom, 12)
 
             HStack(spacing: 10) {
@@ -171,6 +157,70 @@ struct ComposeView: View {
             text = request.text
             writing = true
         }
+    }
+
+    private func cancelButton(wide: Bool) -> some View {
+        Button {
+            dismiss()
+        } label: {
+            Text("Cancel").secondaryButton(wide: wide)
+        }
+        .buttonStyle(.plain)
+    }
+
+    private func clearButton(wide: Bool) -> some View {
+        Button {
+            text = ""
+        } label: {
+            Text("Clear").secondaryButton(wide: wide)
+        }
+        .buttonStyle(.plain)
+        .disabled(text.isEmpty)
+        .opacity(text.isEmpty ? 0.5 : 1)
+    }
+
+    /// Send, and beside it the arrow for Save Draft, in FiestaBoard orange.
+    private var sendButton: some View {
+        HStack(spacing: 0) {
+            Button(action: submit) {
+                Group {
+                    if sending {
+                        ProgressView().tint(Style.primaryInk)
+                    } else {
+                        Label {
+                            // Its whole width, so that a row too narrow for it is seen to be.
+                            Text("Send").fixedSize()
+                        } icon: {
+                            LucideIcon("send", size: 20, relativeTo: .body)
+                        }
+                        .labelStyle(SendLabelStyle())
+                    }
+                }
+                .padding(.horizontal, 22)
+                .frame(maxWidth: .infinity)
+                .frame(height: 48)
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .disabled(sending || text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+            Rectangle().fill(Style.primaryInk.opacity(0.2)).frame(width: 1, height: 48)
+            Menu {
+                Button {
+                    library.saveDraft(text, replacing: request.draft)
+                    dismiss()
+                } label: {
+                    Label("Save Draft", lucide: "save")
+                }
+                .disabled(text.isEmpty)
+            } label: {
+                LucideIcon("chevron-down", size: 18, relativeTo: .footnote)
+                    .frame(width: 44, height: 48)
+            }
+            .accessibilityLabel("More ways to send")
+        }
+        .fixedSize(horizontal: false, vertical: true)
+        .foregroundStyle(Style.primaryInk)
+        .background(Style.primary, in: RoundedRectangle(cornerRadius: Style.radius))
     }
 
     private func submit() {
