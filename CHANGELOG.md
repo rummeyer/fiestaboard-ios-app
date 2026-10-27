@@ -6,6 +6,10 @@ adheres to [semantic versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-10-27
+
+The first release.
+
 ### Added
 
 - FiestaBoard's look: its colours from its web UI, light or dark as the
@@ -58,4 +62,5 @@ adheres to [semantic versioning](https://semver.org/spec/v2.0.0.html).
 - README with screenshots, and how to reach FiestaBoard at home, through a
   VPN, or from anywhere over HTTPS with Caddy; how to put the app on an iPhone.
 
-[Unreleased]: https://github.com/rummeyer/fiestaboard-ios-app/commits/main
+[Unreleased]: https://github.com/rummeyer/fiestaboard-ios-app/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/rummeyer/fiestaboard-ios-app/releases/tag/v1.0.0

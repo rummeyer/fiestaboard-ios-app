@@ -154,6 +154,10 @@ The files in `FiestaBoard/` are the project: Xcode picks up whatever is in the f
 
 All of them run on the demo board and a sample LED clock beside it, with sample content of their own.
 
+### Versions
+
+The app follows [semantic versioning](https://semver.org): MAJOR.MINOR.PATCH, the patch for fixes, the minor for something new, the major for a change that breaks what was there. Settings → About shows it with the build number, which counts up with every version. `scripts/version.sh` prints both; `scripts/version.sh 1.1.0` sets the version and the next build. What changed is in [CHANGELOG.md](CHANGELOG.md); each version is tagged `vX.Y.Z` and has a release on GitHub.
+
 ## Icon, colours, typefaces and icons
 
 All of them are FiestaBoard's:
