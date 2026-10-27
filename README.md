@@ -36,7 +36,7 @@
   &nbsp;
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/settings-dark.png">
-    <img src="docs/screenshots/settings-light.png" alt="The first start: Connection, with the local server, the remote server and the API token, and Demo, to add the demo board" width="200">
+    <img src="docs/screenshots/settings-light.png" alt="The first start: Connection, with FiestaBoard's address and the API token, and Demo, to add the demo board" width="200">
   </picture>
 </p>
 
@@ -79,11 +79,9 @@ It talks to nothing but your FiestaBoard, over its public API (`/api/v1`), with 
 
 The app takes an `https://` address from anywhere, and a plain `http://` one only where it cannot be reached from the internet: 10.x, 172.16–31.x, 192.168.x, 100.64–127.x (Tailscale's range), a `.local` name, a name without a dot, or a private IPv6 address. Typed without `http://` or `https://`, an address gets the one that fits.
 
-Settings has two: **Local Server**, FiestaBoard's address at home, and **Remote Server**, its address from anywhere. One is enough; with both, the app asks the one that answered last and, when that one cannot be reached, the other — at home the local server, away the remote one, with nothing to switch. A router seldom lets a phone at home reach its own public address, so the remote server alone often does not work on the home Wi‑Fi.
-
 ### At home
 
-As **Local Server**, FiestaBoard's address on your network, such as `10.0.1.10:4420`. The first time, iOS asks whether the app may use the local network; allow it.
+FiestaBoard's address on your network, such as `10.0.1.10:4420`. The first time, iOS asks whether the app may use the local network; allow it.
 
 ### Through a VPN
 

@@ -70,8 +70,6 @@ enum APIError: LocalizedError {
 struct FiestaBoardAPI: Sendable {
     let base: URL
     let token: String
-    /// Seconds to wait for an answer.
-    var timeout: TimeInterval = 20
 
     /// From what was typed in, with or without a trailing /api: https anywhere,
     /// http only to an address on the home network or reached through a VPN, as
@@ -176,7 +174,7 @@ struct FiestaBoardAPI: Sendable {
     private func call<T: Decodable>(_ method: String, _ path: String, body: Body? = nil) async throws -> T {
         var request = URLRequest(url: base.appending(path: path))
         request.httpMethod = method
-        request.timeoutInterval = timeout
+        request.timeoutInterval = 20
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         if !token.isEmpty {
             request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
