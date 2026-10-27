@@ -133,9 +133,9 @@ The files in `FiestaBoard/` are the project: Xcode picks up whatever is in the f
 | `-demo -demoCompose` | writing a message |
 | `-demo -demoSettings` | the first start |
 
-## Icon, colours and typefaces
+## Icon, colours, typefaces and icons
 
-All three are FiestaBoard's:
+All of them are FiestaBoard's:
 
 - **The icon** is FiestaBoard's taco (`fiesta-icon.png` in the FiestaBoard repository, MIT licence), on white. `tools/make-icon.swift` makes it:
 
@@ -144,7 +144,10 @@ All three are FiestaBoard's:
   ```
 
 - **The colours** are those of FiestaBoard's web UI (`@fiestaboard/ui`), in light and dark: warm beige or warm near-black, and FiestaBoard orange for whatever is primary or chosen.
-- **The typefaces** are FiestaBoard's: Archivo for words and Spline Sans Mono for the board, both under the SIL Open Font License, in `FiestaBoard/Fonts/` with their licences.
+- **The typefaces** are FiestaBoard's: Archivo for words and Spline Sans Mono for the board, both under the SIL Open Font License.
+- **The icons** are [Lucide](https://lucide.dev)'s, as in FiestaBoard's web UI, under the ISC licence.
+
+Their licences are in `FiestaBoard/Licenses/`, and go with the app.
 
 ## Licence
 

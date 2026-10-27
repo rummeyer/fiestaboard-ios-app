@@ -10,8 +10,8 @@ adheres to [semantic versioning](https://semver.org/spec/v2.0.0.html).
 
 - FiestaBoard's look: its colours from its web UI, light or dark as the
   iPhone is, its orange for whatever is primary or chosen, Archivo for words
-  and Spline Sans Mono for the board, and the board drawn as FiestaBoard
-  draws it.
+  and Spline Sans Mono for the board, Lucide's icons as in its web UI, and
+  the board drawn as FiestaBoard draws it.
 - The board live on a card on top, large on tapping it, read again every 15
   seconds while the app is open and on pulling down, with a picker for more
   than one board; whether it is paused, until when a timed message stays, or

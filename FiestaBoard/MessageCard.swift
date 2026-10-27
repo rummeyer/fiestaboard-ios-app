@@ -23,6 +23,7 @@ struct BoardShape: Equatable {
 /// One action in a card's bottom bar.
 struct CardAction: Identifiable {
     let id = UUID()
+    /// A Lucide icon's name.
     let symbol: String
     let label: String
     let run: () -> Void
@@ -94,8 +95,7 @@ struct MessageCard<More: View>: View {
                         Rectangle().fill(Style.rule).frame(width: 1)
                     }
                     Button(action: action.run) {
-                        Image(systemName: action.symbol)
-                            .font(Style.font(.title3))
+                        LucideIcon(action.symbol, size: 22, relativeTo: .title3)
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                     }
                     .accessibilityLabel(action.label)
@@ -103,8 +103,7 @@ struct MessageCard<More: View>: View {
                 if let shareText {
                     Rectangle().fill(Style.rule).frame(width: 1)
                     ShareLink(item: shareText) {
-                        Image(systemName: "arrowshape.turn.up.right.fill")
-                            .font(Style.font(.title3))
+                        LucideIcon("forward", size: 22, relativeTo: .title3)
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                     }
                     .accessibilityLabel("Share")
@@ -114,9 +113,7 @@ struct MessageCard<More: View>: View {
                     Menu {
                         more()
                     } label: {
-                        Image(systemName: "ellipsis")
-                            .rotationEffect(.degrees(90))
-                            .font(Style.font(.title3))
+                        LucideIcon("ellipsis-vertical", size: 22, relativeTo: .title3)
                             .frame(width: 64)
                             .frame(maxHeight: .infinity)
                     }
@@ -149,7 +146,7 @@ struct Avatar: View {
             .frame(width: 30, height: 30)
             .overlay {
                 if name == "You" {
-                    Image(systemName: "person.fill").font(Style.font(.caption)).foregroundStyle(Style.card)
+                    LucideIcon("user", size: 16, relativeTo: .caption).foregroundStyle(Style.card)
                 } else {
                     Text(name.prefix(1)).font(Style.font(.caption, weight: .semibold)).foregroundStyle(Style.card)
                 }

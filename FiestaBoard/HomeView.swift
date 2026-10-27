@@ -46,7 +46,7 @@ struct HomeView: View {
                 ScrollView {
                     VStack(spacing: 26) {
                         if let problem {
-                            Label(problem, systemImage: "exclamationmark.triangle")
+                            Label(problem, lucide: "triangle-alert")
                                 .foregroundStyle(.red)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
@@ -121,8 +121,7 @@ struct HomeView: View {
                     ProgressView().frame(height: 36)
                 }
                 ZStack {
-                    Image(systemName: "chevron.down")
-                        .font(Style.font(.footnote, weight: .semibold))
+                    LucideIcon("chevron-down", size: 18, relativeTo: .footnote)
                     if let date = liveDate {
                         Text(ago(date))
                             .font(Style.font(.caption2))
@@ -176,7 +175,7 @@ struct HomeView: View {
                         onFavorite: { library.toggleFavorite(characters, boardName: boardName) },
                         shareText: kept?.editableText ?? board.text,
                         actions: [
-                            CardAction(symbol: "square.on.square.fill", label: "Copy into a new message") {
+                            CardAction(symbol: "copy", label: "Copy into a new message") {
                                 showingLive = false
                                 composing = ComposeRequest(text: kept?.editableText ?? "")
                             },
@@ -191,8 +190,7 @@ struct HomeView: View {
             Button {
                 showingLive = false
             } label: {
-                Image(systemName: "xmark")
-                    .font(Style.font(.title2))
+                LucideIcon("x", size: 26, relativeTo: .title2)
                     .foregroundStyle(Style.ink)
                     .frame(width: 64, height: 64)
                     .background(Style.card, in: Circle())
@@ -206,11 +204,11 @@ struct HomeView: View {
     private func status(of board: BoardDetail) -> some View {
         Group {
             if board.paused {
-                Label("Paused", systemImage: "pause.circle")
+                Label("Paused", lucide: "circle-pause")
             } else if board.overrideExpiresAt != nil {
-                Label("A message for a while, then the schedule again", systemImage: "timer")
+                Label("A message for a while, then the schedule again", lucide: "timer")
             } else if board.source == "schedule" {
-                Label("Following the schedule", systemImage: "calendar")
+                Label("Following the schedule", lucide: "calendar")
             }
         }
         .font(Style.font(.footnote))
@@ -286,7 +284,7 @@ struct HomeView: View {
                     Button {
                         withAnimation { filtering = false }
                     } label: {
-                        Image(systemName: "xmark").font(Style.font(.title3))
+                        LucideIcon("x", size: 22, relativeTo: .title3)
                     }
                     .accessibilityLabel("Close the filter")
                     Spacer()
@@ -312,8 +310,7 @@ struct HomeView: View {
                 Button {
                     withAnimation { filtering = true }
                 } label: {
-                    Image(systemName: "slider.horizontal.3")
-                        .font(Style.font(.title3))
+                    LucideIcon("sliders-horizontal", size: 22, relativeTo: .title3)
                         .frame(width: 52, height: 52)
                         .background(Style.card, in: Circle())
                         .overlay(Circle().stroke(Style.border, lineWidth: 1))
@@ -358,19 +355,23 @@ struct HomeView: View {
             onFavorite: { library.toggleFavorite(message.characters, boardName: message.boardName) },
             shareText: message.editableText,
             actions: [
-                CardAction(symbol: "square.on.square.fill", label: "Copy into a new message") {
+                CardAction(symbol: "copy", label: "Copy into a new message") {
                     composing = ComposeRequest(text: message.editableText)
                 },
-                CardAction(symbol: "paperplane.fill", label: "Send to the board") {
+                CardAction(symbol: "send", label: "Send to the board") {
                     Task { await resend(message) }
                 },
             ]
         ) {
-            Button(message.favorite ? "Remove from Favorites" : "Add to Favorites", systemImage: "bookmark") {
+            Button {
                 library.toggleFavorite(message.characters, boardName: message.boardName)
+            } label: {
+                Label(message.favorite ? "Remove from Favorites" : "Add to Favorites", lucide: "bookmark")
             }
-            Button("Delete", systemImage: "trash", role: .destructive) {
+            Button(role: .destructive) {
                 library.delete(message)
+            } label: {
+                Label("Delete", lucide: "trash-2")
             }
         }
     }
@@ -386,7 +387,7 @@ struct HomeView: View {
                 CardAction(symbol: "pencil", label: "Edit") {
                     composing = ComposeRequest(text: draft.text, draft: draft.id)
                 },
-                CardAction(symbol: "paperplane.fill", label: "Send to the board") {
+                CardAction(symbol: "send", label: "Send to the board") {
                     Task {
                         if let outcome = await sendText(draft.text) {
                             notice = outcome
@@ -397,8 +398,10 @@ struct HomeView: View {
                 },
             ]
         ) {
-            Button("Delete", systemImage: "trash", role: .destructive) {
+            Button(role: .destructive) {
                 library.deleteDraft(draft.id)
+            } label: {
+                Label("Delete", lucide: "trash-2")
             }
         }
     }
@@ -409,8 +412,7 @@ struct HomeView: View {
         Button {
             composing = ComposeRequest()
         } label: {
-            Image(systemName: "square.and.pencil")
-                .font(Style.font(.title))
+            LucideIcon("square-pen", size: 28, relativeTo: .title)
                 .foregroundStyle(Style.primaryInk)
                 .frame(width: 68, height: 68)
                 .background(Style.primary, in: Circle())
@@ -423,7 +425,7 @@ struct HomeView: View {
         HStack {
             VStack(spacing: 10) {
                 Rectangle().fill(Style.primary).frame(width: 40, height: 3)
-                Image(systemName: "house.fill").font(Style.font(.title2))
+                LucideIcon("house", size: 26, relativeTo: .title2)
             }
             .frame(maxWidth: .infinity)
             .accessibilityLabel("Home")
@@ -435,7 +437,7 @@ struct HomeView: View {
                         }
                     }
                 } label: {
-                    Image(systemName: "square.grid.3x3").font(Style.font(.title2)).padding(.top, 13)
+                    LucideIcon("grid-3x3", size: 26, relativeTo: .title2).padding(.top, 13)
                 }
                 .frame(maxWidth: .infinity)
                 .accessibilityLabel("Board")
@@ -443,7 +445,7 @@ struct HomeView: View {
             Button {
                 showingSettings = true
             } label: {
-                Image(systemName: "gearshape").font(Style.font(.title2)).padding(.top, 13)
+                LucideIcon("settings", size: 26, relativeTo: .title2).padding(.top, 13)
             }
             .frame(maxWidth: .infinity)
             .accessibilityLabel("Settings")

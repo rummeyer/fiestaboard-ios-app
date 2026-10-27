@@ -92,3 +92,36 @@ func ago(_ date: Date) -> String {
     }
     return date.formatted(.relative(presentation: .named))
 }
+
+/// A Lucide icon (lucide.dev, ISC licence), as FiestaBoard's web UI uses:
+/// stroked, coloured by the foreground style, and growing with the reader's
+/// text size.
+struct LucideIcon: View {
+    let name: String
+    @ScaledMetric private var size: CGFloat
+
+    init(_ name: String, size: CGFloat = 22, relativeTo style: Font.TextStyle = .body) {
+        self.name = name
+        _size = ScaledMetric(wrappedValue: size, relativeTo: style)
+    }
+
+    var body: some View {
+        Image("lucide-\(name)")
+            .resizable()
+            .renderingMode(.template)
+            .scaledToFit()
+            .frame(width: size, height: size)
+            .accessibilityHidden(true)
+    }
+}
+
+extension Label where Title == Text, Icon == LucideIcon {
+    /// A label with a Lucide icon instead of a system symbol.
+    init(_ title: String, lucide name: String) {
+        self.init {
+            Text(title)
+        } icon: {
+            LucideIcon(name, size: 16, relativeTo: .footnote)
+        }
+    }
+}

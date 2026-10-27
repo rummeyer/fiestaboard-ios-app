@@ -79,10 +79,10 @@ struct ComposeView: View {
 
             HStack {
                 if laid.overflow {
-                    Label("Too long: the end is cut off", systemImage: "exclamationmark.triangle")
+                    Label("Too long: the end is cut off", lucide: "triangle-alert")
                         .foregroundStyle(.orange)
                 } else if let problem {
-                    Label(problem, systemImage: "exclamationmark.circle")
+                    Label(problem, lucide: "circle-alert")
                         .foregroundStyle(.red)
                 }
                 Spacer()
@@ -111,7 +111,7 @@ struct ComposeView: View {
                                 Label {
                                     Text("Send").fixedSize()
                                 } icon: {
-                                    Image(systemName: "paperplane.fill")
+                                    LucideIcon("send", size: 20, relativeTo: .body)
                                 }
                                 .labelStyle(SendLabelStyle())
                             }
@@ -124,14 +124,15 @@ struct ComposeView: View {
                     .disabled(sending || text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                     Rectangle().fill(Style.primaryInk.opacity(0.2)).frame(width: 1, height: 48)
                     Menu {
-                        Button("Save Draft", systemImage: "square.and.arrow.down") {
+                        Button {
                             library.saveDraft(text, replacing: request.draft)
                             dismiss()
+                        } label: {
+                            Label("Save Draft", lucide: "save")
                         }
                         .disabled(text.isEmpty)
                     } label: {
-                        Image(systemName: "chevron.down")
-                            .font(Style.font(.footnote))
+                        LucideIcon("chevron-down", size: 18, relativeTo: .footnote)
                             .frame(width: 44, height: 48)
                     }
                     .accessibilityLabel("More ways to send")

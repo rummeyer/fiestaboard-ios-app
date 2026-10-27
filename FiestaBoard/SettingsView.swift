@@ -35,7 +35,7 @@ struct SettingsView: View {
             }
             if let problem {
                 Section {
-                    Label(problem, systemImage: "exclamationmark.triangle")
+                    Label(problem, lucide: "triangle-alert")
                         .foregroundStyle(.red)
                 }
             }
