@@ -117,13 +117,12 @@ struct SettingsView: View {
         } set: {
             looks[board.id] = $0
         }
-        Toggle(isOn: look.white) {
-            VStack(alignment: .leading, spacing: 2) {
-                Text(verbatim: board.name)
-                Text("White board").font(.footnote).foregroundStyle(Style.muted)
-            }
+        Picker(selection: look.white) {
+            Text("Black").tag(false)
+            Text("White").tag(true)
+        } label: {
+            Text(verbatim: board.name)
         }
-        .tint(Style.primary)
         Picker("Code 62", selection: look.heart) {
             (Text(verbatim: "❤ ") + Text("Heart")).tag(true)
             (Text(verbatim: "° ") + Text("Degree sign")).tag(false)
