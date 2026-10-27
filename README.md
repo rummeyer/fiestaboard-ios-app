@@ -22,7 +22,7 @@
   &nbsp;
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/compose-dark.png">
-    <img src="docs/screenshots/compose-light.png" alt="Writing a message: the board above showing where the text lands, the text, 19/45 tiles, Cancel, Clear and the orange Send, and the colour tiles" width="200">
+    <img src="docs/screenshots/compose-light.png" alt="Writing a message: the board above showing where the text lands, the text, how long it shows and 19/45 tiles, Cancel, Clear and the orange Send in one row, and the colour tiles" width="200">
   </picture>
   &nbsp;
   <picture>
@@ -52,7 +52,7 @@
 
 **Tile by tile.** Switch from **Text** to **Visual** and the board is your canvas: choose a colour or the eraser and tap or drag across the tiles, or choose the letters, tap a tile and type from there — backspace goes back, return to the next row. Undo and redo as you go. What you wrote as text carries over, and back. A visual message is sent tile for tile, exactly as drawn; a visual draft opens visually again, and so does a message copied from what the board showed.
 
-**For a while, then the schedule again.** A message stays until the board's next refresh — the next page of its schedule or carousel — unless you choose, above Send, to show it for 15 minutes, an hour, 4 or 8 hours. It then holds against the schedule, and the board goes back to it by itself once the time is up; the live card says until when, and **Back to the schedule** ends it sooner.
+**For a while, then the schedule again.** A message stays until the board's next refresh — the next page of its schedule or carousel — unless you choose, beside the tile count, to show it for 15 minutes, an hour, 4 or 8 hours. It then holds against the schedule, and the board goes back to it by itself once the time is up; the live card says until when, and **Back to the schedule** ends it sooner.
 
 **All your boards.** Every display your FiestaBoard drives — a split-flap board, an LED panel such as a pixel clock — each drawn as it looks, picked in the row of boards on top. History is per board; Favorites and Drafts are the same whichever board is chosen, and go to any of them, laid out anew for its size.
 

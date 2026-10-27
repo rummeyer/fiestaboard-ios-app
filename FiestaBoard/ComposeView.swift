@@ -108,7 +108,7 @@ struct ComposeView: View {
             }
             .font(Style.font(.footnote))
             .foregroundStyle(Style.ink)
-            .padding(.top, 12)
+            .padding(.top, 8)
 
             Picker("Mode", selection: Binding(get: { mode }, set: switchMode)) {
                 Text("Text").tag(Mode.text)
@@ -116,7 +116,7 @@ struct ComposeView: View {
             }
             .pickerStyle(.segmented)
             .padding(.horizontal, 20)
-            .padding(.vertical, 12)
+            .padding(.vertical, 8)
 
             switch mode {
             case .text:
@@ -125,31 +125,17 @@ struct ComposeView: View {
                 visualEditor
             }
 
-            durationChoice
-                .padding(.horizontal, 20)
-                .padding(.bottom, 10)
-
-            // In one row where the words fit, else Send across the width and the other two below it:
-            // German and French words are longer than English ones, and text can be larger.
-            ViewThatFits(in: .horizontal) {
-                HStack(spacing: 10) {
-                    cancelButton(wide: false)
-                    clearButton(wide: false)
-                    Spacer(minLength: 0)
-                    sendButton
-                }
-                VStack(spacing: 10) {
-                    sendButton
-                    HStack(spacing: 10) {
-                        cancelButton(wide: true)
-                        clearButton(wide: true)
-                    }
-                }
+            // One row, as little room as there is above the keyboard: the board and the text need it.
+            HStack(spacing: 14) {
+                cancelButton.fixedSize()
+                clearButton.fixedSize()
+                Spacer(minLength: 0)
+                sendButton
             }
             .lineLimit(1)
             .dynamicTypeSize(...DynamicTypeSize.xxLarge)
-            .padding(.horizontal, 20)
-            .padding(.bottom, 12)
+            .padding(.horizontal, 16)
+            .padding(.bottom, 8)
 
             paletteBar
         }
@@ -172,7 +158,9 @@ struct ComposeView: View {
         let laid = Layout.grid(text, rows: shape.rows, cols: shape.cols)
         BoardView(characters: laid.grid, rows: shape.rows, cols: shape.cols, heart: shape.heart, white: shape.heart, led: shape.led)
             .padding(.horizontal)
-            .padding(.bottom, 12)
+            .padding(.bottom, 8)
+            // Its full size, the keyboard up or not: the text below gives way.
+            .layoutPriority(1)
 
         ZStack(alignment: .topLeading) {
             if text.isEmpty {
@@ -190,8 +178,10 @@ struct ComposeView: View {
         }
         .font(Style.font(.title3))
         .padding(.horizontal, 24)
+        .frame(minHeight: 56)
 
-        HStack {
+        HStack(spacing: 10) {
+            durationChoice
             if laid.overflow {
                 Label("Too long: the end is cut off", lucide: "triangle-alert")
                     .foregroundStyle(.orange)
@@ -199,15 +189,16 @@ struct ComposeView: View {
                 Label(problem, lucide: "circle-alert")
                     .foregroundStyle(.red)
             }
-            Spacer()
+            Spacer(minLength: 0)
             Text("\(Layout.tiles(of: text.replacingOccurrences(of: "\n", with: "")).count)/\(shape.rows * shape.cols)")
                 .monospacedDigit()
                 .foregroundStyle(Style.secondary)
         }
         .font(Style.font(.footnote))
+        .lineLimit(1)
         .dynamicTypeSize(...DynamicTypeSize.accessibility1)
-        .padding(.horizontal, 24)
-        .padding(.vertical, 8)
+        .padding(.horizontal, 20)
+        .padding(.vertical, 6)
     }
 
     // MARK: - Tile by tile
@@ -216,7 +207,8 @@ struct ComposeView: View {
     private var visualEditor: some View {
         BoardEditor(grid: grid, shape: shape, cursor: tool == .letters ? cursor : nil, begin: beginStroke, touch: touch)
             .padding(.horizontal)
-            .padding(.bottom, 12)
+            .padding(.bottom, 8)
+            .layoutPriority(1)
 
         HStack(spacing: 14) {
             Button(action: undo) {
@@ -241,11 +233,12 @@ struct ComposeView: View {
             }
             .font(Style.font(.footnote))
             .foregroundStyle(Style.muted)
+            .lineLimit(2)
             .frame(maxWidth: .infinity, alignment: .leading)
         }
         .foregroundStyle(Style.ink)
         .padding(.horizontal, 24)
-        .padding(.bottom, 8)
+        .padding(.bottom, 6)
         .background {
             // Takes the letters typed while the letter tool is chosen; never seen.
             TextField("", text: $letters)
@@ -261,6 +254,14 @@ struct ComposeView: View {
         }
 
         Spacer(minLength: 0)
+
+        HStack {
+            durationChoice
+            Spacer(minLength: 0)
+        }
+        .font(Style.font(.footnote))
+        .padding(.horizontal, 20)
+        .padding(.vertical, 6)
     }
 
     private func switchMode(_ new: Mode) {
@@ -411,7 +412,7 @@ struct ComposeView: View {
                                 RoundedRectangle(cornerRadius: 7).stroke(Style.primary, lineWidth: 2.5)
                             }
                         }
-                        .frame(height: 44)
+                        .frame(height: 38)
                 }
                 .accessibilityLabel(spoken)
                 .accessibilityAddTraits(mode == .visual && tool == .colour(code) ? .isSelected : [])
@@ -422,7 +423,7 @@ struct ComposeView: View {
             }
         }
         .padding(.horizontal, 12)
-        .padding(.vertical, 10)
+        .padding(.vertical, 6)
         .background(Style.card)
         .overlay(alignment: .top) { Rectangle().fill(Style.border).frame(height: 1) }
     }
@@ -434,10 +435,10 @@ struct ComposeView: View {
             LucideIcon(icon, size: 20, relativeTo: .body)
                 .foregroundStyle(tool == which ? Style.primaryInk : Style.ink)
                 .frame(maxWidth: .infinity)
-                .frame(height: 38)
+                .frame(height: 32)
                 .background(tool == which ? Style.primary : Style.fill, in: RoundedRectangle(cornerRadius: 5))
                 .padding(3)
-                .frame(height: 44)
+                .frame(height: 38)
         }
         .accessibilityLabel(label)
         .accessibilityAddTraits(tool == which ? .isSelected : [])
@@ -461,34 +462,39 @@ struct ComposeView: View {
                 }
             }
         } label: {
-            HStack(spacing: 8) {
-                LucideIcon("timer", size: 18, relativeTo: .subheadline)
+            // Small, beside the count: the default is said quietly, a while chosen stands out.
+            HStack(spacing: 5) {
+                LucideIcon("timer", size: 15, relativeTo: .footnote)
                 Text(Self.durations.first { $0.0 == minutes }?.1 ?? "Until the next refresh")
                     .lineLimit(1)
                     .minimumScaleFactor(0.8)
-                LucideIcon("chevron-down", size: 14, relativeTo: .subheadline)
+                LucideIcon("chevron-down", size: 12, relativeTo: .footnote)
             }
-            .font(Style.font(.subheadline))
+            .font(Style.font(.footnote))
             .foregroundStyle(minutes == nil ? Style.muted : Style.ink)
-            .padding(.horizontal, 14)
-            .frame(height: 36)
+            .padding(.horizontal, 10)
+            .frame(height: 30)
             .background(minutes == nil ? Color.clear : Style.fill, in: Capsule())
             .overlay(Capsule().stroke(Style.border, lineWidth: 1))
+            .contentShape(Capsule())
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
         .accessibilityLabel("Show")
     }
 
-    private func cancelButton(wide: Bool) -> some View {
+    private var cancelButton: some View {
         Button {
             dismiss()
         } label: {
-            Text("Cancel").secondaryButton(wide: wide)
+            Text("Cancel")
+                .font(Style.font(.body))
+                .foregroundStyle(Style.ink)
+                .frame(minHeight: 44)
+                .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
     }
 
-    private func clearButton(wide: Bool) -> some View {
+    private var clearButton: some View {
         Button {
             switch mode {
             case .text:
@@ -499,7 +505,11 @@ struct ComposeView: View {
                 cursor = tool == .letters ? Cell(row: 0, col: 0) : nil
             }
         } label: {
-            Text("Clear").secondaryButton(wide: wide)
+            Text("Clear")
+                .font(Style.font(.body))
+                .foregroundStyle(Style.ink)
+                .frame(minHeight: 44)
+                .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
         .disabled(isEmpty)
@@ -523,14 +533,13 @@ struct ComposeView: View {
                         .labelStyle(SendLabelStyle())
                     }
                 }
-                .padding(.horizontal, 22)
-                .frame(maxWidth: .infinity)
-                .frame(height: 48)
+                .padding(.horizontal, 14)
+                .frame(height: 44)
                 .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
             .disabled(sending || isEmpty)
-            Rectangle().fill(Style.primaryInk.opacity(0.2)).frame(width: 1, height: 48)
+            Rectangle().fill(Style.primaryInk.opacity(0.2)).frame(width: 1, height: 44)
             Menu {
                 Button {
                     switch mode {
@@ -544,7 +553,7 @@ struct ComposeView: View {
                 .disabled(isEmpty)
             } label: {
                 LucideIcon("chevron-down", size: 18, relativeTo: .footnote)
-                    .frame(width: 44, height: 48)
+                    .frame(width: 44, height: 44)
             }
             .accessibilityLabel("More ways to send")
         }
