@@ -8,6 +8,8 @@ adheres to [semantic versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- Sending a card from History, Favorites or Drafts asks how long it shows:
+  until the next refresh, or 15 minutes, an hour, 4 or 8 hours.
 - Tips, in Settings under Donation: two coffees through In-App Purchase,
   and a StoreKit configuration to try them from Xcode.
 - Buy Me a Coffee in the README.

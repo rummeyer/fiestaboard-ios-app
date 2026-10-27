@@ -26,6 +26,16 @@ extension View {
     }
 }
 
+/// How long a message holds against the schedule or carousel: until its next refresh, as by
+/// default, or for so many minutes, after which the board goes back to it by itself.
+@MainActor let showDurations: [(Int?, LocalizedStringKey)] = [
+    (nil, "Until the next refresh"),
+    (15, "For 15 minutes"),
+    (60, "For 1 hour"),
+    (240, "For 4 hours"),
+    (480, "For 8 hours"),
+]
+
 /// What a message is sent as: text, laid out by FiestaBoard, or the board drawn tile by tile.
 enum Outgoing {
     case text(String)
@@ -446,15 +456,7 @@ struct ComposeView: View {
         .accessibilityAddTraits(tool == which ? .isSelected : [])
     }
 
-    /// How long a message holds against the schedule or carousel: until its next refresh, as by
-    /// default, or for a while, after which the board goes back to it by itself.
-    private static let durations: [(Int?, LocalizedStringKey)] = [
-        (nil, "Until the next refresh"),
-        (15, "For 15 minutes"),
-        (60, "For 1 hour"),
-        (240, "For 4 hours"),
-        (480, "For 8 hours"),
-    ]
+    private static let durations = showDurations
 
     private var durationChoice: some View {
         Menu {

@@ -453,8 +453,8 @@ struct HomeView: View {
                 CardAction(symbol: "copy", label: "Copy into a new message") {
                     composing = request(from: message)
                 },
-                CardAction(symbol: "send", label: "Send to the board") {
-                    Task { await resend(message) }
+                CardAction(symbol: "send", label: "Send to the board") { minutes in
+                    Task { await resend(message, minutes: minutes) }
                 },
             ]
         ) {
@@ -491,9 +491,9 @@ struct HomeView: View {
                 CardAction(symbol: "pencil", label: "Edit") {
                     composing = ComposeRequest(text: draft.text, characters: draft.characters, draft: draft.id)
                 },
-                CardAction(symbol: "send", label: "Send to the board") {
+                CardAction(symbol: "send", label: "Send to the board") { minutes in
                     Task {
-                        if let outcome = await send(outgoing(of: draft), minutes: nil) {
+                        if let outcome = await send(outgoing(of: draft), minutes: minutes) {
                             notice = outcome
                         } else {
                             library.deleteDraft(draft.id)
@@ -630,13 +630,13 @@ struct HomeView: View {
     }
 
     /// Sends a kept message again: flap for flap to a board of its size, else its text.
-    private func resend(_ message: SavedMessage) async {
+    private func resend(_ message: SavedMessage, minutes: Int?) async {
         do {
             let api = try settings.service(for: boardID)
             let sameSize = message.characters.count == shape.rows && message.characters.first?.count == shape.cols
             let response = sameSize
-                ? try await api.send(characters: message.characters, to: boardID, minutes: nil)
-                : try await api.send(message.editableText, to: boardID, minutes: nil)
+                ? try await api.send(characters: message.characters, to: boardID, minutes: minutes)
+                : try await api.send(message.editableText, to: boardID, minutes: minutes)
             notice = await sent(response, text: message.text) ?? String(localized: "Sent to \(boardName)")
         } catch {
             notice = error.localizedDescription

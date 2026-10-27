@@ -34,6 +34,21 @@ struct CardAction: Identifiable {
     let symbol: String
     let label: LocalizedStringKey
     let run: () -> Void
+    /// Sending: how long the message shows chosen first, from a menu; minutes, or none until the next refresh.
+    var send: ((Int?) -> Void)?
+
+    init(symbol: String, label: LocalizedStringKey, run: @escaping () -> Void) {
+        self.symbol = symbol
+        self.label = label
+        self.run = run
+    }
+
+    init(symbol: String, label: LocalizedStringKey, send: @escaping (Int?) -> Void) {
+        self.symbol = symbol
+        self.label = label
+        self.run = {}
+        self.send = send
+    }
 }
 
 /// A message as a card: who and when on top, the ribbon
@@ -103,9 +118,24 @@ struct MessageCard<More: View>: View {
                     if index > 0 {
                         Rectangle().fill(Style.rule).frame(width: 1)
                     }
-                    Button(action: action.run) {
-                        LucideIcon(action.symbol, size: 22, relativeTo: .title3)
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    Group {
+                        if let send = action.send {
+                            Menu {
+                                Section(action.label) {
+                                    ForEach(showDurations, id: \.0) { minutes, title in
+                                        Button(title) { send(minutes) }
+                                    }
+                                }
+                            } label: {
+                                LucideIcon(action.symbol, size: 22, relativeTo: .title3)
+                                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            }
+                        } else {
+                            Button(action: action.run) {
+                                LucideIcon(action.symbol, size: 22, relativeTo: .title3)
+                                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            }
+                        }
                     }
                     .accessibilityLabel(action.label)
                 }
