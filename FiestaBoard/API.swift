@@ -143,8 +143,12 @@ struct FiestaBoardAPI: Sendable {
     }
 
     /// A message as it was on a board, flap for flap: for one of the same size.
+    /// FiestaBoard holds only text for a while, so a timed one goes as lines: a row each, not wrapped again.
     func send(characters: [[Int]], to board: String, minutes: Int?) async throws -> MessageResponse {
-        try await call("POST", "boards/\(board)/message", body: Body(characters: characters, minutes: minutes))
+        let body = minutes == nil
+            ? Body(characters: characters, minutes: nil)
+            : Body(lines: Layout.lines(of: characters), minutes: minutes)
+        return try await call("POST", "boards/\(board)/message", body: body)
     }
 
     /// The board back to its schedule: a timed message ended before its time.
@@ -152,20 +156,22 @@ struct FiestaBoardAPI: Sendable {
         try await call("DELETE", "boards/\(board)/message")
     }
 
-    /// What a message is sent as: one of text or flaps, and for how long.
+    /// What a message is sent as: one of text, rows or flaps, and for how long.
     private struct Body: Encodable {
         var text: String?
+        var lines: [String]?
         var characters: [[Int]]?
         var minutes: Int?
 
         private enum Keys: String, CodingKey {
-            case text, characters
+            case text, lines, characters
             case minutes = "duration_minutes"
         }
 
         func encode(to encoder: Encoder) throws {
             var container = encoder.container(keyedBy: Keys.self)
             try container.encodeIfPresent(text, forKey: .text)
+            try container.encodeIfPresent(lines, forKey: .lines)
             try container.encodeIfPresent(characters, forKey: .characters)
             try container.encodeIfPresent(minutes, forKey: .minutes)
         }

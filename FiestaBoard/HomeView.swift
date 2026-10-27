@@ -39,6 +39,11 @@ struct HomeView: View {
         board.map { BoardShape($0, look: settings.look(for: $0.id, deviceType: $0.deviceType)) } ?? .note
     }
 
+    /// FiestaBoard holds a message for a while only on its primary board; the demo board, on any.
+    private var timed: Bool {
+        boardID == VirtualBoard.id || boards.first { $0.id == boardID }?.isPrimary == true
+    }
+
     private var boardName: String {
         board?.name ?? "FiestaBoard"
     }
@@ -93,7 +98,7 @@ struct HomeView: View {
             liveView
         }
         .fullScreenCover(item: $composing) { request in
-            ComposeView(request: request, shape: shape, boardName: boardName) { outgoing, minutes in
+            ComposeView(request: request, shape: shape, boardName: boardName, timed: timed) { outgoing, minutes in
                 await send(outgoing, minutes: minutes)
             }
             .environment(library)
@@ -453,7 +458,7 @@ struct HomeView: View {
                 CardAction(symbol: "copy", label: "Copy into a new message") {
                     composing = request(from: message)
                 },
-                CardAction(symbol: "send", label: "Send to the board") { minutes in
+                sendAction { minutes in
                     Task { await resend(message, minutes: minutes) }
                 },
             ]
@@ -491,7 +496,7 @@ struct HomeView: View {
                 CardAction(symbol: "pencil", label: "Edit") {
                     composing = ComposeRequest(text: draft.text, characters: draft.characters, draft: draft.id)
                 },
-                CardAction(symbol: "send", label: "Send to the board") { minutes in
+                sendAction { minutes in
                     Task {
                         if let outcome = await send(outgoing(of: draft), minutes: minutes) {
                             notice = outcome
@@ -630,6 +635,13 @@ struct HomeView: View {
     }
 
     /// Sends a kept message again: flap for flap to a board of its size, else its text.
+    /// Send on a card: how long first, from a menu, where the board can hold a message for a while.
+    private func sendAction(_ send: @escaping (Int?) -> Void) -> CardAction {
+        timed
+            ? CardAction(symbol: "send", label: "Send to the board", send: send)
+            : CardAction(symbol: "send", label: "Send to the board") { send(nil) }
+    }
+
     private func resend(_ message: SavedMessage, minutes: Int?) async {
         do {
             let api = try settings.service(for: boardID)

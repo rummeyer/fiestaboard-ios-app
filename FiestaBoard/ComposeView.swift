@@ -64,6 +64,8 @@ struct ComposeView: View {
     let request: ComposeRequest
     let shape: BoardShape
     let boardName: String
+    /// Whether the board takes a message for a while: FiestaBoard holds one only on its primary board.
+    var timed = true
     /// Sends the message, for so many minutes or until the next refresh; says what came of it, nil when it reached the board.
     let send: (Outgoing, Int?) async -> String?
 
@@ -191,7 +193,9 @@ struct ComposeView: View {
         .frame(minHeight: 56)
 
         HStack(spacing: 10) {
-            durationChoice
+            if timed {
+                durationChoice
+            }
             if laid.overflow {
                 Label("Too long: the end is cut off", lucide: "triangle-alert")
                     .foregroundStyle(.orange)
@@ -266,7 +270,9 @@ struct ComposeView: View {
         Spacer(minLength: 0)
 
         HStack {
-            durationChoice
+            if timed {
+                durationChoice
+            }
             Spacer(minLength: 0)
         }
         .font(Style.font(.footnote))

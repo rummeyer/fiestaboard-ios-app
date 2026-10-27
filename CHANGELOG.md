@@ -10,6 +10,13 @@ adheres to [semantic versioning](https://semver.org/spec/v2.0.0.html).
 
 - Sending a card from History, Favorites or Drafts asks how long it shows:
   until the next refresh, or 15 minutes, an hour, 4 or 8 hours.
+
+### Fixed
+
+- A message drawn tile by tile, or sent again from a card, for a while:
+  FiestaBoard refused a duration with exact tiles, so it now goes as one
+  line of text per row, the same tiles. Durations are offered only on the
+  primary board, the only one FiestaBoard holds a timed message on.
 - Tips, in Settings under Donation: two coffees through In-App Purchase,
   and a StoreKit configuration to try them from Xcode.
 - Buy Me a Coffee in the README.

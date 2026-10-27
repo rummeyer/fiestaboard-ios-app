@@ -28,6 +28,23 @@ enum Layout {
         }.joined(separator: "\n").replacingOccurrences(of: "\n+$", with: "", options: .regularExpression)
     }
 
+    /// A grid as rows of text that come out as the same flaps: a letter, digit or sign
+    /// as itself, a blank as a space, every other flap as its code, such as `{63}`.
+    static func lines(of grid: [[Int]]) -> [String] {
+        grid.map { row in
+            row.map { code -> String in
+                if code == 0 {
+                    return " "
+                }
+                if code != 62, case let .character(letter) = Flap.of(code, heart: false), !letter.isEmpty,
+                   let back = letter.first, Layout.code(of: back) == code {
+                    return letter
+                }
+                return "{\(code)}"
+            }.joined().replacingOccurrences(of: " +$", with: "", options: .regularExpression)
+        }
+    }
+
     static func grid(_ text: String, rows: Int, cols: Int) -> (grid: [[Int]], overflow: Bool) {
         var lines: [[Int]] = []
         for line in text.components(separatedBy: "\n") {
