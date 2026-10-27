@@ -1,4 +1,7 @@
 import Foundation
+import OSLog
+
+private let log = Logger(subsystem: "de.rummeyer.fiestaboard", category: "servers")
 
 /// FiestaBoard at two addresses: on the home network, and from anywhere. A
 /// router seldom lets a phone at home reach its own public address, and the
@@ -20,7 +23,8 @@ struct FiestaBoardServers: BoardService {
     }
 
     func boards() async throws -> [BoardSummary] {
-        try await reach(again: true) { try await $0.boards() }
+        log.info("Servers: \(servers.map { $0.base.host(percentEncoded: false) ?? "?" }.joined(separator: " and "))")
+        return try await reach(again: true) { try await $0.boards() }
     }
 
     func board(_ id: String) async throws -> BoardDetail {
@@ -49,13 +53,19 @@ struct FiestaBoardServers: BoardService {
             // Not the last to try: soon given up, so that the other is not waited for long.
             var attempt = server
             attempt.timeout = last ? 20 : 6
+            let host = server.base.host(percentEncoded: false) ?? "?"
             do {
                 let answer = try await request(attempt)
+                if index > 0 || servers.count == 1 {
+                    log.info("Servers: \(host) answered")
+                }
                 await LastAnswered.shared.answered(server)
                 return answer
             } catch let error as URLError where Self.unreached(error, again: again) && !last {
+                log.info("Servers: \(host) not reached (\(error.code.rawValue)), trying the other")
                 failure = error
             } catch {
+                log.error("Servers: \(host) failed, \(error.localizedDescription)")
                 throw error
             }
         }
