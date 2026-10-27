@@ -6,10 +6,17 @@ adheres to [semantic versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-10-27
+
 ### Removed
 
 - The tips: no In-App Purchase in the app, and no StoreKit configuration.
   Buy Me a Coffee stays in the README.
+
+### Fixed
+
+- The README's screenshots each show what they say: the clock board, writing
+  a message, and Settings opened from Home.
 
 ## [1.1.0] - 2026-10-27
 
@@ -90,6 +97,7 @@ The first release.
 - README with screenshots, and how to reach FiestaBoard at home, through a
   VPN, or from anywhere over HTTPS with Caddy; how to put the app on an iPhone.
 
-[Unreleased]: https://github.com/rummeyer/fiestaboard-ios-app/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/rummeyer/fiestaboard-ios-app/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/rummeyer/fiestaboard-ios-app/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/rummeyer/fiestaboard-ios-app/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/rummeyer/fiestaboard-ios-app/releases/tag/v1.0.0
