@@ -25,7 +25,7 @@ struct CardAction: Identifiable {
     let id = UUID()
     /// A Lucide icon's name.
     let symbol: String
-    let label: String
+    let label: LocalizedStringKey
     let run: () -> Void
 }
 
@@ -49,7 +49,7 @@ struct MessageCard<More: View>: View {
                     Avatar(name: sender)
                     // Who on one line, when beside it, both smaller rather than wrapped.
                     HStack(spacing: 10) {
-                        Text(sender)
+                        Text(senderName(sender))
                             .foregroundStyle(Style.ink)
                             .layoutPriority(1)
                         if let date {
@@ -136,6 +136,16 @@ extension MessageCard where More == EmptyView {
     }
 }
 
+/// Who put a message there, in the reader's language: "You" and "Draft" are
+/// the app's own words, a board's or FiestaBoard's name stays as it is.
+func senderName(_ sender: String) -> String {
+    switch sender {
+    case "You": String(localized: "You")
+    case "Draft": String(localized: "Draft")
+    default: sender
+    }
+}
+
 /// A sender's round badge: the app's own sends as a person, others by their first letter.
 struct Avatar: View {
     let name: String
@@ -148,7 +158,7 @@ struct Avatar: View {
                 if name == "You" {
                     LucideIcon("user", size: 16, relativeTo: .caption).foregroundStyle(Style.card)
                 } else {
-                    Text(name.prefix(1)).font(Style.font(.caption, weight: .semibold)).foregroundStyle(Style.card)
+                    Text(senderName(name).prefix(1)).font(Style.font(.caption, weight: .semibold)).foregroundStyle(Style.card)
                 }
             }
     }

@@ -51,13 +51,13 @@ enum APIError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .badAddress:
-            "Use an https:// address, or http:// for one on your network or VPN: 10.x, 172.16–31.x, 192.168.x, 100.64–127.x or a .local name."
+            String(localized: "Use an https:// address, or http:// for one on your network or VPN: 10.x, 172.16–31.x, 192.168.x, 100.64–127.x or a .local name.")
         case .unauthorized:
-            "The token was not accepted."
+            String(localized: "The token was not accepted.")
         case let .server(status, detail):
-            detail.isEmpty ? "The server answered \(status)." : detail
+            detail.isEmpty ? String(localized: "The server answered \(status).") : detail
         case .unreadable:
-            "The server's answer could not be read."
+            String(localized: "The server's answer could not be read.")
         }
     }
 }

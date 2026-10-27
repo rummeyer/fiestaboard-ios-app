@@ -42,7 +42,7 @@ struct SettingsView: View {
         }
         .scrollContentBackground(.hidden)
         .background(Style.background)
-        .navigationTitle(isFirstRun ? "FiestaBoard" : "Settings")
+        .navigationTitle(isFirstRun ? Text(verbatim: "FiestaBoard") : Text("Settings"))
         .toolbar {
             if !isFirstRun {
                 ToolbarItem(placement: .cancellationAction) {
@@ -53,7 +53,7 @@ struct SettingsView: View {
                 if checking {
                     ProgressView()
                 } else {
-                    Button(isFirstRun ? "Connect" : "Save", action: connect)
+                    Button(isFirstRun ? LocalizedStringKey("Connect") : LocalizedStringKey("Save"), action: connect)
                         .disabled(address.isEmpty || token.isEmpty)
                 }
             }

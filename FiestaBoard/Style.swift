@@ -88,7 +88,7 @@ private struct RibbonShape: Shape {
 /// "3 days ago", "Just now".
 func ago(_ date: Date) -> String {
     if Date.now.timeIntervalSince(date) < 60 {
-        return "Just now"
+        return String(localized: "Just now")
     }
     return date.formatted(.relative(presentation: .named))
 }
@@ -116,8 +116,17 @@ struct LucideIcon: View {
 }
 
 extension Label where Title == Text, Icon == LucideIcon {
-    /// A label with a Lucide icon instead of a system symbol.
-    init(_ title: String, lucide name: String) {
+    /// A label with a Lucide icon instead of a system symbol, its title translated.
+    init(_ title: LocalizedStringKey, lucide name: String) {
+        self.init {
+            Text(title)
+        } icon: {
+            LucideIcon(name, size: 16, relativeTo: .footnote)
+        }
+    }
+
+    /// The same with a title that is already in the reader's language, as an error's.
+    init<S: StringProtocol>(_ title: S, lucide name: String) {
         self.init {
             Text(title)
         } icon: {

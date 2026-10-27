@@ -34,15 +34,16 @@ struct ComposeView: View {
     @State private var problem: String?
     @FocusState private var writing: Bool
 
-    private static let palette: [(String, Color)] = [
-        ("white", Color(white: 0.98)),
-        ("red", Color(red: 0.85, green: 0.16, blue: 0.11)),
-        ("orange", Color(red: 1.0, green: 0.46, blue: 0.0)),
-        ("yellow", Color(red: 1.0, green: 0.72, blue: 0.11)),
-        ("green", Color(red: 0.0, green: 0.6, blue: 0.27)),
-        ("blue", Color(red: 0.0, green: 0.34, blue: 0.72)),
-        ("violet", Color(red: 0.44, green: 0.18, blue: 0.54)),
-        ("black", Color(white: 0.08)),
+    /// The marker, the tile's colour, and what VoiceOver calls it.
+    private static let palette: [(String, Color, LocalizedStringKey)] = [
+        ("white", Color(white: 0.98), "White tile"),
+        ("red", Color(red: 0.85, green: 0.16, blue: 0.11), "Red tile"),
+        ("orange", Color(red: 1.0, green: 0.46, blue: 0.0), "Orange tile"),
+        ("yellow", Color(red: 1.0, green: 0.72, blue: 0.11), "Yellow tile"),
+        ("green", Color(red: 0.0, green: 0.6, blue: 0.27), "Green tile"),
+        ("blue", Color(red: 0.0, green: 0.34, blue: 0.72), "Blue tile"),
+        ("violet", Color(red: 0.44, green: 0.18, blue: 0.54), "Violet tile"),
+        ("black", Color(white: 0.08), "Black tile"),
     ]
 
     var body: some View {
@@ -148,7 +149,7 @@ struct ComposeView: View {
             .padding(.bottom, 12)
 
             HStack(spacing: 10) {
-                ForEach(Self.palette, id: \.0) { name, colour in
+                ForEach(Self.palette, id: \.0) { name, colour, spoken in
                     Button {
                         text += "{\(name)}"
                     } label: {
@@ -157,7 +158,7 @@ struct ComposeView: View {
                             .overlay(RoundedRectangle(cornerRadius: 5).stroke(Style.border, lineWidth: 1))
                             .frame(height: 38)
                     }
-                    .accessibilityLabel("\(name.capitalized) tile")
+                    .accessibilityLabel(spoken)
                 }
             }
             .padding(.horizontal, 16)

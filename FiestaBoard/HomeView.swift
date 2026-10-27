@@ -3,8 +3,16 @@ import SwiftUI
 /// Home: the board live on top, then History,
 /// Favorites and Drafts, and the button to write a message.
 struct HomeView: View {
-    enum Tab: String, CaseIterable {
-        case history = "History", favorites = "Favorites", drafts = "Drafts"
+    enum Tab: CaseIterable {
+        case history, favorites, drafts
+
+        var title: LocalizedStringKey {
+            switch self {
+            case .history: "History"
+            case .favorites: "Favorites"
+            case .drafts: "Drafts"
+            }
+        }
     }
 
     @Environment(Settings.self) private var settings
@@ -224,7 +232,7 @@ struct HomeView: View {
                     tab = each
                 } label: {
                     VStack(spacing: 12) {
-                        Text(each.rawValue)
+                        Text(each.title)
                             .font(Style.font(.title3))
                             .lineLimit(1)
                             .minimumScaleFactor(0.6)
@@ -253,11 +261,10 @@ struct HomeView: View {
             if tab == .history && !library.messages.isEmpty || sender != nil {
                 filterBar
             }
-            if messages.isEmpty {
-                empty(tab == .history ? "No messages yet" : "No favorites yet",
-                      tab == .history
-                        ? "What you send from here, and what the board shows while the app is open, comes here."
-                        : "Tap the ribbon on a message to keep it here.")
+            if messages.isEmpty && tab == .history {
+                empty("No messages yet", "What you send from here, and what the board shows while the app is open, comes here.")
+            } else if messages.isEmpty {
+                empty("No favorites yet", "Tap the ribbon on a message to keep it here.")
             }
             ForEach(messages) { message in
                 card(message)
@@ -300,9 +307,9 @@ struct HomeView: View {
                 }
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 8) {
-                        chip("All", selected: sender == nil) { sender = nil }
+                        chip(Text("All"), selected: sender == nil) { sender = nil }
                         ForEach(library.senders, id: \.self) { name in
-                            chip(name, selected: sender == name) { sender = name }
+                            chip(Text(senderName(name)), selected: sender == name) { sender = name }
                         }
                     }
                 }
@@ -322,9 +329,9 @@ struct HomeView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
     }
 
-    private func chip(_ title: String, selected: Bool, action: @escaping () -> Void) -> some View {
+    private func chip(_ title: Text, selected: Bool, action: @escaping () -> Void) -> some View {
         Button(action: action) {
-            Text(title)
+            title
                 .lineLimit(1)
                 .padding(.horizontal, 16)
                 .padding(.vertical, 8)
@@ -335,7 +342,7 @@ struct HomeView: View {
         .buttonStyle(.plain)
     }
 
-    private func empty(_ title: String, _ detail: String) -> some View {
+    private func empty(_ title: LocalizedStringKey, _ detail: LocalizedStringKey) -> some View {
         VStack(spacing: 14) {
             Text(title).font(Style.font(.title3)).foregroundStyle(Style.ink)
             Text(detail).foregroundStyle(Style.secondary)
@@ -366,7 +373,11 @@ struct HomeView: View {
             Button {
                 library.toggleFavorite(message.characters, boardName: message.boardName)
             } label: {
-                Label(message.favorite ? "Remove from Favorites" : "Add to Favorites", lucide: "bookmark")
+                if message.favorite {
+                    Label("Remove from Favorites", lucide: "bookmark")
+                } else {
+                    Label("Add to Favorites", lucide: "bookmark")
+                }
             }
             Button(role: .destructive) {
                 library.delete(message)
@@ -515,7 +526,7 @@ struct HomeView: View {
             let response = sameSize
                 ? try await api.send(characters: message.characters, to: boardID)
                 : try await api.send(message.editableText, to: boardID)
-            notice = await sent(response, text: message.editableText) ?? "Sent to \(boardName)"
+            notice = await sent(response, text: message.editableText) ?? String(localized: "Sent to \(boardName)")
         } catch {
             notice = error.localizedDescription
         }
@@ -525,11 +536,11 @@ struct HomeView: View {
         if response.sent || response.held == true {
             library.sent(response.characters, text: text, boardName: boardName)
             if response.held == true {
-                notice = "Held until the board's quiet time ends"
+                notice = String(localized: "Held until the board's quiet time ends")
             }
             await load()
             return nil
         }
-        return response.reason ?? "Not sent"
+        return response.reason ?? String(localized: "Not sent")
     }
 }

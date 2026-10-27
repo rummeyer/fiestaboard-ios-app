@@ -29,6 +29,8 @@ adheres to [semantic versioning](https://semver.org/spec/v2.0.0.html).
   to an address on the home network or reached through a VPN — private IPv4
   and IPv6 addresses, 100.64–127.x as Tailscale uses, .local names and names
   without a dot — and nowhere else.
+- English, German, French and Spanish, as the iPhone is set, with
+  FiestaBoard's own names for its menus in each.
 - Labels on one line at any text size.
 - FiestaBoard's own taco as the app icon, on white.
 - `-demo`, `-demoLive`, `-demoCompose` and `-demoSettings` in a debug build:

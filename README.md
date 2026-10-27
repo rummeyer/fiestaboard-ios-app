@@ -45,6 +45,8 @@
 
 **Writing a message.** The round button opens it. The board above shows where your text will land as you type — laid out as FiestaBoard lays it out: from the top left, word-wrapped, a line break where you type one — with how many tiles it takes. The colour tiles below put one in. **Send** says whether it reached the board or why not: a paused board, or one in its quiet time, which holds the message until that ends. **Save Draft**, next to Send, keeps it for later.
 
+**In your language.** English, German, French and Spanish, as the iPhone is set — or for this app alone under Settings → FiestaBoard → Language. It calls FiestaBoard's menus by the names FiestaBoard gives them in that language.
+
 It talks to nothing but your FiestaBoard, over its public API (`/api/v1`), with an API token.
 
 ## What you need
