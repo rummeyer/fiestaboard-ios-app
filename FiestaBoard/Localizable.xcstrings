@@ -2143,24 +2143,68 @@
         }
       }
     },
-    "Buy me a coffee": {
+    "Thank you!": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Spendieren Sie mir einen Kaffee"
+            "value": "Vielen Dank!"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Invítame a un café"
+            "value": "¡Gracias!"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Offrez-moi un café"
+            "value": "Merci !"
+          }
+        }
+      }
+    },
+    "Your coffee keeps the app going.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ihr Kaffee hält die App am Laufen."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu café mantiene viva la app."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Votre café fait vivre l’app."
+          }
+        }
+      }
+    },
+    "The App Store could not confirm the purchase.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Der App Store konnte den Kauf nicht bestätigen."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El App Store no pudo confirmar la compra."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’App Store n’a pas pu confirmer l’achat."
           }
         }
       }

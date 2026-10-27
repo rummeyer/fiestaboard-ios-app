@@ -8,6 +8,7 @@ struct SettingsView: View {
     var boards: [BoardSummary] = []
 
     @Environment(Settings.self) private var settings
+    @Environment(TipJar.self) private var tips
     @Environment(\.dismiss) private var dismiss
     @State private var address = ""
     @State private var token = ""
@@ -68,12 +69,11 @@ struct SettingsView: View {
             if !isFirstRun {
                 Section {
                     LabeledContent("Version", value: Self.version)
-                    Link(destination: URL(string: "https://buymeacoffee.com/rummeyer")!) {
-                        Label("Buy me a coffee", lucide: "coffee")
-                    }
+                    TipRows()
                 } header: {
                     Text("About")
                 }
+                .tipping(tips)
             }
         }
         .scrollContentBackground(.hidden)

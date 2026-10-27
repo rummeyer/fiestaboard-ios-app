@@ -1,0 +1,107 @@
+{
+  "identifier": "F1E5TAB0",
+  "nonRenewingSubscriptions": [],
+  "products": [
+    {
+      "displayPrice": "1.99",
+      "familyShareable": false,
+      "internalID": "4445351405",
+      "localizations": [
+        {
+          "description": "A thank-you for the app.",
+          "displayName": "Small coffee",
+          "locale": "en_US"
+        },
+        {
+          "description": "Ein Dankeschön für die App.",
+          "displayName": "Kleiner Kaffee",
+          "locale": "de"
+        },
+        {
+          "description": "Un merci pour l’app.",
+          "displayName": "Petit café",
+          "locale": "fr"
+        },
+        {
+          "description": "Un agradecimiento por la app.",
+          "displayName": "Café pequeño",
+          "locale": "es"
+        }
+      ],
+      "productID": "de.rummeyer.fiestaboard.tip.small",
+      "referenceName": "Tip small",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "4.99",
+      "familyShareable": false,
+      "internalID": "6093017670",
+      "localizations": [
+        {
+          "description": "A thank-you for the app.",
+          "displayName": "Big coffee",
+          "locale": "en_US"
+        },
+        {
+          "description": "Ein Dankeschön für die App.",
+          "displayName": "Großer Kaffee",
+          "locale": "de"
+        },
+        {
+          "description": "Un merci pour l’app.",
+          "displayName": "Grand café",
+          "locale": "fr"
+        },
+        {
+          "description": "Un agradecimiento por la app.",
+          "displayName": "Café grande",
+          "locale": "es"
+        }
+      ],
+      "productID": "de.rummeyer.fiestaboard.tip.medium",
+      "referenceName": "Tip medium",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "9.99",
+      "familyShareable": false,
+      "internalID": "1513989320",
+      "localizations": [
+        {
+          "description": "A thank-you for the app.",
+          "displayName": "Coffee and cake",
+          "locale": "en_US"
+        },
+        {
+          "description": "Ein Dankeschön für die App.",
+          "displayName": "Kaffee und Kuchen",
+          "locale": "de"
+        },
+        {
+          "description": "Un merci pour l’app.",
+          "displayName": "Café et gâteau",
+          "locale": "fr"
+        },
+        {
+          "description": "Un agradecimiento por la app.",
+          "displayName": "Café y pastel",
+          "locale": "es"
+        }
+      ],
+      "productID": "de.rummeyer.fiestaboard.tip.large",
+      "referenceName": "Tip large",
+      "type": "Consumable"
+    }
+  ],
+  "settings": {
+    "_failTransactionsEnabled": false,
+    "_locale": "de",
+    "_storefront": "DEU",
+    "_storeKitErrors": []
+  },
+  "subscriptionGroups": [],
+  "version": {
+    "major": 4,
+    "minor": 0
+  }
+}

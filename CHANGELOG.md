@@ -8,7 +8,9 @@ adheres to [semantic versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
-- Buy me a coffee, in Settings under About.
+- Tips, in Settings under About: three coffees through In-App Purchase,
+  and a StoreKit configuration to try them from Xcode.
+- Buy Me a Coffee in the README.
 
 ### Removed
 

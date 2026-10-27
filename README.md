@@ -5,6 +5,10 @@
 <h1 align="center">FiestaBoard for iPhone</h1>
 
 <p align="center">
+  <a href="https://buymeacoffee.com/rummeyer"><img src="https://img.shields.io/badge/donate-Buy%20Me%20a%20Coffee-yellow" alt="Buy Me a Coffee"></a>
+</p>
+
+<p align="center">
   Your <a href="https://github.com/Fiestaboard/FiestaBoard">FiestaBoard</a> in your pocket, in FiestaBoard's own look:<br>
   <b>what your board shows</b>, live, and <b>a message to it</b> in a few taps — at home, through a VPN, or from anywhere.
 </p>
@@ -153,6 +157,10 @@ The files in `FiestaBoard/` are the project: Xcode picks up whatever is in the f
 | `-demo -demoSettings` | the first start |
 
 All of them run on the demo board and a sample LED clock beside it, with sample content of their own.
+
+### Tips
+
+Settings → About offers three coffees as tips, through In-App Purchase: consumables that unlock nothing. Their product IDs are `de.rummeyer.fiestaboard.tip.small`, `.medium` and `.large`; in App Store Connect they are created as consumable in-app purchases with these IDs. `FiestaBoard.storekit` has them for Xcode, chosen in the shared scheme, so that a run from Xcode shows and buys them without App Store Connect. Elsewhere, until the App Store has them, Settings shows no tips at all.
 
 ### Versions
 
