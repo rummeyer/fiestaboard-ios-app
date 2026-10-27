@@ -30,17 +30,20 @@ struct SettingsView: View {
         Form {
             // Where FiestaBoard is and the key to it.
             Section {
+                // As iOS's own forms have it: the label on the left, what is typed on the right.
                 LabeledContent("Server") {
-                    TextField("10.0.1.10:4420 or https://…", text: $address)
+                    TextField("https://… or 10.0.1.10:4420", text: $address)
                         .keyboardType(.URL)
                         .textContentType(.URL)
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
+                        .multilineTextAlignment(.trailing)
                 }
                 LabeledContent("API token") {
-                    SecureField("Token", text: $token)
+                    SecureField("Required", text: $token)
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
+                        .multilineTextAlignment(.trailing)
                 }
             } header: {
                 Text("Connection")

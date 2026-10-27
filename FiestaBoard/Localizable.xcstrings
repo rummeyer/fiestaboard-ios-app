@@ -24,28 +24,6 @@
         }
       }
     },
-    "10.0.1.10:4420 or https://…": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "10.0.1.10:4420 oder https://…"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "10.0.1.10:4420 o https://…"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "10.0.1.10:4420 ou https://…"
-          }
-        }
-      }
-    },
     "A message until %@, then the schedule again": {
       "localizations": {
         "de": {
@@ -2205,6 +2183,50 @@
           "stringUnit": {
             "state": "translated",
             "value": "L’App Store n’a pas pu confirmer l’achat."
+          }
+        }
+      }
+    },
+    "https://… or 10.0.1.10:4420": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://… oder 10.0.1.10:4420"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://… o 10.0.1.10:4420"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://… ou 10.0.1.10:4420"
+          }
+        }
+      }
+    },
+    "Required": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erforderlich"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obligatorio"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obligatoire"
           }
         }
       }
