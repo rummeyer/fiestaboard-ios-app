@@ -30,8 +30,10 @@ struct SettingsView: View {
         Form {
             // Where FiestaBoard is and the key to it.
             Section {
-                // As iOS's own forms have it: the label on the left, what is typed on the right.
-                LabeledContent("Server") {
+                // As iOS's own forms have it: the label on the left, what is typed on the right,
+                // in one line however long the address — it scrolls in its field rather than going below.
+                HStack(spacing: 16) {
+                    Text("Server").fixedSize()
                     TextField("https://… or 10.0.1.10:4420", text: $address)
                         .keyboardType(.URL)
                         .textContentType(.URL)
@@ -39,7 +41,8 @@ struct SettingsView: View {
                         .autocorrectionDisabled()
                         .multilineTextAlignment(.trailing)
                 }
-                LabeledContent("API token") {
+                HStack(spacing: 16) {
+                    Text("API token").fixedSize()
                     SecureField("Required", text: $token)
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
