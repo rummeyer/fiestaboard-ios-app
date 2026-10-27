@@ -10,9 +10,9 @@ enum Style {
     static let ink = Color("Ink")
     static let muted = Color("Muted")
     /// A quiet fill: a control's or a chip's.
-    static let fill = Color("Secondary")
+    static let fill = Color("QuietFill")
     /// FiestaBoard orange, the same in both themes, with board ink on it.
-    static let primary = Color("Primary")
+    static let primary = Color("BrandOrange")
     static let primaryInk = Color("PrimaryInk")
     static let live = Color("Success")
     /// A card's edge, a rule between things.
@@ -115,6 +115,7 @@ struct LucideIcon: View {
     }
 }
 
+@MainActor
 extension Label where Title == Text, Icon == LucideIcon {
     /// A label with a Lucide icon instead of a system symbol, its title translated.
     init(_ title: LocalizedStringKey, lucide name: String) {
