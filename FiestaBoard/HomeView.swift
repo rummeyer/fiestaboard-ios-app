@@ -122,8 +122,9 @@ struct HomeView: View {
             VStack(spacing: 8) {
                 liveTitle(dark: true)
                     .font(Style.font(.footnote))
-                if let board, let characters = board.characters {
-                    BoardView(characters: characters, rows: board.rows, cols: board.cols, heart: shape.heart, white: shape.heart, led: shape.led)
+                if let board {
+                    // Nothing sent to it yet: the board as it stands, empty, rather than waiting.
+                    BoardView(characters: board.characters ?? [], rows: board.rows, cols: board.cols, heart: shape.heart, white: shape.heart, led: shape.led)
                         .frame(maxWidth: 300)
                 } else {
                     ProgressView().frame(height: 36)
@@ -180,7 +181,8 @@ struct HomeView: View {
                 Spacer()
                 liveTitle(dark: false)
                     .font(Style.font(.title3, weight: .medium))
-                if let board, let characters = board.characters {
+                if let board {
+                    let characters = board.characters ?? Array(repeating: Array(repeating: 0, count: board.cols), count: board.rows)
                     let kept = library.latest(characters, on: boardID)
                     MessageCard(
                         characters: characters,
