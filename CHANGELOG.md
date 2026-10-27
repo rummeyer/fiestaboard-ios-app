@@ -10,6 +10,10 @@ adheres to [semantic versioning](https://semver.org/spec/v2.0.0.html).
 
 - Buy me a coffee, in Settings under About.
 
+### Removed
+
+- The link to the source code, in Settings under About.
+
 ## [1.0.0] - 2026-10-27
 
 The first release.

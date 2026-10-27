@@ -2143,28 +2143,6 @@
         }
       }
     },
-    "Source code": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Quellcode"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Código fuente"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Code source"
-          }
-        }
-      }
-    },
     "Buy me a coffee": {
       "localizations": {
         "de": {
