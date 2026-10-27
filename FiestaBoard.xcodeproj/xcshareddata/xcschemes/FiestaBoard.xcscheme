@@ -49,7 +49,7 @@
          </BuildableReference>
       </BuildableProductRunnable>
       <StoreKitConfigurationFileReference
-         identifier = "../FiestaBoard.storekit">
+         identifier = "../../FiestaBoard.storekit">
       </StoreKitConfigurationFileReference>
    </LaunchAction>
    <ProfileAction
