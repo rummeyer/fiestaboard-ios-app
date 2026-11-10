@@ -180,6 +180,7 @@
 				DEVELOPMENT_TEAM = 2JQQ4S3FLN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FiestaBoard;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "To reach FiestaBoard at its address on your network.";
@@ -214,6 +215,7 @@
 				DEVELOPMENT_TEAM = 2JQQ4S3FLN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FiestaBoard;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "To reach FiestaBoard at its address on your network.";
